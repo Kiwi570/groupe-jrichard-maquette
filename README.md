@@ -16,12 +16,14 @@ carte des trois sites, statut « ouvert maintenant ») · Mentions légales · C
 ## Refaire le site après une modification
 
 ```
-python3 outils/images.py recu/lot-site.json   photos du site actuel vers WebP (originaux à remettre dans recu/site/)
+python3 outils/images.py recu/lot-site.json   photos du site actuel vers WebP, couleurs ravivées (originaux à remettre dans recu/site/)
 python3 outils/images.py recu/lot-grok.json   images Grok vers WebP, étalonnage doux (originaux dans recu/grok/)
 node outils/generer.mjs                     pages HTML depuis donnees/ et source/
 node outils/images-partage.mjs              images de partage 1200×630
 node _audit/audit.mjs                       audit complet (rapport dans _audit/rapport/)
 ```
+
+Présenter une autre saison au client : ajouter `?saison=printemps` (ou `ete`, `automne`, `hiver`) à l'adresse d'une page ; sans ce paramètre, le site suit la date du jour (heure de Paris).
 
 Textes : `donnees/textes/fr.json`. Données : `donnees/*.json` (sites et horaires, sociétés, métiers, réalisations, actualités, postes, avis, labels, chiffres).
 

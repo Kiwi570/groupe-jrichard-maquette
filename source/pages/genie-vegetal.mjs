@@ -8,14 +8,15 @@ function coupeBerge() {
   const roseaux = Array.from({ length: 14 }, (_, i) => { const x = 70 + i * 13; const h = 60 + ((i * 37) % 40); return `<path d="M${x} 330 q${(i % 3) - 1} ${-h / 2} ${(i % 2 ? 4 : -4)} ${-h}"/><ellipse cx="${x + (i % 2 ? 4 : -4)}" cy="${330 - h}" rx="3" ry="9" fill="#8a6f4d" stroke="none"/>`; }).join('');
   const fascines = Array.from({ length: 6 }, (_, i) => `<path d="M${262 + i * 22} ${348 - i * 18} l26 -6" />`).join('');
   const boutures = Array.from({ length: 7 }, (_, i) => { const x = 270 + i * 22, y = 330 - i * 18; return `<path d="M${x} ${y} v-34"/><path class="f" d="M${x} ${y - 24} q-12 -8 -14 -20 q12 2 14 20Z"/><path class="f" d="M${x} ${y - 30} q12 -8 14 -20 q-12 2 -14 20Z"/>`; }).join('');
-  const racines = Array.from({ length: 10 }, (_, i) => { const x = 300 + i * 26; return `<path d="M${x} ${300 - i * 10 + 30} q${-10 + (i % 3) * 8} 40 ${-4 + (i % 2) * 10} 90"/>`; }).join('');
+  const racines = Array.from({ length: 10 }, (_, i) => { const x = 300 + i * 26; return `<path class="berge-racine" pathLength="1" d="M${x} ${300 - i * 10 + 30} q${-10 + (i % 3) * 8} 40 ${-4 + (i % 2) * 10} 90"/>`; }).join('');
   const arbres = [[430, 150, 54], [500, 120, 64], [560, 150, 50]].map(([x, y, r]) => `<path d="M${x} ${y + r * 0.6} V${y + 120}" stroke="#6b5640" stroke-width="8" fill="none"/><circle cx="${x}" cy="${y}" r="${r}" fill="#32662A"/><circle cx="${x - r * .4}" cy="${y + r * .2}" r="${r * .7}" fill="#669B2E"/>`).join('');
   return brut(`<svg viewBox="0 0 600 500" aria-hidden="true">
     <rect width="600" height="500" fill="#DCE8E6"/>
     <path d="M0 330 H250 L330 270 L420 250 L600 236 V500 H0Z" fill="#7a5c3e"/>
     <path d="M0 380 H600 V500 H0Z" fill="#5a4330" opacity=".7"/>
-    <path d="M0 300 H262 L250 330 H0Z" fill="#7FC3C3" opacity=".85"/>
-    <path d="M0 304 q30 -6 60 0 t60 0 t60 0 t60 0" fill="none" stroke="#EEF2E7" stroke-width="2" opacity=".8"/>
+    <defs><clipPath id="berge-eau"><path d="M0 296 H296 L250 331 H0Z"/></clipPath></defs>
+    <path d="M0 300 H291 L250 330 H0Z" fill="#7FC3C3" opacity=".85"/>
+    <g clip-path="url(#berge-eau)"><g data-berge-vagues fill="none" stroke="#EEF2E7" stroke-linecap="round"><path d="M-120 304 q30 -6 60 0 t60 0 t60 0 t60 0 t60 0 t60 0" stroke-width="2" opacity=".8"/><path d="M-150 314 q24 -4 48 0 t48 0 t48 0 t48 0 t48 0 t48 0 t48 0" stroke-width="1.4" opacity=".55"/><path d="M-100 323 q20 -3 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" stroke-width="1" opacity=".45"/></g></g>
     <g data-couche="roseaux" fill="none" stroke="#4E7F2C" stroke-width="3" stroke-linecap="round">${roseaux}</g>
     <g data-couche="berge"><g fill="none" stroke="#b08a5a" stroke-width="7" stroke-linecap="round">${fascines}</g><g fill="none" stroke="#669B2E" stroke-width="3" stroke-linecap="round">${boutures}</g><g fill="none" stroke="#c7a477" stroke-width="2" stroke-linecap="round" opacity=".9">${racines}</g></g>
     <g data-couche="ripisylve">${arbres}<path d="M330 270 L420 250 L600 236" fill="none" stroke="#669B2E" stroke-width="10" stroke-linecap="round"/></g>

@@ -20,6 +20,8 @@ lot.json :
 - "ratio": [16, 9] recadre l'image principale à ce format autour du point de cadrage.
 - "etalonnage": true applique un étalonnage doux (saturation et contraste légèrement baissés), pour que
   les images générées se fondent avec les vraies photos.
+- "raviver": true ravive une vraie photo un peu terne (saturation +14 %, contraste +4 %, lumière +3 %),
+  directement dans le fichier : aucun filtre CSS à recalculer pendant le défilement.
 """
 import json
 import sys
@@ -69,8 +71,16 @@ def tailles(liste, largeur):
     return t
 
 
+def raviver(img):
+    img = ImageEnhance.Color(img).enhance(1.14)
+    img = ImageEnhance.Contrast(img).enhance(1.04)
+    return ImageEnhance.Brightness(img).enhance(1.03)
+
+
 def ouvrir(chemin, e):
     img = ImageOps.exif_transpose(Image.open(RACINE / chemin)).convert("RGB")
+    if e.get("raviver"):
+        img = raviver(img)
     return adoucir(img) if e.get("etalonnage") else img
 
 

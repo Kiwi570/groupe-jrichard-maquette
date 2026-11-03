@@ -1,6 +1,6 @@
 /* Recrutement : postes recherchés (filtrables), raisons, métiers, apprentissage, déroulé, candidature simulée. */
-import { html } from '../../outils/gabarit.mjs';
-import { tete, chapitre, cime, mediaOu, dessin } from '../gabarits/blocs.mjs';
+import { html, brut } from '../../outils/gabarit.mjs';
+import { tete, chapitre, cime, mediaOu, dessin, plante } from '../gabarits/blocs.mjs';
 
 export const page = { cle: 'recrutement', fichier: 'recrutement', imagePartage: 'photos/grimpeurs-chene-1280.webp' };
 
@@ -66,6 +66,7 @@ ${tete(c, {
 <section class="s-creme bloc-y" id="deroule" data-strate="Houppier">
   <div class="conteneur">
     ${chapitre(c, { surtitre: c.t('recrutement.deroule.surtitre'), titre: c.tb('recrutement.deroule.titre') })}
+    <div class="chemin-etapes" aria-hidden="true" data-chemin-etapes><svg viewBox="0 0 1000 80" preserveAspectRatio="none"><path d="M40 52 C 180 8, 300 80, 500 40 S 820 6, 960 46" pathLength="1" vector-effect="non-scaling-stroke"/></svg><svg class="chemin-feuille" viewBox="-12 -12 24 24"><path d="M-10 0C-6-8 6-9 10 0C6 9-6 8-10 0Z"/><path d="M-10 0H8" class="nervure"/></svg></div>
     <ol class="methode-etapes etapes-dessinees" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))">${r.etapes.map((e, i) => html`<li data-anime><div class="etape-dessin" data-visuel aria-hidden="true">${dessin(['pousse', 'feuille', 'rameau', 'erable'][i])}</div><h3 class="titre-3">${e.titre}</h3><p>${e.texte}</p></li>`)}</ol>
   </div>
 </section>
@@ -86,11 +87,12 @@ ${tete(c, {
       </fieldset>
       <div class="champ" style="margin-top:16px"><span class="champ-libelle" id="cand-cv-libelle">${c.t('recrutement.form.cv')}</span><label class="fichier" for="cand-cv"><input class="fichier-input" id="cand-cv" name="cv" type="file" accept=".pdf,.doc,.docx,.jpg,.png" aria-labelledby="cand-cv-libelle" aria-describedby="cand-cv-nom" data-fichier><span class="fichier-bouton" aria-hidden="true">${c.t('recrutement.form.cvBouton')}</span><span class="fichier-nom" id="cand-cv-nom" data-fichier-nom>${c.t('recrutement.form.cvAucun')}</span></label></div>
       <div class="champ"><label for="cand-message">${c.t('form.message')}</label><textarea id="cand-message" name="message"></textarea></div>
-      <p class="mention-donnees">${c.t('form.mentionDonnees')} ${c.lien('confidentialite', { texte: c.t('form.politique') })} <span class="a-completer">${c.t('commun.aCompleter')}</span></p>
+      <p class="mention-donnees">${c.t('form.mentionDonnees')} ${c.lien('confidentialite', { texte: c.t('form.politique') })}.</p>
       <p><button class="bouton bouton--orange" type="submit">${c.t('recrutement.form.envoyer')}</button></p>
       <p data-message-envoi tabindex="-1" hidden data-texte="${c.s('recrutement.form.simule')}"></p>
     </form>
     <aside class="recap" style="position:static">
+      ${brut(plante())}
       ${c.media({ nom: 'photos/locaux-goueffon-amilly', alt: c.s('recrutement.rh.alt'), ratio: '16 / 10', classe: 'recap-media', sizes: '(max-width: 900px) 100vw, 30vw', cadrage: '40% 50%' })}
       <h3>${c.t('recrutement.rh.titre')}</h3>
       <p style="margin:0">${c.t('recrutement.rh.texte')}</p>

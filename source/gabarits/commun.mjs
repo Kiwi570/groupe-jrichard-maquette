@@ -152,7 +152,7 @@ function corde(c) {
 
 export function page(c, contenu) {
   return html`<!doctype html>
-<html lang="${c.l}" data-v="${c.v}" data-gabarit="${c.page.gabarit || c.page.cle}"${c.site.curseur ? brut(' data-curseur') : ''}>
+<html lang="${c.l}" data-v="${c.v}" data-gabarit="${c.page.gabarit || c.page.cle}"${c.site.curseur ? brut(' data-curseur') : ''} data-curseur-voir="${c.s('commun.curseurVoir')}">
 ${tete(c)}
 <body id="haut">
 ${voile(c)}

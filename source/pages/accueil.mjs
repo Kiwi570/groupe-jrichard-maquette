@@ -43,6 +43,7 @@ ${tete(c, {
       ${c.media({ nom: s.image, alt: c.s(`accueil.metiers.${s.cle}.alt`), cadrage: s.cadrage, classe: 'strate-media', sizes: '(max-width: 860px) 100vw, 55vw' })}
     </article>`)}
     <div class="strates-jauge" aria-hidden="true">${STRATES.map(() => html`<span><i></i></span>`)}</div>
+    <div class="strates-altitude" aria-hidden="true" data-audit-ignorer><div class="strates-altitude-piste">${STRATES.map((s) => html`<span>${s.altitude}</span>`)}</div></div>
   </div>
 </section>
 

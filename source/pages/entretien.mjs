@@ -38,10 +38,11 @@ ${tete(c, {
 <section class="s-sauge bloc-y" id="saisons" data-strate="Tronc">
   <div class="conteneur">
     ${chapitre(c, { surtitre: c.t('entretien.saisons.surtitre'), titre: c.tb('entretien.saisons.titre'), chapeau: c.t('entretien.saisons.chapeau') })}
+    <div class="saisons-cadran" aria-hidden="true" data-saisons-cadran><svg viewBox="-60 -60 120 120"><path class="q q1" d="M0 0V-52A52 52 0 0 1 52 0Z"/><path class="q q2" d="M0 0H52A52 52 0 0 1 0 52Z"/><path class="q q3" d="M0 0V52A52 52 0 0 1 -52 0Z"/><path class="q q4" d="M0 0H-52A52 52 0 0 1 0 -52Z"/><circle class="anneau" r="52"/><g class="aiguille" data-saisons-aiguille><path d="M0 6V-44"/><circle cy="-44" r="5"/></g><circle class="moyeu" r="6"/></svg></div>
     <ol class="grille-cartes grille-saisons" style="list-style:none;margin:0;padding:0" data-saisons>
       ${SAISONS.map((s) => html`<li class="carte-presta" data-saison="${s}">
         ${mediaOu(c, { nom: `grok/saison-${s}`, alt: c.s(`entretien.saisons.${s}.alt`), sizes: '(max-width: 700px) 100vw, 25vw' }, html`<div class="carte-dessin" aria-hidden="true" data-saison-dessin="${s}">${dessin({ printemps: 'pousse', ete: 'soleil', automne: 'erable', hiver: 'rameau' }[s])}</div>`)}
-        <div class="carte-presta-corps"><h3>${c.t(`entretien.saisons.${s}.titre`)}</h3><p>${c.t(`entretien.saisons.${s}.texte`)}</p></div>
+        <div class="carte-presta-corps"><p class="saison-maintenant" hidden>${c.t('entretien.saisons.maintenant')}</p><h3>${c.t(`entretien.saisons.${s}.titre`)}</h3><p>${c.t(`entretien.saisons.${s}.texte`)}</p></div>
       </li>`)}
     </ol>
   </div>

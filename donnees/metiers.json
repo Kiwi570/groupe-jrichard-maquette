@@ -9,7 +9,7 @@
     "collectivite"
    ],
    "image": "grok/plan-mains",
-   "texte": "Rendez-vous sur place, plans en 2D ou en 3D par le bureau d'études, ambiances de nuit et des quatre saisons, échantillons de matériaux. Chez Sauvegrain, deux formules : l'étude « prête à planter » ou l'étude complète avec plan de masse, vues 3D et chiffrage."
+   "texte": "Rendez-vous sur place, plans en 2D ou en 3D par le bureau d’études, ambiances de nuit et des quatre saisons, échantillons de matériaux. Chez Sauvegrain, deux formules : l’étude « prête à planter » ou l’étude complète avec plan de masse, vues 3D et chiffrage."
   },
   {
    "cle": "plantation",
@@ -20,7 +20,7 @@
     "collectivite"
    ],
    "image": "photos/plantation-arbre-motte",
-   "texte": "Plus de 1 000 arbres plantés par an. Terre végétale sur 40 à 50 cm pour les massifs et 1 m pour les fosses d'arbres, tuteurage pendant 3 ans, arrosage les premières années, paillage de 10 cm."
+   "texte": "Plus de 1 000 arbres plantés par an. Terre végétale sur 40 à 50 cm pour les massifs et 1 m pour les fosses d’arbres, tuteurage pendant 3 ans, arrosage les premières années, paillage de 10 cm."
   },
   {
    "cle": "gazon",
@@ -31,7 +31,7 @@
     "collectivite"
    ],
    "image": "photos/prairie-fleurie",
-   "texte": "Semis en mars-avril ou en septembre-octobre, gazon de placage, gazon synthétique, prairie fleurie fauchée à l'automne. Engrais naturel à libération lente."
+   "texte": "Semis en mars-avril ou en septembre-octobre, gazon de placage, gazon synthétique, prairie fleurie fauchée à l’automne. Engrais naturel à libération lente."
   },
   {
    "cle": "terrasse",
@@ -53,7 +53,7 @@
     "collectivite"
    ],
    "image": "photos/allee-paves-enherbes",
-   "texte": "Béton, enrobé, pavés ou gravier stabilisé entièrement perméable. Usages, pentes et drainage étudiés d'abord ; allées accessibles aux personnes à mobilité réduite."
+   "texte": "Béton, enrobé, pavés ou gravier stabilisé entièrement perméable. Usages, pentes et drainage étudiés d’abord ; allées accessibles aux personnes à mobilité réduite."
   },
   {
    "cle": "clotures",
@@ -64,7 +64,7 @@
     "collectivite"
    ],
    "image": "photos/cloture-barreaudage-roses",
-   "texte": "Clôtures rigides ou souples, barreaudage pour les établissements recevant du public, claustras ; portails pivotants, coulissants ou autoportants, motorisés. Un seul intervenant du génie civil à l'automatisme."
+   "texte": "Clôtures rigides ou souples, barreaudage pour les établissements recevant du public, claustras ; portails pivotants, coulissants ou autoportants, motorisés. Un seul intervenant du génie civil à l’automatisme."
   },
   {
    "cle": "pergolas",
@@ -83,7 +83,7 @@
     "particulier"
    ],
    "image": "photos/cuisine-exterieure-pergola",
-   "texte": "Cuisines Aspic, fabricant français, posées clé en main avec les raccordements ; spas Be Spa livrés, posés et mis en service, à découvrir au showroom d'Amilly."
+   "texte": "Cuisines Aspic, fabricant français, posées clé en main avec les raccordements ; spas Be Spa livrés, posés et mis en service, à découvrir au showroom d’Amilly."
   },
   {
    "cle": "arrosage",
@@ -94,7 +94,7 @@
     "collectivite"
    ],
    "image": "photos/arrosage-pose",
-   "texte": "Étude de l'arrivée d'eau, découpage en secteurs, plan 2D ; goutte-à-goutte, turbines et tuyères, sondes en option."
+   "texte": "Étude de l’arrivée d’eau, découpage en secteurs, plan 2D ; goutte-à-goutte, turbines et tuyères, sondes en option."
   },
   {
    "cle": "eaux-pluviales",
@@ -105,7 +105,7 @@
     "collectivite"
    ],
    "image": "photos/noue-verveines",
-   "texte": "Tranchées d'infiltration, cuves de récupération de 300 à 10 000 litres, noues et bassins dans les résidences."
+   "texte": "Tranchées d’infiltration, cuves de récupération de 300 à 10 000 litres, noues et bassins dans les résidences."
   },
   {
    "cle": "potagers",
@@ -120,13 +120,13 @@
   },
   {
    "cle": "patios",
-   "titre": "Patios et terrasses d'entreprise",
+   "titre": "Patios et terrasses d’entreprise",
    "profils": [
     "entreprise",
     "collectivite"
    ],
    "image": "photos/patio-entreprise",
-   "texte": "Mi-ombre, accès de plain-pied, revêtements drainants ; grue automotrice et camion souffleur de terre pour les cœurs d'îlot."
+   "texte": "Mi-ombre, accès de plain-pied, revêtements drainants ; grue automotrice et camion souffleur de terre pour les cœurs d’îlot."
   },
   {
    "cle": "residences",
@@ -136,7 +136,7 @@
     "collectivite"
    ],
    "image": "photos/parc-residence-aerien",
-   "texte": "De la conception à l'entretien pour les promoteurs et les bailleurs : noues, bassins, agrès, nichoirs, gestion différenciée."
+   "texte": "De la conception à l’entretien pour les promoteurs et les bailleurs : noues, bassins, agrès, nichoirs, gestion différenciée."
   },
   {
    "cle": "voiries",
@@ -155,11 +155,11 @@
     "collectivite"
    ],
    "image": "photos/arches-rosiers",
-   "texte": "Nivellement, allées, alternance d'ombre et de soleil, ganivelles, aires de jeux et terrains multisport."
+   "texte": "Nivellement, allées, alternance d’ombre et de soleil, ganivelles, aires de jeux et terrains multisport."
   },
   {
    "cle": "ecoles",
-   "titre": "Cours d'école",
+   "titre": "Cours d’école",
    "profils": [
     "collectivite"
    ],
@@ -204,7 +204,7 @@
     "entreprise"
    ],
    "image": "photos/mesange-nichoir",
-   "texte": "Visite du site, parcours pédagogique, démonstrations de taille et pack biodiversité pour les salariés : L'Oréal à Vennecy (2024), John Deere à Saran et Dior à Saint-Jean-de-Braye (2025)."
+   "texte": "Visite du site, parcours pédagogique, démonstrations de taille et pack biodiversité pour les salariés : L’Oréal à Vennecy (2024), John Deere à Saran et Dior à Saint-Jean-de-Braye (2025)."
   }
  ],
  "entretien": [
@@ -217,7 +217,7 @@
     "collectivite"
    ],
    "image": "photos/tonte-frontale",
-   "texte": "Coupe à 7-8 cm, tous les 15 jours au printemps et une fois par mois l'été. Tondeuses jusqu'à 3,50 m de coupe et robots jusqu'à 5 000 m²."
+   "texte": "Coupe à 7-8 cm, tous les 15 jours au printemps et une fois par mois l’été. Tondeuses jusqu’à 3,50 m de coupe et robots jusqu’à 5 000 m²."
   },
   {
    "cle": "fauchage",
@@ -289,7 +289,7 @@
     "particulier"
    ],
    "image": "photos/jardin-longere-hortensias",
-   "texte": "Débroussaillage, taille, transplantation d'arbustes, désherbage et paillage : « tout est rattrapable »."
+   "texte": "Débroussaillage, taille, transplantation d’arbustes, désherbage et paillage : « tout est rattrapable »."
   }
  ],
  "sap": [
@@ -305,7 +305,7 @@
  "elagage": [
   {
    "cle": "taille",
-   "titre": "Taille d'arbres",
+   "titre": "Taille d’arbres",
    "profils": [
     "particulier",
     "entreprise",
@@ -313,7 +313,7 @@
    ],
    "image": "photos/grimpeur-chene",
    "cadrage": "78% 35%",
-   "texte": "Taille d'entretien, de réduction, d'adaptation près des lignes, en tête de chat ou architecturée. Diagnostic, choix de la méthode, intervention, broyage."
+   "texte": "Taille d’entretien, de réduction, d’adaptation près des lignes, en tête de chat ou architecturée. Diagnostic, choix de la méthode, intervention, broyage."
   },
   {
    "cle": "formation",
@@ -346,7 +346,7 @@
     "collectivite"
    ],
    "image": "photos/abattage-nacelle",
-   "texte": "Abattage dirigé, démontage avec rétention par cordes et poulies, ou à la grue. Diagnostic sur place et devis selon l'accès et l'évacuation."
+   "texte": "Abattage dirigé, démontage avec rétention par cordes et poulies, ou à la grue. Diagnostic sur place et devis selon l’accès et l’évacuation."
   },
   {
    "cle": "dessouchage",
@@ -372,7 +372,7 @@
   },
   {
    "cle": "transplantation",
-   "titre": "Transplantation d'arbres",
+   "titre": "Transplantation d’arbres",
    "profils": [
     "particulier",
     "entreprise",
@@ -424,12 +424,12 @@
   {
    "cle": "gui",
    "titre": "Gui",
-   "texte": "Plante hémiparasite retirée au ras du tronc par les grimpeurs ; en trop grande quantité, elle affaiblit l'arbre.",
+   "texte": "Plante hémiparasite retirée au ras du tronc par les grimpeurs ; en trop grande quantité, elle affaiblit l’arbre.",
    "dessin": "gui"
   },
   {
    "cle": "suie",
-   "titre": "Maladie de la suie de l'érable",
+   "titre": "Maladie de la suie de l’érable",
    "texte": "Abattage des arbres atteints par temps humide et sans vent, outils désinfectés, bois brûlé ou enterré, périmètre balisé.",
    "dessin": "erable"
   }
@@ -438,13 +438,13 @@
   {
    "cle": "compensatoires",
    "titre": "Mesures compensatoires",
-   "texte": "Séquence éviter-réduire-compenser : crapauducs (déviation de Jargeau), hibernaculums, mares (Fay-aux-Loges), zones humides ; engins à l'huile biologique.",
+   "texte": "Séquence éviter-réduire-compenser : crapauducs (déviation de Jargeau), hibernaculums, mares (Fay-aux-Loges), zones humides ; engins à l’huile biologique.",
    "couche": "faune"
   },
   {
    "cle": "restauration",
    "titre": "Restauration des espaces naturels",
-   "texte": "Embâcles, radiers, effacement d'ouvrages, protection de berges, plantes hélophytes, passerelles ; nacelle de 25 m et huile biodégradable.",
+   "texte": "Embâcles, radiers, effacement d’ouvrages, protection de berges, plantes hélophytes, passerelles ; nacelle de 25 m et huile biodégradable.",
    "couche": "berge"
   },
   {

@@ -35,7 +35,7 @@ ${tete(c, {
     <p class="note-maquette"><span class="a-completer">${c.t('commun.aCompleter')}</span> ${c.t('realisations.note')}</p>
     <ul class="fil" data-reals>
       ${reals.map((r) => html`<li data-profil="${r.profil}" data-metier="${r.metier}">
-        ${r.fiche ? html`<a class="fil-carte" href="${c.url('realisation-' + r.cle)}" data-libelle="${r.titre}">` : html`<div class="fil-carte">`}
+        ${r.fiche ? html`<a class="fil-carte" href="${c.url('realisation-' + r.cle)}" data-libelle="${r.titre}" data-incline>` : html`<div class="fil-carte">`}
           ${c.media({ nom: r.images[0].nom, alt: r.images[0].alt, sizes: '(max-width: 700px) 100vw, 33vw' })}
           <p class="meta-article" style="margin:0">${c.t(`commun.profilsCourts.${r.profil}`)} · ${c.t(`commun.metiers.${r.metier}`)}</p>
           <h3>${r.titre}</h3>

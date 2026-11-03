@@ -1,7 +1,7 @@
 [
-  { "cle": "environnement", "titre": "Agir pour l'environnement et préserver la biodiversité", "texte": "Désherbage manuel, fauchage tardif, taille raisonnée, nichoirs, écopâturage ; un pôle génie écologique depuis 2021." },
-  { "cle": "salaries", "titre": "Garantir le bien-être des salariés", "texte": "Matériel adapté, cohésion d'équipe, formations régulières et questionnaire annuel de qualité de vie au travail." },
+  { "cle": "environnement", "titre": "Agir pour l’environnement et préserver la biodiversité", "texte": "Désherbage manuel, fauchage tardif, taille raisonnée, nichoirs, écopâturage ; un pôle génie écologique depuis 2021." },
+  { "cle": "salaries", "titre": "Garantir le bien-être des salariés", "texte": "Matériel adapté, cohésion d’équipe, formations régulières et questionnaire annuel de qualité de vie au travail." },
   { "cle": "clients", "titre": "Satisfaire nos clients", "texte": "Une relation durable, des solutions sur mesure et des enquêtes de satisfaction régulières." },
-  { "cle": "territoire", "titre": "Renforcer notre ancrage territorial", "texte": "Mécénat, chantiers-écoles, accords avec des structures d'insertion locales et inclusion de personnes en situation de handicap." },
-  { "cle": "perennite", "titre": "Pérenniser l'identité du groupe", "texte": "Chaque entreprise garde son nom et son autonomie ; les excédents sont réinvestis dans le matériel et la formation." }
+  { "cle": "territoire", "titre": "Renforcer notre ancrage territorial", "texte": "Mécénat, chantiers-écoles, accords avec des structures d’insertion locales et inclusion de personnes en situation de handicap." },
+  { "cle": "perennite", "titre": "Pérenniser l’identité du groupe", "texte": "Chaque entreprise garde son nom et son autonomie ; les excédents sont réinvestis dans le matériel et la formation." }
 ]

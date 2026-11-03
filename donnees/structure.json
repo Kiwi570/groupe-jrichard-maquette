@@ -5,7 +5,7 @@
   "alternateName": "Groupe J.Richard, entrepreneur du paysage",
   "url": "https://groupe-jrichard-maquette.vercel.app/",
   "logo": "https://groupe-jrichard-maquette.vercel.app/assets/images/logo-512.png",
-  "description": "Paysagistes et élagueurs du Loiret depuis 1965 : conception, création et entretien d'espaces verts, élagage et soin aux arbres, génie végétal, pour les particuliers, les entreprises et les collectivités.",
+  "description": "Paysagistes et élagueurs du Loiret depuis 1965 : conception, création et entretien d’espaces verts, élagage et soin aux arbres, génie végétal, pour les particuliers, les entreprises et les collectivités.",
   "foundingDate": "1965",
   "numberOfEmployees": { "@type": "QuantitativeValue", "value": 160 },
   "email": "contact@groupe-jrichard.fr",

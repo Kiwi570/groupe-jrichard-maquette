@@ -1,7 +1,7 @@
 /* Détails vivants : titres découpés ligne à ligne, photos révélées de bas en haut (comme une pousse) avec un léger
    parallaxe, tiges des chiffres, tige de la méthode, cartes qui s'inclinent, boutons aimantés, questions animées.
    Tout passe par ScrollTrigger (positions mesurées au chargement), rien en mode calme. */
-import { etat } from '../socle/index.js?v=1';
+import { etat } from '../socle/index.js?v=2';
 
 const souris = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
@@ -25,11 +25,30 @@ export function initDetails() {
   document.querySelectorAll('main .media').forEach((m) => {
     if (m.closest('.tete, [data-strates-scene].epinglee, [data-galerie-section], .avis, .cime, .visionneuse, .vignettes')) return;
     const img = m.querySelector('img');
-    g.fromTo(m, { clipPath: 'inset(14% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: m, start: 'top 90%', once: true } });
+    /* Révélation en dôme, comme une pousse qui sort de terre (forme arrondie qui s'ouvre jusqu'aux bords). */
+    g.fromTo(m, { clipPath: 'inset(34% 8% 0% 8% round 50% 50% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0% round 0% 0% 0% 0%)', duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: m, start: 'top 92%', once: true }, onComplete: () => { m.style.clipPath = ''; } });
     if (img && m.offsetHeight > 260) {
       g.fromTo(img, { scale: 1.14, yPercent: -4 }, { yPercent: 4, ease: 'none', scrollTrigger: { trigger: m, start: 'top bottom', end: 'bottom top', scrub: true } });
     }
   });
+
+  /* Ouverture : la photo s'approche lentement quand on quitte le haut de page. */
+  const fondTete = document.querySelector('.tete-fond');
+  if (fondTete) g.fromTo(fondTete, { scale: 1, yPercent: 0 }, { scale: 1.14, yPercent: 7, ease: 'none', scrollTrigger: { trigger: '.tete', start: 'top top', end: 'bottom top', scrub: true } });
+
+  /* Défilement rapide : les photos à l'écran s'étirent légèrement dans le sens du mouvement
+     (transformation posée seulement sur les photos visibles, rien à recalculer ailleurs). */
+  const etirables = document.querySelectorAll('main .grille-cartes .media, main .vignettes .media, main .galerie-carte .media, main .fil-carte .media');
+  if (etirables.length) {
+    const vues = new Set();
+    const io = new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? vues.add(e.target) : (vues.delete(e.target), (e.target.style.transform = '')))));
+    etirables.forEach((m) => io.observe(m));
+    const etat2 = { v: 0 };
+    let repos = 0;
+    const poser = () => { const v = etat2.v; vues.forEach((m) => { m.style.transform = Math.abs(v) < 0.004 ? '' : `skewY(${(v * 1.6).toFixed(3)}deg) scaleY(${(1 + v * v * 0.03).toFixed(4)})`; }); };
+    const vitesse = g.quickTo(etat2, 'v', { duration: 0.45, ease: 'power3.out', onUpdate: poser });
+    ST.create({ start: 0, end: 'max', onUpdate: (s) => { vitesse(g.utils.clamp(-1, 1, s.getVelocity() / 3000)); clearTimeout(repos); repos = setTimeout(() => vitesse(0), 120); } });
+  }
 
   /* Chiffres : une tige orange pousse au-dessus de chaque chiffre. */
   document.querySelectorAll('[data-tige]').forEach((t, i) => g.fromTo(t, { scaleX: 0 }, { scaleX: 1, duration: 1.2, delay: (i % 4) * 0.12, ease: 'power3.out', scrollTrigger: { trigger: t, start: 'top 90%', once: true } }));
@@ -50,8 +69,10 @@ export function initDetails() {
       c.addEventListener('pointermove', (e) => {
         if (!b) return;
         const x = (e.clientX - b.left) / b.width - 0.5, y = (e.clientY - b.top) / b.height - 0.5;
-        c.style.setProperty('--ry', (x * 7).toFixed(2) + 'deg');
-        c.style.setProperty('--rx', (-y * 7).toFixed(2) + 'deg');
+        c.style.setProperty('--ry', (x * 11).toFixed(2) + 'deg');
+        c.style.setProperty('--rx', (-y * 11).toFixed(2) + 'deg');
+        c.style.setProperty('--gx', ((x + 0.5) * 100).toFixed(1) + '%');
+        c.style.setProperty('--gy', ((y + 0.5) * 100).toFixed(1) + '%');
       });
       c.addEventListener('pointerleave', () => { b = null; c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
     });

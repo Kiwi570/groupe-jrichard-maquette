@@ -41,7 +41,7 @@ ${tete(c, {
     <p class="note-maquette"><span class="a-completer">${c.t('commun.aCompleter')}</span> ${c.t('actualites.noteReprendre')}</p>
     <ul class="fil" data-fil>
       ${tous.map((a) => html`<li data-theme="${a.theme}"${a.evenement ? html` data-evenement="${a.evenement}"` : ''}>
-        ${a.page ? html`<a class="fil-carte" href="${c.url('article-' + a.cle)}" data-libelle="${a.titre}">` : html`<div class="fil-carte">`}
+        ${a.page ? html`<a class="fil-carte" href="${c.url('article-' + a.cle)}" data-libelle="${a.titre}" data-incline>` : html`<div class="fil-carte">`}
           ${a.page && a.image ? c.media({ nom: a.image, alt: a.imageAlt, sizes: '(max-width: 700px) 100vw, 33vw' }) : html`<div class="carte-dessin fil-dessin" data-visuel aria-hidden="true">${dessin({ realisations: 'pousse', arbres: 'rameau', biodiversite: 'feuille', securite: 'hauban', apprentissage: 'pousse', evenements: 'soleil' }[a.theme] || 'feuille')}</div>`}
           <p class="meta-article" style="margin:0"><time datetime="${a.date}">${dateLongue(a.date)}</time> · ${c.t(`actualites.themes.${a.theme}`)} <span class="badge badge--passe" data-statut-evenement hidden>${c.t('actualites.termine')}</span></p>
           <h3>${a.titre}</h3>

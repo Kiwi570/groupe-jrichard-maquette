@@ -1,7 +1,7 @@
 /* Sites : statut « ouvert maintenant » calculé à l'heure de Paris (jamais celle du visiteur), jours fériés compris ;
    aucun statut sans horaires fiables (Amilly, à confirmer) ni les jours fériés. Carte : la Loire se trace,
    les sites pulsent doucement (à l'écran seulement), un site touché met sa fiche en avant. */
-import { boucle, etat } from '../socle/index.js?v=1';
+import { boucle, etat } from '../socle/index.js?v=2';
 
 const JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
 

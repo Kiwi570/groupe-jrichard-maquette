@@ -1,15 +1,15 @@
 [
   { "cle": "jrichard", "nom": "J.Richard Paysage", "couleur": "#669B2E", "logo": "logos/jrichard-paysage", "ville": "Orléans", "depuis": "1965",
-    "metier": "Aménagement et entretien d'espaces verts pour les collectivités et les entreprises",
-    "faits": ["Fondée en 1965 par Jacques Richard", "81 salariés dont 7 apprentis", "9 M€ de chiffre d'affaires en 2025", "60 % de clients publics, 40 % de clients privés", "Label « Engagé RSE », niveau exemplaire (Afnor, 2022)"],
+    "metier": "Aménagement et entretien d’espaces verts pour les collectivités et les entreprises",
+    "faits": ["Fondée en 1965 par Jacques Richard", "81 salariés dont 7 apprentis", "9 M€ de chiffre d’affaires en 2025", "60 % de clients publics, 40 % de clients privés", "Label « Engagé RSE », niveau exemplaire (Afnor, 2022)"],
     "telephone": "02 38 66 13 84", "telephoneLien": "+33238661384", "email": "contact@jrichard-paysage.fr", "site": "orleans", "profils": ["entreprise", "collectivite"] },
   { "cle": "hegy", "nom": "Hegy Paysage", "couleur": "#ED661A", "logo": "logos/hegy-paysage", "ville": "Orléans", "depuis": "2005",
     "metier": "Conception et création de jardins de particuliers",
-    "faits": ["Dans le groupe depuis 2005", "7 spécialistes de l'aménagement de jardin", "Conception 3D depuis 2018"],
+    "faits": ["Dans le groupe depuis 2005", "7 spécialistes de l’aménagement de jardin", "Conception 3D depuis 2018"],
     "telephone": "02 38 66 35 11", "telephoneLien": "+33238663511", "email": "contact@hegy-paysage.fr", "site": "orleans", "profils": ["particulier"] },
   { "cle": "sauvegrain", "nom": "Sauvegrain Paysage", "couleur": "#1A9B9B", "logo": "logos/sauvegrain-paysage", "ville": "Amilly", "depuis": "2008",
-    "metier": "Création et entretien de jardins autour d'Amilly et de Montargis",
-    "faits": ["Fondée en 1974 par François Sauvegrain", "Dans le groupe depuis 2008", "Environ 50 km autour d'Amilly : Loiret, Seine-et-Marne, Yonne"],
+    "metier": "Création et entretien de jardins autour d’Amilly et de Montargis",
+    "faits": ["Fondée en 1974 par François Sauvegrain", "Dans le groupe depuis 2008", "Environ 50 km autour d’Amilly : Loiret, Seine-et-Marne, Yonne"],
     "telephone": "02 38 26 13 94", "telephoneLien": "+33238261394", "email": "contact@sauvegrain-paysage.fr", "site": "amilly", "profils": ["particulier", "entreprise", "collectivite"] },
   { "cle": "sauvegrain-services", "nom": "Sauvegrain Paysage Services", "couleur": "#1A9B9B", "logo": "logos/sauvegrain-paysage-services", "ville": "Amilly", "depuis": "2015",
     "metier": "Jardinage à domicile (services à la personne) dans le bassin montargois",
@@ -21,6 +21,6 @@
     "telephone": "02 38 66 06 06", "telephoneLien": "+33238660606", "email": "contact@services-goueffon.fr", "site": "orleans", "profils": ["particulier"] },
   { "cle": "goueffon-elagage", "nom": "Goueffon Élagage", "couleur": "#CDCD0C", "logo": "logos/goueffon-elagage", "ville": "Semoy", "depuis": "2016",
     "metier": "Élagage, abattage et soin aux arbres, avec une antenne à Amilly",
-    "faits": ["Fondée en 1989 par Vincent Goueffon", "Dans le groupe depuis 2016", "7 équipes d'élagueurs", "Label « Engagé RSE », niveau confirmé (Afnor, 2024)"],
+    "faits": ["Fondée en 1989 par Vincent Goueffon", "Dans le groupe depuis 2016", "7 équipes d’élagueurs", "Label « Engagé RSE », niveau confirmé (Afnor, 2024)"],
     "telephone": "02 38 61 01 01", "telephoneLien": "+33238610101", "email": "contact@goueffon-elagage.fr", "site": "semoy", "profils": ["particulier", "entreprise", "collectivite"] }
 ]

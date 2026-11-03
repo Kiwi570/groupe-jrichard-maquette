@@ -1,7 +1,7 @@
 /* Demande de devis en 5 étapes : une étape à la fois (sans JavaScript, tout est visible), hauteur animée,
    étape annoncée aux lecteurs d'écran, choix préremplis par l'adresse (?motif=devis&besoin=elagage&profil=…),
    récapitulatif en direct et aiguillage vers la société du groupe qui répondra. */
-import { rafraichir, etat } from '../socle/index.js?v=1';
+import { rafraichir, etat } from '../socle/index.js?v=2';
 
 const LIBELLES = {};
 const SOCIETES = {

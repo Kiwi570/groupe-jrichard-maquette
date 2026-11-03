@@ -1,7 +1,7 @@
 [
   { "cle": "paysagiste", "titre": "Paysagiste création et entretien", "metier": "paysage", "lieu": "", "contrat": "" },
   { "cle": "elagueur", "titre": "Grimpeur-élagueur", "metier": "elagage", "lieu": "", "contrat": "" },
-  { "cle": "chef-equipe", "titre": "Responsable d'équipe (création, entretien ou élagage)", "metier": "paysage", "lieu": "", "contrat": "" },
+  { "cle": "chef-equipe", "titre": "Responsable d’équipe (création, entretien ou élagage)", "metier": "paysage", "lieu": "", "contrat": "" },
   { "cle": "mecanicien", "titre": "Mécanicien espaces verts", "metier": "atelier", "lieu": "", "contrat": "" },
   { "cle": "magasinier", "titre": "Magasinier", "metier": "atelier", "lieu": "", "contrat": "" },
   { "cle": "apprenti-paysagiste", "titre": "Apprenti paysagiste", "metier": "alternance", "lieu": "", "contrat": "Alternance" },

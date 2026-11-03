@@ -1,7 +1,7 @@
 /* Filtres des listes (réalisations, postes, actualités) : choix gardés dans l'adresse de la page,
    passage en fondu sans vider la page, rubriques vides grisées, compte annoncé. Statuts automatiques
    des événements passés (« Terminé »), calculés à la date de Paris. Liens « Postuler » sans rechargement. */
-import { rafraichir } from '../socle/index.js?v=1';
+import { rafraichir } from '../socle/index.js?v=2';
 
 function filtrer(form, liste, attrs, mots) {
   const g = window.gsap;

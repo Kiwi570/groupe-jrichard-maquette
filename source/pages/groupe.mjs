@@ -29,6 +29,19 @@ function tronc(histoire, photo) {
   </svg>`);
 }
 
+
+/* Arbre des six sociétés : un tronc, six branches qui se dessinent, une couronne de la couleur de chaque société. */
+function arbreSocietes(liste) {
+  const n = liste.length;
+  const branches = liste.map((s, i) => {
+    const x = 1000 * (i + 0.5) / n, y = 46 + (i % 2) * 22;
+    const d = `M500 236 C 500 ${180 - Math.abs(i - (n - 1) / 2) * 6}, ${x} ${y + 90}, ${x.toFixed(0)} ${y + 20}`;
+    const feuilles = [[-16, 4, 18], [14, 0, 20], [0, -12, 22], [-4, 10, 14], [10, 12, 13]].map(([dx, dy, r]) => `<circle cx="${(x + dx).toFixed(0)}" cy="${y + dy}" r="${r}"/>`).join('');
+    return `<g class="arbre-branche" data-branche="${i}" style="--couleur:${s.couleur}"><path class="bois" d="${d}" pathLength="1"/><g class="couronne">${feuilles}</g></g>`;
+  }).join('');
+  return `<svg class="arbre-societes" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" data-arbre-societes><path class="tronc" d="M486 300 C 490 270, 496 250, 500 236 C 504 250, 510 270, 514 300Z"/>${branches}<path class="racines" d="M500 300 c -40 -4 -90 2 -140 0 M500 300 c 40 -4 90 2 140 0" pathLength="1"/></svg>`;
+}
+
 export default (c) => html`
 ${tete(c, {
     image: 'photos/equipe-groupe', alt: c.s('groupe.tete.alt'), cadrage: '50% 55%', cadrageMobile: '45% 55%',
@@ -53,7 +66,7 @@ ${tete(c, {
   <div class="conteneur">
     ${chapitre(c, { surtitre: c.t('groupe.histoire.surtitre'), titre: c.tb('groupe.histoire.titre'), chapeau: c.t('groupe.histoire.chapeau') })}
     <div class="cernes">
-      <div class="cernes-tronc" data-visuel>${imageExiste('grok/coupe-tronc') ? c.media({ nom: 'grok/coupe-tronc', alt: c.s('groupe.histoire.altGrok'), classe: 'cernes-photo', sizes: '(max-width: 900px) 90vw, 45vw' }) : ''}${tronc(c.donnees.histoire, imageExiste('grok/coupe-tronc'))}</div>
+      <div class="cernes-tronc" data-visuel>${imageExiste('grok/coupe-tronc') ? c.media({ nom: 'grok/coupe-tronc', alt: c.s('groupe.histoire.altGrok'), classe: 'cernes-photo', sizes: '(max-width: 900px) 90vw, 45vw' }) : ''}${tronc(c.donnees.histoire, imageExiste('grok/coupe-tronc'))}<div class="annee-geante" aria-hidden="true" data-annee-geante data-audit-ignorer><span>${c.donnees.histoire[0].annee}</span></div></div>
       <ol class="cernes-liste">${c.donnees.histoire.map((h, i) => html`<li data-cerne-etape="${i}"><button type="button" data-cerne-bouton="${i}" aria-describedby="cerne-texte-${i}"><b>${h.annee}</b><span>${h.titre}</span></button><p id="cerne-texte-${i}">${h.texte}</p></li>`)}</ol>
     </div>
   </div>
@@ -62,7 +75,8 @@ ${tete(c, {
 <section class="s-sauge bloc-y" id="societes" data-strate="Tronc">
   <div class="conteneur">
     ${chapitre(c, { surtitre: c.t('groupe.societes.surtitre'), titre: c.tb('groupe.societes.titre'), chapeau: c.t('groupe.societes.chapeau') })}
-    <ul class="societes">${c.donnees.societes.map((s) => html`<li class="societe" style="--couleur:${s.couleur}" data-anime>
+    ${brut(arbreSocietes(c.donnees.societes))}
+    <ul class="societes">${c.donnees.societes.map((s, i) => html`<li class="societe" style="--couleur:${s.couleur}" data-anime data-incline data-societe="${i}">
       <div class="plaque plaque--societe" data-visuel>${logo(c, s.logo.replace('logos/', ''), s.nom, { hauteur: 60 })}</div>
       <h3>${s.nom}</h3><p>${s.metier}</p>
       <ul>${s.faits.map((f) => html`<li>${f}</li>`)}</ul>

@@ -51,7 +51,7 @@ export function chapitre(c, { surtitre, titre, chapeau, seul = false, id }) {
 
 /* Cartes de prestations, filtrables par profil. */
 export function cartes(c, liste, { lienDevis } = {}) {
-  return html`<div class="grille-cartes" data-filtre-profil>
+  return html`<div class="grille-cartes presta-liste" data-filtre-profil data-presta-liste style="--n:${liste.length}">
   ${liste.map((p) => html`<article class="carte-presta" id="${p.cle}" data-profils="${p.profils.join(' ')}" data-incline>
     ${p.image ? mediaOu(c, { nom: p.image, alt: p.titre, cadrage: p.cadrage || '50% 50%', sizes: '(max-width: 700px) 100vw, 33vw' }, html`<div class="carte-dessin" aria-hidden="true">${dessin(p.dessin || 'pousse')}</div>`) : html`<div class="carte-dessin" aria-hidden="true">${dessin(p.dessin || 'pousse')}</div>`}
     <div class="carte-presta-corps">
@@ -61,6 +61,7 @@ export function cartes(c, liste, { lienDevis } = {}) {
       ${lienDevis ? c.lien('contact', { ancre: 'devis', params: `motif=devis&besoin=${lienDevis}&presta=${p.cle}`, classe: 'lien-fleche', texte: c.t('commun.demanderCeci') }) : ''}
     </div>
   </article>`)}
+  <div class="presta-cadre" aria-hidden="true"><div class="presta-cadre-colle" data-presta-cadre></div></div>
 </div>
 <p class="filtre-vide" data-filtre-vide hidden>${c.t('commun.filtreVide')}</p>`;
 }
@@ -73,6 +74,9 @@ export function faq(c, liste) {
 export function cime(c, { titre, texte, actions, image = 'grok/ciel-cime', id = 'devis-final' }) {
   return html`<section class="cime s-ciel" id="${id}" data-strate="Cime">
   ${mediaOu(c, { nom: image, alt: '', classe: 'cime-fond', sizes: '100vw' }, html`<svg class="cime-dessin" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMin slice" aria-hidden="true">${brut(feuillageCime())}</svg>`)}
+  <div class="cime-ciel" aria-hidden="true" data-audit-ignorer><span class="cime-nuage cime-nuage--1"></span><span class="cime-nuage cime-nuage--2"></span><span class="cime-nuage cime-nuage--3"></span>${brut(oiseaux())}</div>
+  <div class="cime-feuillage cime-feuillage--g" aria-hidden="true" data-audit-ignorer data-cime-feuillage>${brut(grappe(11))}</div>
+  <div class="cime-feuillage cime-feuillage--d" aria-hidden="true" data-audit-ignorer data-cime-feuillage>${brut(grappe(29))}</div>
   <div class="conteneur cime-contenu">
     <p class="surtitre" data-anime>${c.t('commun.cimeSurtitre')}</p>
     <h2 class="titre-1" data-titre-decoupe>${titre}</h2>
@@ -90,6 +94,43 @@ export function logo(c, cle, alt, { hauteur = 52, classe = '' } = {}) {
 }
 
 /* Feuillage de cime dessiné (en attendant l'image) : silhouettes de feuilles en haut de l'écran. */
+/* Grappe de feuilles qui pend d'un coin de la cime (déterministe : la même à chaque génération). */
+function grappe(graine) {
+  let a = graine;
+  const r = () => ((a = (a * 9301 + 49297) % 233280) / 233280);
+  const verts = ['#2E4A30', '#32662A', '#4E7F2C', '#669B2E', '#7FA845', '#A9C47F'];
+  let branches = '', feuilles = '';
+  for (let b = 0; b < 5; b++) {
+    const x0 = -20 + r() * 60, y0 = -20 + r() * 80, x1 = 160 + r() * 420, y1 = 40 + r() * 360;
+    const cx = (x0 + x1) / 2 + (r() - 0.5) * 120, cy = (y0 + y1) / 2 - 60 * r();
+    branches += `<path d="M${x0.toFixed(0)} ${y0.toFixed(0)}Q${cx.toFixed(0)} ${cy.toFixed(0)} ${x1.toFixed(0)} ${y1.toFixed(0)}" fill="none" stroke="#3B2E1E" stroke-width="${(5 - b * 0.7).toFixed(1)}" stroke-linecap="round"/>`;
+    for (let i = 0; i < 22; i++) {
+      const t = 0.12 + (i / 22) * 0.88, u = 1 - t;
+      const x = u * u * x0 + 2 * u * t * cx + t * t * x1, y = u * u * y0 + 2 * u * t * cy + t * t * y1;
+      const ang = (r() - 0.5) * 160 + (i % 2 ? 40 : -40), e = 0.7 + r() * 0.9 - t * 0.25;
+      feuilles += `<path d="M0 0C9-10 26-11 38 0C26 11 9 10 0 0Z" fill="${verts[Math.floor(r() * verts.length)]}" opacity="${(0.82 + r() * 0.18).toFixed(2)}" transform="translate(${x.toFixed(0)} ${y.toFixed(0)}) rotate(${ang.toFixed(0)}) scale(${e.toFixed(2)})"/>`;
+    }
+  }
+  return `<svg viewBox="0 0 600 460" preserveAspectRatio="xMinYMin meet">${branches}${feuilles}</svg>`;
+}
+
+/* Plante qui pousse à mesure que le formulaire se remplit (une feuille par réponse) et fleurit à l'envoi. */
+export function plante() {
+  const feuilles = [[130, -1], [116, 1], [102, -1], [88, 1], [74, -1], [60, 1]].map(([y, cote], i) => {
+    const x = 60 + (y < 100 ? 0 : 1);
+    const d = cote < 0 ? 'M0 0C-8-10-24-12-34-4C-24 4-10 6 0 0Z' : 'M0 0C8-10 24-12 34-4C24 4 10 6 0 0Z';
+    return `<g class="plante-feuille" style="--i:${i}" transform="translate(${x} ${y})"><path d="${d}"/><path class="nervure" d="${cote < 0 ? 'M0 0L-26-5' : 'M0 0L26-5'}"/></g>`;
+  }).join('');
+  const petales = Array.from({ length: 7 }, (_, i) => `<ellipse cx="0" cy="-9" rx="5" ry="9" transform="rotate(${i * (360 / 7)})"/>`).join('');
+  return `<svg class="plante" viewBox="0 0 120 170" aria-hidden="true" data-plante><ellipse class="plante-sol" cx="60" cy="152" rx="40" ry="7"/><path class="plante-tige" d="M60 152C57 128 64 100 59 74S61 46 60 34" pathLength="1"/>${feuilles}<g class="plante-fleur" transform="translate(60 32)"><g class="petales">${petales}</g><circle r="5.5" class="coeur"/></g></svg>`;
+}
+
+/* Trois oiseaux qui traversent le ciel une fois, quand on arrive à la cime. */
+function oiseaux() {
+  const un = (x, y, e) => `<g class="oiseau" transform="translate(${x} ${y}) scale(${e})"><path class="aile aile--g" d="M0 0C-6-6-13-7-20-4C-13-3-6 0 0 3Z"/><path class="aile aile--d" d="M0 0C6-6 13-7 20-4C13-3 6 0 0 3Z"/></g>`;
+  return `<svg class="cime-oiseaux" viewBox="0 0 160 70">${un(30, 40, 1)}${un(78, 22, 0.8)}${un(118, 48, 0.65)}</svg>`;
+}
+
 function feuillageCime() {
   let s = '', a = 7;
   const r = () => ((a = (a * 9301 + 49297) % 233280) / 233280);

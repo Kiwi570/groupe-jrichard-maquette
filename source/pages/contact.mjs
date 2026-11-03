@@ -1,7 +1,7 @@
 /* Contact : demande de devis ou de rendez-vous en 5 étapes, récapitulatif en direct et aiguillage vers la bonne société,
    puis les trois sites (horaires, statut, carte). */
-import { html } from '../../outils/gabarit.mjs';
-import { tete, chapitre, logo } from '../gabarits/blocs.mjs';
+import { html, brut } from '../../outils/gabarit.mjs';
+import { tete, chapitre, logo, plante } from '../gabarits/blocs.mjs';
 import { carteLoiret, listeSites } from '../gabarits/carte.mjs';
 
 export const page = { cle: 'contact', fichier: 'contact', imagePartage: 'photos/allee-massifs-1280.webp' };
@@ -47,7 +47,7 @@ ${tete(c, {
           <div class="champ"><label for="devis-message">${c.t('form.message')}</label><textarea id="devis-message" name="message"></textarea></div>
           <div class="champ"><span class="champ-libelle" id="devis-fichier-libelle">${c.t('contact.form.fichier')}</span><label class="fichier" for="devis-fichier"><input class="fichier-input" id="devis-fichier" name="fichier" type="file" accept=".jpg,.png,.pdf,.xlsx,.xls,.docx,.doc" multiple aria-labelledby="devis-fichier-libelle" aria-describedby="devis-fichier-nom" data-fichier data-fichiers-texte="${c.t('contact.form.fichiersChoisis')}"><span class="fichier-bouton" aria-hidden="true">${c.t('contact.form.fichierBouton')}</span><span class="fichier-nom" id="devis-fichier-nom" data-fichier-nom>${c.t('contact.form.fichierAucun')}</span></label></div>
           <input type="hidden" name="presta">
-          <p class="mention-donnees">${c.t('form.mentionDonnees')} ${c.lien('confidentialite', { texte: c.t('form.politique') })} <span class="a-completer">${c.t('commun.aCompleter')}</span></p>
+          <p class="mention-donnees">${c.t('form.mentionDonnees')} ${c.lien('confidentialite', { texte: c.t('form.politique') })}.</p>
           <p><button class="bouton bouton--orange" type="submit" data-devis-envoyer>${c.t('contact.form.envoyer')}</button></p>
           <p data-message-envoi tabindex="-1" hidden data-texte="${c.s('contact.form.simule')}"></p>
         </fieldset>
@@ -58,6 +58,7 @@ ${tete(c, {
       </div>
     </form>
     <aside class="recap" aria-labelledby="recap-titre">
+      ${brut(plante())}
       <h3 id="recap-titre">${c.t('contact.recap.titre')}</h3>
       <dl data-recap>
         ${['motif', 'profil', 'besoin', 'secteur'].map((n) => html`<dt>${c.t(`contact.form.etapes.${n}`)}</dt><dd data-recap-champ="${n}">${c.t('contact.recap.vide')}</dd>`)}

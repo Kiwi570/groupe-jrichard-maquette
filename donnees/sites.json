@@ -25,7 +25,7 @@
     "telephone": "02 38 26 13 94", "telephoneLien": "+33238261394",
     "societes": ["sauvegrain", "sauvegrain-services", "goueffon-elagage"],
     "horaires": [],
-    "horairesTexte": "Du lundi au jeudi, 9 h – 12 h et 14 h – 18 h ; le vendredi jusqu'à 17 h",
+    "horairesTexte": "Du lundi au jeudi, 9 h – 12 h et 14 h – 18 h ; le vendredi jusqu’à 17 h",
     "aConfirmer": true,
     "carte": { "x": 0.80, "y": 0.42 }
   }
