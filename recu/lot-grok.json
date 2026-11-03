@@ -1,0 +1,137 @@
+[
+ {
+  "source": "recu/grok/saison-printemps.png",
+  "nom": "grok/saison-printemps",
+  "largeurs": [
+   640,
+   1280
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/saison-ete.png",
+  "nom": "grok/saison-ete",
+  "largeurs": [
+   640,
+   1280
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/saison-automne.png",
+  "nom": "grok/saison-automne",
+  "largeurs": [
+   640,
+   1280
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/saison-hiver.png",
+  "nom": "grok/saison-hiver",
+  "largeurs": [
+   640,
+   1280
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/herbier-16x9.png",
+  "nom": "grok/herbier",
+  "source_mobile": "recu/grok/herbier-9x16.png",
+  "cadrage": [
+   50,
+   50
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/souche-pousse-16x9.png",
+  "nom": "grok/souche-pousse",
+  "source_mobile": "recu/grok/souche-pousse-9x16.png",
+  "cadrage": [
+   50,
+   50
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/gland-germe.png",
+  "nom": "grok/gland-germe",
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/berge-saules.png",
+  "nom": "grok/berge-saules",
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/mains-plantation.png",
+  "nom": "grok/mains-plantation",
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/ecopaturage.png",
+  "nom": "grok/ecopaturage",
+  "largeurs": [
+   640,
+   1280
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/materiel-elagueur.png",
+  "nom": "grok/materiel-elagueur",
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/feuillage-flou.png",
+  "nom": "grok/feuillage-flou",
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/coupe-tronc.png",
+  "nom": "grok/coupe-tronc",
+  "largeurs": [
+   640,
+   1280
+  ],
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/plan-mains.png",
+  "nom": "grok/plan-mains",
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/racines-sol.png",
+  "nom": "grok/racines-sol",
+  "etalonnage": true
+ },
+ {
+  "source": "recu/grok/texture-canopee.png",
+  "nom": "grok/texture-canopee",
+  "largeurs": [
+   640,
+   1280
+  ]
+ },
+ {
+  "source": "recu/grok/ciel-cime-9x16.png",
+  "nom": "grok/ciel-cime",
+  "ratio": [
+   16,
+   9
+  ],
+  "cadrage": [
+   50,
+   30
+  ],
+  "source_mobile": "recu/grok/ciel-cime-9x16.png",
+  "cadrage_mobile": [
+   50,
+   50
+  ],
+  "etalonnage": true
+ }
+]

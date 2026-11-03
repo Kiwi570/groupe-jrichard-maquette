@@ -1,0 +1,6 @@
+[
+  { "cle": "salaries", "valeur": 160, "suffixe": "", "libelle": "salariés, dont 15 apprentis" },
+  { "cle": "societes", "valeur": 6, "suffixe": "", "libelle": "entreprises complémentaires" },
+  { "cle": "sites", "valeur": 3, "suffixe": "", "libelle": "sites : Orléans, Semoy, Amilly" },
+  { "cle": "ca", "valeur": 16, "suffixe": " M€", "libelle": "de chiffre d’affaires en 2025" }
+]

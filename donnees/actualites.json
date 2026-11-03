@@ -1,0 +1,116 @@
+[
+ {
+  "cle": "journee-securite-sauvegrain",
+  "date": "2026-10-29",
+  "theme": "securite",
+  "titre": "Une journée sécurité pour les paysagistes de Sauvegrain Paysage",
+  "auteur": "Nadège Beauchamp",
+  "chapo": "Le 23 octobre 2026, les équipes d'Amilly ont passé une journée entière à se former à la prévention des risques.",
+  "corps": [
+   [
+    "La prévention à l'honneur",
+    "Organisée tous les deux ans sur chaque site du groupe, cette journée s'inscrit dans la démarche RSE. Avec un casque de réalité virtuelle, l'organisme BC&F Formations a fait ressentir les pertes de coordination dues à l'alcool, à la drogue ou à la fatigue. La MSA a animé un atelier sur le corps, le poste et l'environnement de travail, et Moreau Incendies une formation express aux extincteurs."
+   ],
+   [
+    "Des ateliers sur les engins",
+    "Pelle, mini-pelle, tondeuse, tracteur, chariot élévateur, nacelle : des sessions ont porté sur la conduite et l'entretien des engins, avec le passage de certaines autorisations de conduite."
+   ]
+  ],
+  "image": "grok/materiel-elagueur",
+  "imageAlt": "Casque, harnais, cordes et mousquetons posés au pied d’un chêne"
+ },
+ {
+  "cle": "challenge-msa-2026",
+  "date": "2026-10-19",
+  "theme": "apprentissage",
+  "titre": "Un apprenti du groupe remporte en équipe le challenge Prévention des risques de la MSA",
+  "auteur": "Nadège Beauchamp",
+  "chapo": "Benjamin, apprenti chez J.Richard Paysage, et ses deux équipiers ont obtenu le meilleur score face à cinq établissements de la région.",
+  "corps": [
+   [
+    "Une finale à Bourges",
+    "En deuxième année de BTS Aménagements paysagers au campus de La Mouillère, Benjamin est apprenti en création d'espaces verts. Après une sélection interne, son équipe de trois a rejoint la finale au CFPPA de Bourges."
+   ],
+   [
+    "Six épreuves",
+    "Secourisme sur une blessure par tronçonneuse, chasse aux risques, sécurisation d'un chantier, chargement ergonomique, reconnaissance de dix végétaux et questionnaire sur la réglementation : l'équipe orléanaise a terminé en tête."
+   ]
+  ],
+  "image": "photos/apprentis-groupe",
+  "imageAlt": "Des apprentis du groupe devant un hangar"
+ },
+ {
+  "cle": "jardins-flottants-saran",
+  "date": "2026-07-16",
+  "theme": "realisations",
+  "titre": "Trois jardins flottants posés à Malakoff Humanis Saran",
+  "auteur": "Nadège Beauchamp",
+  "realisation": "jardins-flottants",
+  "chapo": "Le 9 juillet, les paysagistes de J.Richard ont installé trois modules Aloé sur l'étang du site.",
+  "corps": [
+   [
+    "Purifier l'eau, préserver la biodiversité",
+    "Conçus par Urbanoé à Angers et assemblés sur place, les modules ont une coque hexagonale en aluminium et liège. Leurs plantes mellifères attirent les pollinisateurs, leurs racines captent certaines bactéries et améliorent la qualité de l'eau, et ils servent de refuge à la faune, notamment aux batraciens."
+   ]
+  ],
+  "image": "photos/jardin-flottant",
+  "imageAlt": "Un module de jardin flottant hexagonal sur un plan d'eau"
+ },
+ {
+  "cle": "chenilles-processionnaires-chene",
+  "date": "2026-06-12",
+  "theme": "arbres",
+  "titre": "Suppression des nids de chenilles processionnaires du chêne",
+  "auteur": "Nadège Beauchamp",
+  "chapo": "Les processionnaires du chêne progressent sur le territoire : mieux vaut agir dès les premiers nids.",
+  "corps": [
+   [
+    "Un danger pour la santé",
+    "Leurs poils urticants provoquent irritations, allergies et troubles respiratoires, et restent actifs longtemps."
+   ],
+   [
+    "Retrait par aspiration",
+    "Goueffon Élagage retire désormais les nids par aspiration, avec un matériel dédié et des équipements de protection qui limitent la dispersion des poils, y compris sur les grands arbres. Particuliers, entreprises, collectivités et sites industriels : devis gratuit au 02 38 61 01 01."
+   ]
+  ],
+  "image": "photos/grimpeur-contreplongee",
+  "imageAlt": "Un grimpeur-élagueur dans un grand chêne"
+ },
+ {
+  "cle": "portes-ouvertes-sauvegrain-2026",
+  "date": "2026-04-13",
+  "theme": "evenements",
+  "titre": "Portes ouvertes Sauvegrain Paysage à Amilly",
+  "auteur": "Nadège Beauchamp",
+  "evenement": "2026-05-30",
+  "chapo": "Le samedi 30 mai 2026, de 10 h à 18 h, au 79 rue de Paucourt à Amilly, sur le thème du jardin durable et résistant à la chaleur.",
+  "corps": [
+   [
+    "Au programme",
+    "Spas de la marque française Be Spa, pergolas et carports sur mesure, démonstration de fours à pizza, conseils d'entretien personnalisés et offres réservées à la journée. Entrée libre."
+   ]
+  ],
+  "image": "photos/locaux-sauvegrain",
+  "imageAlt": "Les locaux de Sauvegrain Paysage, 79 rue de Paucourt à Amilly"
+ },
+ {
+  "cle": "jardins-sur-l-eau",
+  "date": "2026-04-07",
+  "theme": "biodiversite",
+  "titre": "Nouveau dans le Loiret : des jardins sur l'eau",
+  "auteur": "Nadège Beauchamp",
+  "chapo": "Le Groupe J.Richard devient le partenaire exclusif d'Urbanoé dans le Loiret pour les jardins flottants Aloé.",
+  "corps": [
+   [
+    "Des îlots de biodiversité",
+    "Une structure en liège et aluminium, des plantes qui épurent l'eau par phytoépuration, un refuge pour les oiseaux, les insectes, les batraciens et les poissons : les modules conviennent aux plans d'eau naturels ou artificiels peu végétalisés."
+   ],
+   [
+    "Modulables",
+    "Le module standard mesure 1,42 m de diamètre et s'utilise seul ou assemblé par 2, 3, 5 ou 10 ; la version mini, de 69 cm, convient aux bassins et aux mares."
+   ]
+  ],
+  "image": "photos/jardin-flottant",
+  "imageAlt": "Un module de jardin flottant Aloé sur un plan d'eau"
+ }
+]

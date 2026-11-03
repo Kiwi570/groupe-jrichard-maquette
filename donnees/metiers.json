@@ -1,0 +1,463 @@
+{
+ "amenagement": [
+  {
+   "cle": "etude",
+   "titre": "Étude et conception",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "grok/plan-mains",
+   "texte": "Rendez-vous sur place, plans en 2D ou en 3D par le bureau d'études, ambiances de nuit et des quatre saisons, échantillons de matériaux. Chez Sauvegrain, deux formules : l'étude « prête à planter » ou l'étude complète avec plan de masse, vues 3D et chiffrage."
+  },
+  {
+   "cle": "plantation",
+   "titre": "Plantations",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/plantation-arbre-motte",
+   "texte": "Plus de 1 000 arbres plantés par an. Terre végétale sur 40 à 50 cm pour les massifs et 1 m pour les fosses d'arbres, tuteurage pendant 3 ans, arrosage les premières années, paillage de 10 cm."
+  },
+  {
+   "cle": "gazon",
+   "titre": "Gazon et prairie fleurie",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/prairie-fleurie",
+   "texte": "Semis en mars-avril ou en septembre-octobre, gazon de placage, gazon synthétique, prairie fleurie fauchée à l'automne. Engrais naturel à libération lente."
+  },
+  {
+   "cle": "terrasse",
+   "titre": "Terrasses",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/terrasse-bois-graminees",
+   "texte": "Bois (pin, cumaru, bambou), pierre naturelle, céramique ou composite, posés collés ou sur plots réglables."
+  },
+  {
+   "cle": "allees",
+   "titre": "Allées et entrées",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/allee-paves-enherbes",
+   "texte": "Béton, enrobé, pavés ou gravier stabilisé entièrement perméable. Usages, pentes et drainage étudiés d'abord ; allées accessibles aux personnes à mobilité réduite."
+  },
+  {
+   "cle": "clotures",
+   "titre": "Clôtures et portails",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/cloture-barreaudage-roses",
+   "texte": "Clôtures rigides ou souples, barreaudage pour les établissements recevant du public, claustras ; portails pivotants, coulissants ou autoportants, motorisés. Un seul intervenant du génie civil à l'automatisme."
+  },
+  {
+   "cle": "pergolas",
+   "titre": "Pergolas, carports et abris",
+   "profils": [
+    "particulier",
+    "entreprise"
+   ],
+   "image": "photos/pergola-bioclimatique",
+   "texte": "Pergolas en bois ou bioclimatiques en aluminium, carports et abris sur mesure du fabricant français LI-SU des Temps, garantis 10 ans. Les démarches en mairie sont prises en charge."
+  },
+  {
+   "cle": "cuisines-spas",
+   "titre": "Cuisines extérieures et spas",
+   "profils": [
+    "particulier"
+   ],
+   "image": "photos/cuisine-exterieure-pergola",
+   "texte": "Cuisines Aspic, fabricant français, posées clé en main avec les raccordements ; spas Be Spa livrés, posés et mis en service, à découvrir au showroom d'Amilly."
+  },
+  {
+   "cle": "arrosage",
+   "titre": "Arrosage automatique",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/arrosage-pose",
+   "texte": "Étude de l'arrivée d'eau, découpage en secteurs, plan 2D ; goutte-à-goutte, turbines et tuyères, sondes en option."
+  },
+  {
+   "cle": "eaux-pluviales",
+   "titre": "Eaux pluviales",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/noue-verveines",
+   "texte": "Tranchées d'infiltration, cuves de récupération de 300 à 10 000 litres, noues et bassins dans les résidences."
+  },
+  {
+   "cle": "potagers",
+   "titre": "Potagers",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/potager-ecole",
+   "texte": "Carrés surélevés, buttes, potagers partagés ou pédagogiques pour les entreprises et les écoles."
+  },
+  {
+   "cle": "patios",
+   "titre": "Patios et terrasses d'entreprise",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/patio-entreprise",
+   "texte": "Mi-ombre, accès de plain-pied, revêtements drainants ; grue automotrice et camion souffleur de terre pour les cœurs d'îlot."
+  },
+  {
+   "cle": "residences",
+   "titre": "Résidences et lotissements",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/parc-residence-aerien",
+   "texte": "De la conception à l'entretien pour les promoteurs et les bailleurs : noues, bassins, agrès, nichoirs, gestion différenciée."
+  },
+  {
+   "cle": "voiries",
+   "titre": "Voiries et parkings paysagers",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/place-paves-gazon",
+   "texte": "Dalles alvéolées, pavés drainants, joints engazonnés ou poreux, contre le ruissellement et les îlots de chaleur."
+  },
+  {
+   "cle": "parcs",
+   "titre": "Parcs et jardins publics",
+   "profils": [
+    "collectivite"
+   ],
+   "image": "photos/arches-rosiers",
+   "texte": "Nivellement, allées, alternance d'ombre et de soleil, ganivelles, aires de jeux et terrains multisport."
+  },
+  {
+   "cle": "ecoles",
+   "titre": "Cours d'école",
+   "profils": [
+    "collectivite"
+   ],
+   "image": "photos/cour-ecole-bouleaux",
+   "texte": "Des projets construits avec les élèves, les enseignants et les parents : décroûtage, îlots de fraîcheur, végétaux non allergisants, classe dehors."
+  },
+  {
+   "cle": "jeux",
+   "titre": "Aires de jeux et équipements",
+   "profils": [
+    "collectivite",
+    "entreprise"
+   ],
+   "image": "photos/aire-jeux-inclusive",
+   "texte": "Jeux inclusifs et sensoriels de fabricants français posés selon les normes NF EN 1176 et 1177, fitness, parcours de santé, mobilier urbain."
+  },
+  {
+   "cle": "chateaux",
+   "titre": "Châteaux et jardins historiques",
+   "profils": [
+    "collectivite",
+    "entreprise"
+   ],
+   "image": "photos/chambord-broderie",
+   "texte": "Restauration des jardins à la française du château de Chambord, cours pavées et allées de châteaux du Loiret."
+  },
+  {
+   "cle": "interieur",
+   "titre": "Végétalisation intérieure",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/hall-vegetalise",
+   "texte": "Plantes naturelles ou stabilisées, murs végétaux, mousses et lichens, avec des horticulteurs locaux."
+  },
+  {
+   "cle": "biodiversite",
+   "titre": "Animation biodiversité",
+   "profils": [
+    "entreprise"
+   ],
+   "image": "photos/mesange-nichoir",
+   "texte": "Visite du site, parcours pédagogique, démonstrations de taille et pack biodiversité pour les salariés : L'Oréal à Vennecy (2024), John Deere à Saran et Dior à Saint-Jean-de-Braye (2025)."
+  }
+ ],
+ "entretien": [
+  {
+   "cle": "tonte",
+   "titre": "Tonte",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/tonte-frontale",
+   "texte": "Coupe à 7-8 cm, tous les 15 jours au printemps et une fois par mois l'été. Tondeuses jusqu'à 3,50 m de coupe et robots jusqu'à 5 000 m²."
+  },
+  {
+   "cle": "fauchage",
+   "titre": "Fauchage raisonné",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/robot-fauchage",
+   "texte": "Deux passages au printemps en gardant 5 à 10 % de bandes refuges, fauche tardive de juillet à septembre, fauche de sécurité en bord de route."
+  },
+  {
+   "cle": "taille",
+   "titre": "Taille raisonnée",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/taille-hortensias",
+   "texte": "Chaque arbuste est taillé selon sa ramification et sa floraison ; tout le personnel est formé chaque année par un spécialiste."
+  },
+  {
+   "cle": "desherbage",
+   "titre": "Désherbage sans produit phyto",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/desherbage-manuel",
+   "texte": "Manuel, mécanique ou thermique, complété par le paillage. Aucun produit phytosanitaire sur les chantiers depuis plus de dix ans."
+  },
+  {
+   "cle": "dechets",
+   "titre": "Déchets verts valorisés",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/broyage-branches",
+   "texte": "Paillage, mulching, bois raméal fragmenté, bois de chauffage : ce qui a poussé sur place reste sur place."
+  },
+  {
+   "cle": "ecopaturage",
+   "titre": "Éco-pâturage",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "grok/ecopaturage",
+   "texte": "Moutons solognots, une race locale, environ six brebis par hectare. Clôtures, formalités et suivi vétérinaire pris en charge par Sauvegrain Paysage."
+  },
+  {
+   "cle": "gestion-ecologique",
+   "titre": "Gestion différenciée",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/hotel-insectes",
+   "texte": "Plan de gestion en cinq étapes, nichoirs, gîtes à chauves-souris, haies de Benjes ; accompagnement vers les labels Écojardin et BiodiverCity."
+  },
+  {
+   "cle": "remise-en-etat",
+   "titre": "Remise en état de jardin",
+   "profils": [
+    "particulier"
+   ],
+   "image": "photos/jardin-longere-hortensias",
+   "texte": "Débroussaillage, taille, transplantation d'arbustes, désherbage et paillage : « tout est rattrapable »."
+  }
+ ],
+ "sap": [
+  "Tonte et scarification",
+  "Débroussaillage",
+  "Taille des haies et arbustes",
+  "Désherbage sans produit phyto",
+  "Potager",
+  "Arrosage pendant vos absences",
+  "Déneigement",
+  "Nettoyage haute pression"
+ ],
+ "elagage": [
+  {
+   "cle": "taille",
+   "titre": "Taille d'arbres",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/grimpeur-chene",
+   "cadrage": "78% 35%",
+   "texte": "Taille d'entretien, de réduction, d'adaptation près des lignes, en tête de chat ou architecturée. Diagnostic, choix de la méthode, intervention, broyage."
+  },
+  {
+   "cle": "formation",
+   "titre": "Taille de formation et fruitière",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/taille-formation-chambord",
+   "texte": "Dès la plantation puis chaque année en dormance. Fruitiers en gobelet, cordon, espalier ou palmette, avec des outils désinfectés."
+  },
+  {
+   "cle": "haies",
+   "titre": "Haies, lisières et rideaux",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/taille-rideau-nacelle",
+   "texte": "Avril-mai et septembre-octobre. Au-delà de 3 m : perche, nacelle ou lamier sur automotrice Energreen, avec balisage de la voirie."
+  },
+  {
+   "cle": "abattage",
+   "titre": "Abattage et démontage",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/abattage-nacelle",
+   "texte": "Abattage dirigé, démontage avec rétention par cordes et poulies, ou à la grue. Diagnostic sur place et devis selon l'accès et l'évacuation."
+  },
+  {
+   "cle": "dessouchage",
+   "titre": "Dessouchage",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/rabotage-souche",
+   "texte": "Raboteuse à disque denté : à partir de 90 € HT, environ 150 € HT par souche en moyenne."
+  },
+  {
+   "cle": "haubanage",
+   "titre": "Haubanage",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "dessin": "hauban",
+   "texte": "Dynamique, statique ou préventif, pour les arbres proches des bâtiments et des routes. Contrôle tous les 3 à 5 ans."
+  },
+  {
+   "cle": "transplantation",
+   "titre": "Transplantation d'arbres",
+   "profils": [
+    "particulier",
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/transplanteuse",
+   "texte": "Transplanteuse Optimal 1400, pour une motte de 1,40 m sur 70 cm de profondeur, ou méthode manuelle ; de préférence en automne."
+  },
+  {
+   "cle": "forestier",
+   "titre": "Travaux forestiers",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "image": "photos/broyeur-forestier",
+   "texte": "Broyage forestier, sentiers et lignes coupe-feu, broyage de branches, rabotage, fendage, de 500 m² à plusieurs hectares."
+  },
+  {
+   "cle": "ecuroducs",
+   "titre": "Écuroducs",
+   "profils": [
+    "entreprise",
+    "collectivite"
+   ],
+   "dessin": "ecuroduc",
+   "texte": "Passages pour écureuils tendus en hauteur par les grimpeurs ; deux ont été posés au parc Berthe Morisot, à Orléans."
+  }
+ ],
+ "maladies": [
+  {
+   "cle": "processionnaire-pin",
+   "titre": "Chenille processionnaire du pin",
+   "texte": "Retrait des nids de novembre à février, pièges en mai-juin, confusion sexuelle début juin, éco-pièges sur le tronc.",
+   "dessin": "nid"
+  },
+  {
+   "cle": "processionnaire-chene",
+   "titre": "Chenille processionnaire du chêne",
+   "texte": "Suppression mécanique des nids, éco-pièges à phéromones, et les prédateurs naturels : mésanges et chauves-souris.",
+   "dessin": "chenille"
+  },
+  {
+   "cle": "mineuse",
+   "titre": "Mineuse du marronnier",
+   "texte": "Surveillance plusieurs fois par saison, ramassage et destruction des feuilles, pièges à phéromones en complément.",
+   "dessin": "feuille"
+  },
+  {
+   "cle": "gui",
+   "titre": "Gui",
+   "texte": "Plante hémiparasite retirée au ras du tronc par les grimpeurs ; en trop grande quantité, elle affaiblit l'arbre.",
+   "dessin": "gui"
+  },
+  {
+   "cle": "suie",
+   "titre": "Maladie de la suie de l'érable",
+   "texte": "Abattage des arbres atteints par temps humide et sans vent, outils désinfectés, bois brûlé ou enterré, périmètre balisé.",
+   "dessin": "erable"
+  }
+ ],
+ "genie": [
+  {
+   "cle": "compensatoires",
+   "titre": "Mesures compensatoires",
+   "texte": "Séquence éviter-réduire-compenser : crapauducs (déviation de Jargeau), hibernaculums, mares (Fay-aux-Loges), zones humides ; engins à l'huile biologique.",
+   "couche": "faune"
+  },
+  {
+   "cle": "restauration",
+   "titre": "Restauration des espaces naturels",
+   "texte": "Embâcles, radiers, effacement d'ouvrages, protection de berges, plantes hélophytes, passerelles ; nacelle de 25 m et huile biodégradable.",
+   "couche": "berge"
+  },
+  {
+   "cle": "entretien",
+   "titre": "Entretien des milieux naturels",
+   "texte": "Espèces exotiques envahissantes (jussie, renouée du Japon, ailante, ambroisie) traitées en trois étapes, sans dissémination ; ripisylve, prairies humides.",
+   "couche": "ripisylve"
+  },
+  {
+   "cle": "phytoepuration",
+   "titre": "Phytoépuration",
+   "texte": "Filtres plantés de roseaux dimensionnés en équivalent habitant, à partir de 20 m², pour les industriels, les agriculteurs et les promoteurs.",
+   "couche": "roseaux"
+  }
+ ]
+}

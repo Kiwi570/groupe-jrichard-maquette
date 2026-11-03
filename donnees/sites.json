@@ -1,0 +1,32 @@
+[
+  {
+    "cle": "orleans", "nom": "Orléans", "role": "Siège du groupe",
+    "adresse": "43 rue Corne de Cerf", "cp": "45100", "ville": "Orléans",
+    "telephone": "02 38 66 13 84", "telephoneLien": "+33238661384",
+    "societes": ["jrichard", "hegy", "goueffon-services"],
+    "horaires": [[1, "08:30", "12:00"], [1, "13:30", "18:00"], [2, "08:30", "12:00"], [2, "13:30", "18:00"], [3, "08:30", "12:00"], [3, "13:30", "18:00"], [4, "08:30", "12:00"], [4, "13:30", "18:00"], [5, "08:30", "12:00"], [5, "13:30", "18:00"]],
+    "horairesTexte": "Du lundi au vendredi, 8 h 30 – 12 h et 13 h 30 – 18 h",
+    "aConfirmer": false,
+    "carte": { "x": 0.375, "y": 0.47 }
+  },
+  {
+    "cle": "semoy", "nom": "Semoy", "role": "Élagage",
+    "adresse": "220 rue Marigny, ZA du Pressoir Vert", "cp": "45400", "ville": "Semoy",
+    "telephone": "02 38 61 01 01", "telephoneLien": "+33238610101",
+    "societes": ["goueffon-elagage"],
+    "horaires": [[1, "08:30", "12:00"], [1, "13:00", "17:30"], [2, "08:30", "12:00"], [2, "13:00", "17:30"], [3, "08:30", "12:00"], [3, "13:00", "17:30"], [4, "08:30", "12:00"], [4, "13:00", "17:30"], [5, "08:30", "12:00"], [5, "13:00", "17:30"]],
+    "horairesTexte": "Du lundi au vendredi, 8 h 30 – 12 h et 13 h – 17 h 30",
+    "aConfirmer": false,
+    "carte": { "x": 0.405, "y": 0.43 }
+  },
+  {
+    "cle": "amilly", "nom": "Amilly", "role": "Bassin montargois",
+    "adresse": "79 rue de Paucourt", "cp": "45200", "ville": "Amilly",
+    "telephone": "02 38 26 13 94", "telephoneLien": "+33238261394",
+    "societes": ["sauvegrain", "sauvegrain-services", "goueffon-elagage"],
+    "horaires": [],
+    "horairesTexte": "Du lundi au jeudi, 9 h – 12 h et 14 h – 18 h ; le vendredi jusqu'à 17 h",
+    "aConfirmer": true,
+    "carte": { "x": 0.80, "y": 0.42 }
+  }
+]

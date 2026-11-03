@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Groupe J.Richard",
+  "alternateName": "Groupe J.Richard, entrepreneur du paysage",
+  "url": "https://groupe-jrichard-maquette.vercel.app/",
+  "logo": "https://groupe-jrichard-maquette.vercel.app/assets/images/logo-512.png",
+  "description": "Paysagistes et élagueurs du Loiret depuis 1965 : conception, création et entretien d'espaces verts, élagage et soin aux arbres, génie végétal, pour les particuliers, les entreprises et les collectivités.",
+  "foundingDate": "1965",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 160 },
+  "email": "contact@groupe-jrichard.fr",
+  "telephone": "+33238661384",
+  "address": { "@type": "PostalAddress", "streetAddress": "43 rue Corne de Cerf", "postalCode": "45100", "addressLocality": "Orléans", "addressCountry": "FR" },
+  "areaServed": ["Loiret", "Loir-et-Cher", "Cher", "Eure-et-Loir", "Yonne", "Seine-et-Marne"],
+  "sameAs": ["https://www.linkedin.com/company/groupejrichard/", "https://www.instagram.com/groupejrichard/", "https://www.facebook.com/jrichardpaysage/", "https://fr.pinterest.com/groupejrichard/"],
+  "subOrganization": [
+    { "@type": "HomeAndConstructionBusiness", "name": "J.Richard Paysage", "foundingDate": "1965", "telephone": "+33238661384", "email": "contact@jrichard-paysage.fr",
+      "address": { "@type": "PostalAddress", "streetAddress": "43 rue Corne de Cerf", "postalCode": "45100", "addressLocality": "Orléans", "addressCountry": "FR" },
+      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:30", "closes": "12:00" }, { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "13:30", "closes": "18:00" }] },
+    { "@type": "HomeAndConstructionBusiness", "name": "Hegy Paysage", "telephone": "+33238663511", "email": "contact@hegy-paysage.fr",
+      "address": { "@type": "PostalAddress", "streetAddress": "43 rue Corne de Cerf", "postalCode": "45100", "addressLocality": "Orléans", "addressCountry": "FR" } },
+    { "@type": "HomeAndConstructionBusiness", "name": "Goueffon Services", "telephone": "+33238660606", "email": "contact@services-goueffon.fr",
+      "address": { "@type": "PostalAddress", "streetAddress": "43 rue Corne de Cerf", "postalCode": "45100", "addressLocality": "Orléans", "addressCountry": "FR" } },
+    { "@type": "HomeAndConstructionBusiness", "name": "Goueffon Élagage", "foundingDate": "1989", "telephone": "+33238610101", "email": "contact@goueffon-elagage.fr",
+      "address": { "@type": "PostalAddress", "streetAddress": "220 rue Marigny, ZA du Pressoir Vert", "postalCode": "45400", "addressLocality": "Semoy", "addressCountry": "FR" },
+      "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:30", "closes": "12:00" }, { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "13:00", "closes": "17:30" }] },
+    { "@type": "HomeAndConstructionBusiness", "name": "Sauvegrain Paysage", "foundingDate": "1974", "telephone": "+33238261394", "email": "contact@sauvegrain-paysage.fr",
+      "address": { "@type": "PostalAddress", "streetAddress": "79 rue de Paucourt", "postalCode": "45200", "addressLocality": "Amilly", "addressCountry": "FR" } },
+    { "@type": "HomeAndConstructionBusiness", "name": "Sauvegrain Paysage Services", "telephone": "+33238261394", "email": "contact@sauvegrain-paysage.fr",
+      "address": { "@type": "PostalAddress", "streetAddress": "79 rue de Paucourt", "postalCode": "45200", "addressLocality": "Amilly", "addressCountry": "FR" } }
+  ]
+}

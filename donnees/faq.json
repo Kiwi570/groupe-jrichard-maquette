@@ -1,0 +1,18 @@
+{
+  "credit": [
+    { "q": "Qu'est-ce que le crédit d'impôt ?", "r": "Une somme remboursée par l'État : 50 % des dépenses de jardinage à domicile, dans la limite de 5 000 € de dépenses par an et par foyer. Il est ouvert à tous les foyers, sans condition d'âge ni de revenus." },
+    { "q": "Qu'est-ce que l'avance immédiate ?", "r": "L'aide est déduite au moment du paiement : vous ne réglez que la moitié, l'Urssaf prélève seulement votre reste à charge. Le service est gratuit." },
+    { "q": "Qui peut en bénéficier ?", "r": "Les particuliers, pour leur résidence principale ou secondaire en France, propriétaires ou locataires. Il faut avoir déjà déclaré ses revenus et avoir une adresse e-mail ; le prestataire crée le compte sur particulier.urssaf.fr. Les bailleurs, les copropriétés et les entreprises n'y ont pas droit." },
+    { "q": "Comment se passe la facturation ?", "r": "Vous avez 48 heures pour valider la demande de paiement (elle est validée d'office sinon), le prélèvement a lieu sous 2 jours et le prestataire est payé sous 4 jours. Un acompte éventuel est déduit du montant prélevé." }
+  ],
+  "abattage": [
+    { "q": "Quand abattre un arbre ?", "r": "Toute l'année, sauf si une restriction régionale s'applique pendant la nidification des oiseaux." },
+    { "q": "Faut-il une autorisation ?", "r": "En général non sur un terrain privé, sauf règles locales, zones protégées ou terrains publics. Les textes en jeu sont rappelés au moment du diagnostic." },
+    { "q": "Combien coûte un abattage ?", "r": "Cela dépend de l'accès, de la technique et de l'évacuation du bois : un élagueur se déplace pour établir le devis sur place." }
+  ],
+  "amenagement": [
+    { "q": "Comment se déroule un projet de jardin ?", "r": "Rendez-vous sur place pour les mesures, plans 2D ou 3D par le bureau d'études, validation au showroom, devis détaillé, puis un conducteur de travaux comme interlocuteur unique jusqu'à la réception du chantier, signée par les deux parties." },
+    { "q": "Quand planter ?", "r": "Pendant le repos de la végétation, de l'automne au printemps. Les terrasses et les allées se construisent toute l'année." },
+    { "q": "Le devis est-il gratuit ?", "r": "Oui : un paysagiste se déplace chez vous pour étudier votre projet." }
+  ]
+}

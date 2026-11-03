@@ -1,0 +1,122 @@
+[
+{
+"cle": "departement-loiret",
+"nom": "Département du Loiret"
+},
+{
+"cle": "region-centre-val-de-loire",
+"nom": "Région Centre-Val de Loire"
+},
+{
+"cle": "orleans-metropole",
+"nom": "Orléans Métropole"
+},
+{
+"cle": "ville-de-blois",
+"nom": "Ville de Blois"
+},
+{
+"cle": "fleury-les-aubrais",
+"nom": "Fleury-les-Aubrais"
+},
+{
+"cle": "la-ferte-saint-aubin",
+"nom": "La Ferté-Saint-Aubin"
+},
+{
+"cle": "domaine-de-chambord",
+"nom": "Domaine national de Chambord"
+},
+{
+"cle": "loreal",
+"nom": "L'Oréal"
+},
+{
+"cle": "sephora",
+"nom": "Sephora"
+},
+{
+"cle": "caudalie",
+"nom": "Caudalie"
+},
+{
+"cle": "lsdh",
+"nom": "LSDH"
+},
+{
+"cle": "axereal",
+"nom": "Axereal"
+},
+{
+"cle": "john-deere",
+"nom": "John Deere"
+},
+{
+"cle": "hutchinson",
+"nom": "Hutchinson"
+},
+{
+"cle": "fm-logistic",
+"nom": "FM Logistic"
+},
+{
+"cle": "prologis",
+"nom": "Prologis"
+},
+{
+"cle": "covea",
+"nom": "Covéa"
+},
+{
+"cle": "bouygues-immobilier",
+"nom": "Bouygues Immobilier"
+},
+{
+"cle": "bouygues-construction",
+"nom": "Bouygues Construction"
+},
+{
+"cle": "nexity",
+"nom": "Nexity"
+},
+{
+"cle": "eiffage",
+"nom": "Eiffage Construction"
+},
+{
+"cle": "vinci",
+"nom": "Vinci"
+},
+{
+"cle": "vinci-autoroutes",
+"nom": "Vinci Autoroutes"
+},
+{
+"cle": "colas",
+"nom": "Colas"
+},
+{
+"cle": "eurovia",
+"nom": "Eurovia"
+},
+{
+"cle": "valloire-habitat",
+"nom": "Valloire Habitat"
+},
+{
+"cle": "logem-loiret",
+"nom": "Logem Loiret"
+},
+{
+"cle": "france-loire",
+"nom": "France Loire"
+},
+{
+"cle": "realites",
+"nom": "Réalités Immobilier"
+},
+{
+"cle": "deret",
+"nom": "Deret"
+}
+]

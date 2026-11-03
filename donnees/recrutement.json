@@ -1,0 +1,15 @@
+{
+  "etapes": [
+    { "titre": "Votre candidature", "texte": "Toute l'année : CDI, saisonniers l'été, alternance sur 1 à 3 ans, stages de la 3e à la licence." },
+    { "titre": "Lecture par le terrain", "texte": "Votre candidature est analysée par le conducteur de travaux du secteur concerné." },
+    { "titre": "Entretien", "texte": "Rencontre avec les ressources humaines et votre futur responsable." },
+    { "titre": "Promesse d'embauche", "texte": "Après un second entretien si besoin, la promesse d'embauche, puis le parcours d'intégration." }
+  ],
+  "raisons": [
+    { "titre": "La sécurité avant la rentabilité", "texte": "Formations GSA, SST, balisage, AIPR et CACES renouvelées, matériel adapté, 55 % du matériel de taille électrique." },
+    { "titre": "Progresser", "texte": "Postes ouverts d'abord en interne, plan de formation individualisé, apprentis accompagnés par un tuteur attitré." },
+    { "titre": "Une ambiance de groupe", "texte": "Intéressement, salaires transparents, journal interne trimestriel, enquête annuelle anonyme, journée de cohésion." }
+  ],
+  "metiers": ["Ouvrier paysagiste", "Responsable d'équipe", "Chef de chantier", "Grimpeur-élagueur", "Homme de pied", "Conducteur d'engins", "Conducteur de travaux", "Chargé d'études", "Concepteur paysagiste", "Mécanicien", "Magasinier", "Responsable des achats", "Fonctions support"],
+  "ecoles": ["Campus de La Mouillère", "Lycée Bougainville", "CFA de Bellegarde", "CFPPA Tours-Fondettes", "Maisons familiales rurales", "ESA Angers"]
+}

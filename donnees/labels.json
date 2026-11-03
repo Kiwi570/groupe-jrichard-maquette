@@ -1,0 +1,6 @@
+[
+  { "cle": "qualipaysage", "nom": "QualiPaysage", "logo": "logos/qualipaysage", "texte": "Qualifications professionnelles du paysage : aménagement, entretien, génie végétal et élagage pour J.Richard Paysage, Goueffon Élagage et Sauvegrain Paysage." },
+  { "cle": "rse", "nom": "Engagé RSE · Afnor", "logo": "logos/engage-rse", "texte": "J.Richard Paysage au niveau exemplaire depuis 2022, Goueffon Élagage au niveau confirmé depuis 2024." },
+  { "cle": "sap", "nom": "Services à la personne", "logo": "logos/services-a-la-personne", "texte": "Goueffon Services et Sauvegrain Paysage Services : jardinage à domicile ouvrant droit au crédit d'impôt." },
+  { "cle": "ecophyto", "nom": "Écophyto", "logo": "logos/ecophyto", "texte": "Réduire et améliorer l'utilisation des produits phytosanitaires." }
+]

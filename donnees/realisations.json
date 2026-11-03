@@ -1,0 +1,542 @@
+[
+ {
+  "cle": "chambord",
+  "fiche": true,
+  "titre": "Les jardins à la française du château de Chambord",
+  "lieu": "Chambord (Loir-et-Cher)",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "annee": "",
+  "resume": "La restauration des parterres à la française au pied du château : broderies de buis, allées sablées et alignements d'arbres.",
+  "faits": [],
+  "travaux": [
+   "Parterres de broderie en buis",
+   "Allées et parterres sablés",
+   "Alignements d'arbres",
+   "Plantations des massifs"
+  ],
+  "aCompleter": [
+   "Maître d'ouvrage",
+   "Surfaces et quantités"
+  ],
+  "images": [
+   {
+    "nom": "photos/chambord-aerien",
+    "alt": "Les parterres à la française au pied du château de Chambord, vus du ciel",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/chambord-broderie",
+    "alt": "Parterre de broderie en buis devant le château de Chambord",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/chambord-chateau-massif",
+    "alt": "Le château de Chambord vu depuis un massif fleuri",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/chambord-plantations",
+    "alt": "Alignements d'arbres et parterres sablés à Chambord",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/chambord-buis",
+    "alt": "Plantation de buis devant le château de Chambord",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "auguste-saint-hilaire",
+  "fiche": true,
+  "titre": "Le jardin Auguste de Saint-Hilaire",
+  "lieu": "Orléans, rue du Puits Linières",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "annee": "2023",
+  "resume": "Un jardin créé en plein centre-ville d'Orléans, ouvert au public le 29 juin 2023 après un an de travaux.",
+  "faits": [
+   [
+    "1 an",
+    "de travaux"
+   ],
+   [
+    "29 juin 2023",
+    "ouverture au public"
+   ]
+  ],
+  "travaux": [
+   "Plantations odorantes : arbre à caramel, herbe à curry, chèvrefeuille d'hiver, chimonanthe, mélisse, sauge",
+   "Arrosage au goutte-à-goutte",
+   "Aire de jeux en bois",
+   "Semis de gazon",
+   "Allées pavées à joints engazonnés",
+   "Pergolas avec plantes grimpantes",
+   "Clôture à barreaudage et portillons",
+   "Mobilier"
+  ],
+  "aCompleter": [
+   "Maître d'ouvrage",
+   "Surface"
+  ],
+  "images": [
+   {
+    "nom": "photos/saint-hilaire-plantations",
+    "alt": "Jeunes plantations, pergolas et bancs du jardin Auguste de Saint-Hilaire",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/saint-hilaire-jardin",
+    "alt": "Le jardin Auguste de Saint-Hilaire au pied des immeubles",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/saint-hilaire-pergolas",
+    "alt": "Allée pavée à joints engazonnés sous les pergolas",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/saint-hilaire-gazon",
+    "alt": "Engazonnement et banc du jardin",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/saint-hilaire-jeux",
+    "alt": "L'aire de jeux en bois du jardin",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "longues-allees",
+  "fiche": true,
+  "titre": "L'extension du parc des Longues Allées",
+  "lieu": "Saint-Jean-de-Braye",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "annee": "",
+  "resume": "Pour la mairie de Saint-Jean-de-Braye, un vaste espace dédié à la biodiversité et au bien-être des riverains.",
+  "faits": [
+   [
+    "+ 5,7 ha",
+    "ajoutés aux 6,5 ha existants"
+   ],
+   [
+    "≈ 10 000",
+    "végétaux"
+   ],
+   [
+    "1 200 m",
+    "de clôture en ganivelle"
+   ]
+  ],
+  "travaux": [
+   "Aire de jeux en bois",
+   "Terrain multisport",
+   "Rucher avec observatoire",
+   "Vignes",
+   "Mobilier",
+   "Portails et clôtures à barreaudage"
+  ],
+  "aCompleter": [],
+  "client": "Mairie de Saint-Jean-de-Braye",
+  "images": [
+   {
+    "nom": "photos/prairie-fleurie",
+    "alt": "Prairie fleurie du parc des Longues Allées",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/longues-allees",
+    "alt": "Le parc des Longues Allées à Saint-Jean-de-Braye",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/longues-allees-vignes",
+    "alt": "Plantation de vignes au parc des Longues Allées",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "berthe-morisot",
+  "fiche": true,
+  "titre": "Le parc Berthe Morisot",
+  "lieu": "Orléans, quartier Madeleine",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "annee": "2022-2023",
+  "resume": "Trois parcs du quartier Madeleine réunis en un espace arboré de 2,5 hectares, conçu par le bureau d'études d'Orléans Métropole et réalisé de septembre 2022 à juillet 2023.",
+  "faits": [
+   [
+    "2,5 ha",
+    "d'espace arboré"
+   ],
+   [
+    "79",
+    "arbres fruitiers et d'ornement"
+   ],
+   [
+    "+ 9 000",
+    "vivaces et bulbes"
+   ],
+   [
+    "2",
+    "écuroducs"
+   ]
+  ],
+  "travaux": [
+   "Labyrinthe de grandes poteries du XVIIIe siècle fabriquées autrefois sur le site",
+   "Deux aires de jeux, dont un parcours sportif et des jeux inclusifs",
+   "Tables, chaises, bancs et hamacs",
+   "24 arbres fruitiers, 55 arbres d'ornement, 150 vignes, 900 jeunes plants, 600 arbustes",
+   "Deux écuroducs à la place d'anciens fils électriques empruntés par les écureuils"
+  ],
+  "aCompleter": [],
+  "client": "Conception : bureau d'études d'Orléans Métropole",
+  "images": [
+   {
+    "nom": "photos/berthe-morisot-plantations",
+    "alt": "Plantation d'arbres au parc Berthe Morisot",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/aire-jeux-inclusive",
+    "alt": "Aire de jeux inclusive du parc Berthe Morisot",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/berthe-morisot-jeux",
+    "alt": "Aire de jeux pour enfants du parc",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/berthe-morisot-sanitas",
+    "alt": "Papillon sur une verveine du parc",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "helene-cadou",
+  "fiche": true,
+  "titre": "Le jardin Hélène Cadou",
+  "lieu": "Orléans, quais de Loire",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "annee": "",
+  "resume": "Arches de rosiers grimpants, aire de jeux et mobilier : un jardin public au bord de la Loire.",
+  "faits": [],
+  "travaux": [
+   "Aménagement paysager",
+   "Plantation de rosiers grimpants sur arches",
+   "Aire de jeux",
+   "Mobilier extérieur"
+  ],
+  "aCompleter": [
+   "Maître d'ouvrage",
+   "Surfaces et quantités"
+  ],
+  "images": [
+   {
+    "nom": "photos/helene-cadou-arches",
+    "alt": "Arches fleuries de rosiers grimpants au jardin Hélène Cadou",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/helene-cadou-quais",
+    "alt": "Allée sous les arches métalliques, côté quais",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/helene-cadou-buis",
+    "alt": "Boules de buis du jardin Hélène Cadou",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/helene-cadou-jeux",
+    "alt": "Jeu multi-activités du jardin",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "maison-mory",
+  "fiche": true,
+  "titre": "Le jardin de la Maison Mory",
+  "lieu": "Amilly",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "sauvegrain"
+  ],
+  "annee": "2022",
+  "resume": "Le jardin d'une propriété du XIXe siècle réhabilitée en salle des mariages, pour la ville d'Amilly, sur un projet de l'agence montargoise Cambium 17.",
+  "faits": [
+   [
+    "2 000 m²",
+    "de jardin"
+   ],
+   [
+    "150 m³",
+    "de terrassement"
+   ],
+   [
+    "6 500",
+    "vivaces"
+   ],
+   [
+    "40",
+    "élèves du CFA de Bellegarde en chantier-école"
+   ]
+  ],
+  "travaux": [
+   "Allées et massifs",
+   "30 arbres et arbustes, 6 500 vivaces",
+   "Tuteurage",
+   "Chantier-école avec le CFA de Bellegarde, le 16 mars 2022"
+  ],
+  "aCompleter": [],
+  "client": "Ville d'Amilly · maîtrise d'œuvre : Cambium 17",
+  "images": [
+   {
+    "nom": "photos/maison-mory",
+    "alt": "Le jardin de la Maison Mory à Amilly",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/maison-mory-arches",
+    "alt": "Arches au-dessus de la passerelle, jardin de la Maison Mory",
+    "cadrage": "50% 55%"
+   },
+   {
+    "nom": "photos/maison-mory-chantier-ecole",
+    "alt": "Chantier-école avec les élèves du CFA de Bellegarde",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "jardins-flottants",
+  "fiche": true,
+  "titre": "Trois jardins flottants à Saran",
+  "lieu": "Saran, site de Malakoff Humanis",
+  "profil": "entreprise",
+  "metier": "genie-vegetal",
+  "societes": [
+   "jrichard"
+  ],
+  "annee": "2026",
+  "resume": "Le 9 juillet 2026, trois modules Aloé posés sur l'étang du site pour épurer l'eau et abriter la faune.",
+  "faits": [
+   [
+    "3",
+    "modules flottants"
+   ],
+   [
+    "1,42 m",
+    "de diamètre par module"
+   ],
+   [
+    "9 juillet 2026",
+    "pose"
+   ]
+  ],
+  "travaux": [
+   "Modules Aloé conçus par Urbanoé (Angers), assemblés sur place",
+   "Coque hexagonale en aluminium et liège",
+   "Plantes mellifères pour les pollinisateurs",
+   "Racines qui captent certaines bactéries et améliorent l'eau",
+   "Refuge pour la faune, notamment les batraciens"
+  ],
+  "aCompleter": [],
+  "client": "Malakoff Humanis",
+  "images": [
+   {
+    "nom": "photos/jardin-flottant",
+    "alt": "Module de jardin flottant hexagonal posé sur un bassin",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "kergomard",
+  "fiche": true,
+  "titre": "La cour oasis de l'école Pauline Kergomard",
+  "lieu": "Orléans",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "annee": "2025-2026",
+  "resume": "Un jardin à la place du terrain de foot qui divisait la cour, planté avec les élèves de CP.",
+  "faits": [
+   [
+    "21",
+    "arbres"
+   ],
+   [
+    "20",
+    "arbustes"
+   ],
+   [
+    "531",
+    "vivaces"
+   ]
+  ],
+  "travaux": [
+   "Terrassement à l'été 2025",
+   "Cheminements en rondins et escaliers en traverses",
+   "Clôture en ganivelle, bac à sable, engazonnement",
+   "Platelages bois pour un potager : « De la graine à l'assiette »",
+   "Plantation avec 14 élèves de CP le 13 mars 2026"
+  ],
+  "aCompleter": [
+   "Maître d'ouvrage et maître d'œuvre"
+  ],
+  "images": []
+ },
+ {
+  "cle": "coulmiers",
+  "fiche": true,
+  "titre": "Les jardins du château de Coulmiers",
+  "lieu": "Coulmiers",
+  "profil": "particulier",
+  "metier": "amenagement",
+  "societes": [
+   "hegy",
+   "jrichard"
+  ],
+  "annee": "",
+  "resume": "Des jardins à la française à la place de simples surfaces enherbées : massifs bordés de métal, larges allées et pièce d'eau centrale.",
+  "faits": [
+   [
+    "6",
+    "étapes de chantier"
+   ],
+   [
+    "2",
+    "entreprises du groupe"
+   ]
+  ],
+  "travaux": [
+   "Terrassement",
+   "Terrasse et allées en calcaire autour du château",
+   "Quatre charmes, ifs taillés en boule, massifs",
+   "Engazonnement",
+   "Fontaine au centre de la cour, assemblée sur place",
+   "Finitions des allées"
+  ],
+  "aCompleter": [
+   "Surface"
+  ],
+  "client": "Propriétaire privé",
+  "images": []
+ },
+ {
+  "cle": "kellermann",
+  "fiche": false,
+  "titre": "Le parc de la caserne Kellermann",
+  "lieu": "",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "resume": "Aménagement paysager d'un parc, vu du ciel.",
+  "images": [
+   {
+    "nom": "photos/kellermann-aerien",
+    "alt": "Le parc de la caserne Kellermann vu du ciel",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "villiers",
+  "fiche": false,
+  "titre": "Les allées du château de Villiers",
+  "lieu": "",
+  "profil": "particulier",
+  "metier": "amenagement",
+  "societes": [],
+  "resume": "Création des allées et des massifs du château.",
+  "images": [
+   {
+    "nom": "photos/villiers-allee",
+    "alt": "Allée de gravier menant au château de Villiers",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "lsdh",
+  "fiche": false,
+  "titre": "Le patio de LSDH",
+  "lieu": "",
+  "profil": "entreprise",
+  "metier": "amenagement",
+  "societes": [
+   "jrichard"
+  ],
+  "resume": "La végétalisation d'un patio d'entreprise.",
+  "images": [
+   {
+    "nom": "photos/lsdh-patio",
+    "alt": "Patio d'entreprise fleuri de graminées et d'azalées",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "place-clovis",
+  "fiche": false,
+  "titre": "La place Clovis",
+  "lieu": "Saint-Pryvé-Saint-Mesmin",
+  "profil": "collectivite",
+  "metier": "amenagement",
+  "societes": [],
+  "resume": "Pavés à joints engazonnés et massifs de rosiers.",
+  "images": [
+   {
+    "nom": "photos/place-clovis",
+    "alt": "Place pavée à joints engazonnés et massifs de rosiers",
+    "cadrage": "50% 55%"
+   }
+  ]
+ },
+ {
+  "cle": "chamerolles",
+  "fiche": false,
+  "titre": "L'entretien du château de Chamerolles",
+  "lieu": "Chilleurs-aux-Bois",
+  "profil": "collectivite",
+  "metier": "entretien",
+  "societes": [],
+  "resume": "Tonte des grandes pelouses au bord de l'étang.",
+  "images": [
+   {
+    "nom": "photos/tonte-chamerolles",
+    "alt": "Tondeuse autoportée devant le château de Chamerolles",
+    "cadrage": "50% 55%"
+   }
+  ]
+ }
+]

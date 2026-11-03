@@ -1,0 +1,968 @@
+[
+{
+"source": "recu/site/amenagement/jardin-de-la-charpenterie-orleans.jpg",
+"nom": "photos/charpenterie-pergola",
+"cadrage": [
+58,
+62
+],
+"mobile": true
+},
+{
+"source": "recu/site/groupe/mobilier-naturel.jpg",
+"nom": "photos/lavoir-pas-japonais",
+"cadrage": [
+45,
+60
+],
+"mobile": true
+},
+{
+"source": "recu/site/accueil/tonte-jardin-chateau-chamerolles.jpg",
+"nom": "photos/tonte-chamerolles",
+"cadrage": [
+40,
+60
+],
+"mobile": true
+},
+{
+"source": "recu/site/groupe/abattage-arbre-jardin.jpg",
+"nom": "photos/elagueur-cime",
+"cadrage": [
+48,
+40
+],
+"mobile": true
+},
+{
+"source": "recu/site/groupe/genie-ecologique.jpg",
+"nom": "photos/riviere-restauree",
+"cadrage": [
+45,
+60
+],
+"mobile": true
+},
+{
+"source": "recu/site/amenagement/creation-espaces-verts-parc.jpg",
+"nom": "photos/parc-spirale-aerien",
+"cadrage": [
+62,
+55
+],
+"mobile": true
+},
+{
+"source": "recu/site/groupe/cohesion-equipe.jpg",
+"nom": "photos/equipe-groupe",
+"cadrage": [
+50,
+55
+],
+"mobile": true
+},
+{
+"source": "recu/site/groupe/formation-grimpeur-sauveteur-dans-les-arbres.jpg",
+"nom": "photos/grimpeurs-chene",
+"cadrage": [
+70,
+40
+],
+"mobile": true
+},
+{
+"source": "recu/site/amenagement/plantation-vegetaux-massifs-paillage.jpg",
+"nom": "photos/allee-massifs",
+"cadrage": [
+50,
+60
+],
+"mobile": true
+},
+{
+"source": "recu/site/groupe/travail-equipe-sauvegrain-paysage.jpg",
+"nom": "photos/equipe-plantation",
+"cadrage": [
+50,
+55
+],
+"mobile": true
+},
+{
+"source": "recu/site/groupe/restauration-cours-deau-bionne-loiret-travaux.jpg",
+"nom": "photos/berges-travaux",
+"cadrage": [
+50,
+55
+]
+},
+{
+"source": "recu/site/accueil/plantation-parc-auguste-de-saint-hilaire-orleans.jpg",
+"nom": "photos/saint-hilaire-plantations",
+"cadrage": [
+50,
+55
+]
+},
+{
+"source": "recu/site/groupe/taille-de-haie.jpg",
+"nom": "photos/taille-haie-charmes",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/bien-etre-au-travail-chez-goueffon-elagage.jpg",
+"nom": "photos/grimpeur-chene",
+"cadrage": [
+45,
+45
+]
+},
+{
+"source": "recu/site/amenagement/conception-jardin-avec-terrasse-bois-et-massifs.jpg",
+"nom": "photos/conception-3d",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/renovation-cour-chateau-2.jpg",
+"nom": "photos/pose-paves-chateau",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/remise-en-etat-de-jardins.jpg",
+"nom": "photos/taille-hortensias",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/chantier-ecole-sauvegrain-paysage.jpg",
+"nom": "photos/apprentis-tuteurs",
+"cadrage": [
+50,
+40
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/plantation-arbre-motte-parking-comet.jpg",
+"nom": "photos/plantation-arbre-motte",
+"cadrage": [
+50,
+45
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/prarie-fleurie-parc-des-longues-allees-1.jpg",
+"nom": "photos/prairie-fleurie",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/amenagement-paysager-jardin-sauvegrain-paysage.jpg",
+"nom": "photos/terrasse-bois-graminees",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/allee-joint-gazon.jpg",
+"nom": "photos/allee-paves-enherbes",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/pose-cloture-barreaudage-gris-anthracite-orleans.jpg",
+"nom": "photos/cloture-barreaudage-roses",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/pergola-aluminium.jpg",
+"nom": "photos/pergola-bioclimatique",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/cuisine-exterieure-sur-mesure-orleans.jpg",
+"nom": "photos/cuisine-exterieure-pergola",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/arrosage-automatique-parc-jardin.jpg",
+"nom": "photos/arrosage-pose",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/vegetalisation-quartier-bourg-pannes-sauvegrain.jpg",
+"nom": "photos/noue-verveines",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/amenagement-potager-ecole-le-renard-et-la-rose.jpg",
+"nom": "photos/potager-ecole",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/amenagement-patio-entreprise.jpg",
+"nom": "photos/patio-entreprise",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/amenagement-paysager-residence-lotissement.jpg",
+"nom": "photos/parc-residence-aerien",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/pave-joint-gazon-place-amenagement-paysager.jpg",
+"nom": "photos/place-paves-gazon",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/plantation-rosiers.jpg",
+"nom": "photos/arches-rosiers",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/corolle-vegetale-urban-canopee-cour-ecole.jpg",
+"nom": "photos/cour-ecole-bouleaux",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/aire-de-jeu-inclusive-parc-berthe-morisot.jpg",
+"nom": "photos/aire-jeux-inclusive",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/restauration-des-jardins-a-la-francaise-du.jpg",
+"nom": "photos/chambord-broderie",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/vegetalisation-interieur-lsdh.jpg",
+"nom": "photos/hall-vegetalise",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/nichoir-pour-mesange-bleue-arbre.jpg",
+"nom": "photos/mesange-nichoir",
+"cadrage": [
+50,
+45
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/tondeuse-frontale-iseki-materiel.jpg",
+"nom": "photos/tonte-frontale",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/robot-de-fauchage.jpg",
+"nom": "photos/robot-fauchage",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/desherbage-entretien-jardin-service-a-la-personne.jpg",
+"nom": "photos/desherbage-manuel",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/recyclage-dechets-ligneux-orleans.jpg",
+"nom": "photos/broyage-branches",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/hotel-a-insectes.jpg",
+"nom": "photos/hotel-insectes",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/entretien-jardin-goueffon-services.jpg",
+"nom": "photos/jardin-longere-hortensias",
+"cadrage": [
+50,
+60
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/goueffon-services-jardinage-orleans.jpg",
+"nom": "photos/jardiniers-domicile",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/taille-arbre-entretien-orleans.jpg",
+"nom": "photos/grimpeur-contreplongee",
+"cadrage": [
+50,
+40
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/taille-de-formation-arbre.jpg",
+"nom": "photos/taille-formation-chambord",
+"cadrage": [
+50,
+40
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/taille-rideau-arbre-orleans.jpg",
+"nom": "photos/taille-rideau-nacelle",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/abattage-arbre-elagueur.jpg",
+"nom": "photos/abattage-nacelle",
+"cadrage": [
+50,
+45
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/rabotage-de-souche-goueffon-elagage.jpg",
+"nom": "photos/rabotage-souche",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/materiel.jpg",
+"nom": "photos/transplanteuse",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/broyage-tronc-arbre.jpg",
+"nom": "photos/broyeur-forestier",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/vente-bois-de-chauffage-goueffon-elagage.jpg",
+"nom": "photos/buches",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/evacuation-billons-arbres-goueffon-elagage.jpg",
+"nom": "photos/demontage-retention",
+"cadrage": [
+50,
+45
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/formation-secourisme-dans-les-arbres.jpg",
+"nom": "photos/formation-grimpeurs",
+"cadrage": [
+50,
+45
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/restauration-cours-deau.jpg",
+"nom": "photos/riviere-ombragee",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/jardin-flottant-aloe.jpg",
+"nom": "photos/jardin-flottant",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/formation-taille-de-vignes.jpg",
+"nom": "photos/apprentis-vigne",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/apprentis.jpg",
+"nom": "photos/apprentis-groupe",
+"cadrage": [
+50,
+50
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/locaux-goueffon-elagage-amilly.jpg",
+"nom": "photos/locaux-goueffon-amilly",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/locaux-sauvegrain-paysage-amilly.jpg",
+"nom": "photos/locaux-sauvegrain",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/restauration-des-jardins-a-la-francaise-de-2.jpg",
+"nom": "photos/chambord-aerien",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/restauration-des-jardins-a-la-francaise-de.jpg",
+"nom": "photos/chambord-chateau-massif",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/plantations-chambord.jpg",
+"nom": "photos/chambord-plantations",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/plantation-jardins-a-la-francaise-chambord.jpg",
+"nom": "photos/chambord-buis",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/jardin-auguste-saint-hilaire.jpg",
+"nom": "photos/saint-hilaire-jardin",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/engazonnement-jardin-auguste-de-saint-hilaire.jpg",
+"nom": "photos/saint-hilaire-gazon",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/aire-de-jeu-multi-activites-jardin-auguste-saint.jpg",
+"nom": "photos/saint-hilaire-jeux",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/vegetalisation-parc-auguste-de-saint-hilaire.jpg",
+"nom": "photos/saint-hilaire-pergolas",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/amenagement-parc-des-longues-allees.png",
+"nom": "photos/longues-allees",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/plantation-de-vignes-parc-des-longues-allees-1.jpg",
+"nom": "photos/longues-allees-vignes",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/aire-jeu-parc-enfant-parc-berthe-morisot.jpg",
+"nom": "photos/berthe-morisot-jeux",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/groupe/plantation-arbres-parc-berthe-morisot.jpg",
+"nom": "photos/berthe-morisot-plantations",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/accueil/biodiversite-parc-sanitas-amenagement-paysager.jpg",
+"nom": "photos/berthe-morisot-sanitas",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/amenagement-paysager-parc-helene-cadou.jpg",
+"nom": "photos/helene-cadou-arches",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/parc-helene-cadou-quais-orleans.jpg",
+"nom": "photos/helene-cadou-quais",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/jeu-multi-activites-parc-helene-cadou-orleans.jpg",
+"nom": "photos/helene-cadou-jeux",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/creation-jardin-helene-cadou.jpg",
+"nom": "photos/helene-cadou-buis",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/amenagement-parc-maison-mory-sauvegrain-paysage.jpg",
+"nom": "photos/maison-mory",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/parc-maison-mory-sauvegrain-paysage.jpg",
+"nom": "photos/maison-mory-arches",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/engagements/chantier-ecole-maison-mory-sauvegrain-paysage.jpg",
+"nom": "photos/maison-mory-chantier-ecole",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/amenagement-paysager-parc-caserne-kellermann.jpg",
+"nom": "photos/kellermann-aerien",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/realisation-allee-chateau-de-villiers.jpg",
+"nom": "photos/villiers-allee",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/realisation-patio-lsdh.jpg",
+"nom": "photos/lsdh-patio",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+},
+{
+"source": "recu/site/amenagement/pave-joint-gazon-place-clovis-saint-pryve-saint.jpg",
+"nom": "photos/place-clovis",
+"cadrage": [
+50,
+55
+],
+"largeurs": [
+640,
+1280
+]
+}
+]

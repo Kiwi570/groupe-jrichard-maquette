@@ -1,0 +1,72 @@
+{
+  "nom": "Groupe J.Richard",
+  "adresse": "https://groupe-jrichard-maquette.vercel.app",
+  "siteActuel": "groupe-jrichard.fr",
+  "version": 1,
+  "langues": [
+    "fr"
+  ],
+  "navigation": [
+    "accueil",
+    "amenagement",
+    "entretien",
+    "elagage",
+    "genie-vegetal",
+    "realisations",
+    "groupe",
+    "recrutement",
+    "actualites",
+    "contact"
+  ],
+  "actionEntete": {
+    "page": "contact",
+    "ancre": "devis"
+  },
+  "couleurs": {
+    "fond": "#F4F1E8",
+    "texte": "#1C1B15",
+    "voile": "#2E4A30",
+    "ouverture": "#1C1B15",
+    "menu": "#1C1B15",
+    "theme": "#1C1B15"
+  },
+  "contact": {
+    "telephone": "02 38 66 13 84",
+    "telephoneLien": "+33238661384",
+    "email": "contact@groupe-jrichard.fr",
+    "adresse": "43 rue Corne de Cerf, 45100 Orléans"
+  },
+  "polices": [
+    "/assets/polices/fraunces.woff2",
+    "/assets/polices/manrope.woff2"
+  ],
+  "imagePartage": "accueil-1280.webp",
+  "curseur": true,
+  "reseaux": [
+    {
+      "nom": "LinkedIn",
+      "url": "https://www.linkedin.com/company/groupejrichard/"
+    },
+    {
+      "nom": "Instagram",
+      "url": "https://www.instagram.com/groupejrichard/"
+    },
+    {
+      "nom": "Facebook",
+      "url": "https://www.facebook.com/jrichardpaysage/"
+    },
+    {
+      "nom": "Pinterest",
+      "url": "https://fr.pinterest.com/groupejrichard/"
+    }
+  ],
+  "navigationEntete": [
+    "amenagement",
+    "entretien",
+    "elagage",
+    "genie-vegetal",
+    "realisations",
+    "groupe",
+    "recrutement"
+  ]
+}
