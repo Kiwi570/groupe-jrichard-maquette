@@ -1,7 +1,7 @@
 /* Scènes liées à la lecture : les cernes du tronc (Le Groupe), la taille raisonnée (Élagage), la coupe de berge
    (Génie végétal). La colonne de dessin reste à l'écran (sticky) ; chaque étape lue active son dessin.
    En mode calme et sans JavaScript : tout est affiché dans son état final. */
-import { etat } from '../socle/index.js?v=2';
+import { etat } from '../socle/index.js?v=3';
 
 const ST = () => window.ScrollTrigger;
 const declencheurs = (items, activer) => {

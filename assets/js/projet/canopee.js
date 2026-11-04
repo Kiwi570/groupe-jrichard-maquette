@@ -2,7 +2,7 @@
    dessinées en WebGL par-dessus la photo de tête (calque transparent, sans mode de fusion). La source suit la souris.
    Basse résolution (motif doux), densité de pixels limitée, qualité qui baisse d'elle-même si les images tardent,
    boucle arrêtée hors écran, onglet caché et en mode calme (une image fixe). Sans WebGL : rien, la photo reste. */
-import { boucle, etat, quand } from '../socle/index.js?v=2';
+import { boucle, etat, quand } from '../socle/index.js?v=3';
 
 const VERT = `attribute vec2 p; varying vec2 v; void main(){ v = p * .5 + .5; gl_Position = vec4(p, 0., 1.); }`;
 const FRAG = (octaves) => `precision mediump float;

@@ -44,7 +44,9 @@ function arbreSocietes(liste) {
 
 export default (c) => html`
 ${tete(c, {
-    image: 'photos/equipe-groupe', alt: c.s('groupe.tete.alt'), cadrage: '50% 55%', cadrageMobile: '45% 55%',
+    variante: 'famille',
+    visuel: html`<ol class="tete-annees" aria-label="${c.s('groupe.tete.annees')}">${c.donnees.histoire.map((h) => html`<li>${h.annee}</li>`)}</ol>`,
+    image: 'photos/equipe-groupe', alt: c.s('groupe.tete.alt'), cadrage: '50% 30%', cadrageMobile: '50% 34%',
     surtitre: c.t('groupe.tete.surtitre'), lignes: [c.tb('groupe.tete.ligne1'), c.tb('groupe.tete.ligne2')],
     intro: c.t('groupe.tete.intro'),
     actions: html`<a class="bouton bouton--orange" href="#societes" data-action-principale>${c.t('groupe.tete.action')}</a>`,

@@ -1,6 +1,6 @@
 /* La cime, en bas de chaque page : en y arrivant, le feuillage s'écarte vers les coins, les nuages glissent à des
    vitesses différentes (profondeur) et trois oiseaux traversent le ciel une fois. Rien en mode calme. */
-import { etat } from '../socle/index.js?v=2';
+import { etat } from '../socle/index.js?v=3';
 
 export function initCime() {
   const g = window.gsap, ST = window.ScrollTrigger;

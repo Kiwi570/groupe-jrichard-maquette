@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="genie-vegetal" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="genie-vegetal" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -111,13 +111,22 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </nav>
 <div class="barre-altitude" data-barre-lecture aria-hidden="true"></div>
 <main id="contenu" tabindex="-1">
-<section class="tete tete--page " id="debut" data-strate="Sol" data-tete data-masque-barre>
-  <figure class="media tete-fond" style="--cadrage:45% 60%">
-  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/photos/riviere-restauree-mobile-633.webp 633w" sizes="100vw">
+<section class="tete tete--page tete--berge tete--cadre " id="debut" data-strate="Sol" data-tete data-variante="berge" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" style="--cadrage:45% 60%">
+  <picture>
     <img src="/assets/images/photos/riviere-restauree-1280.webp" srcset="/assets/images/photos/riviere-restauree-640.webp 640w, /assets/images/photos/riviere-restauree-1280.webp 1280w, /assets/images/photos/riviere-restauree-1920.webp 1920w" sizes="100vw" alt="Rivière restaurée aux berges végétalisées, sous les arbres" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
   </picture>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <svg class="tete-berge-eau" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" data-audit-ignorer>
+    <path d="M0 64 C 180 30, 360 92, 540 60 S 900 26, 1080 58 S 1320 90, 1440 54 V120 H0Z" fill="var(--humus)"/>
+    <g fill="none" stroke="var(--tendre)" stroke-linecap="round" opacity=".55"><path data-tete-trait pathLength="1" d="M0 60 C 180 26, 360 88, 540 56 S 900 22, 1080 54 S 1320 86, 1440 50" stroke-width="1.5"/></g>
+  </svg>
+  <svg class="tete-berge-racines" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true" data-audit-ignorer>
+    <g fill="none" stroke="var(--tendre)" stroke-linecap="round" opacity=".42" vector-effect="non-scaling-stroke"><path data-tete-trait pathLength="1" d="M40 0 C 14 60, 56 120, 18 170" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M36 48 q -34 22 -56 70 t -26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M46 96 q 28 26 40 74" stroke-width=".9"/><path d="M26 150 q -14 10 -20 30" stroke-width=".7"/><path data-tete-trait pathLength="1" d="M120 0 C 146 60, 104 120, 142 215" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M124 48 q 34 22 56 70 t 26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M114 96 q -28 26 -40 74" stroke-width=".9"/><path d="M134 150 q 14 10 20 30" stroke-width=".7"/><path data-tete-trait pathLength="1" d="M200 0 C 174 60, 216 120, 178 260" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M196 48 q -34 22 -56 70 t -26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M206 96 q 28 26 40 74" stroke-width=".9"/><path d="M186 150 q -14 10 -20 30" stroke-width=".7"/><path data-tete-trait pathLength="1" d="M270 0 C 296 60, 254 120, 292 170" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M274 48 q 34 22 56 70 t 26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M264 96 q -28 26 -40 74" stroke-width=".9"/><path d="M284 150 q 14 10 20 30" stroke-width=".7"/><path data-tete-trait pathLength="1" d="M1170 0 C 1144 60, 1186 120, 1148 215" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M1166 48 q -34 22 -56 70 t -26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M1176 96 q 28 26 40 74" stroke-width=".9"/><path d="M1156 150 q -14 10 -20 30" stroke-width=".7"/><path data-tete-trait pathLength="1" d="M1250 0 C 1276 60, 1234 120, 1272 260" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M1254 48 q 34 22 56 70 t 26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M1244 96 q -28 26 -40 74" stroke-width=".9"/><path d="M1264 150 q 14 10 20 30" stroke-width=".7"/><path data-tete-trait pathLength="1" d="M1320 0 C 1294 60, 1336 120, 1298 170" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M1316 48 q -34 22 -56 70 t -26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M1326 96 q 28 26 40 74" stroke-width=".9"/><path d="M1306 150 q -14 10 -20 30" stroke-width=".7"/><path data-tete-trait pathLength="1" d="M1400 0 C 1426 60, 1384 120, 1422 215" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M1404 48 q 34 22 56 70 t 26 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M1394 96 q -28 26 -40 74" stroke-width=".9"/><path d="M1414 150 q 14 10 20 30" stroke-width=".7"/></g>
+  </svg>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Génie végétal</p>
     <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Restaurer le vivant,</span></span><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">du sol <em>à l’eau</em></span></span></h1>

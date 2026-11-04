@@ -10,9 +10,12 @@ export default (c) => {
   const r = c.donnees.recrutement;
   return html`
 ${tete(c, {
+    variante: 'collage',
+    /* Pastille inclinée : les boîtes de ses lignes, une fois tournées, se recouvrent par construction (data-superpose) ; les lignes, elles, ne se touchent pas. */
+    visuel: html`${c.media({ nom: 'photos/apprentis-groupe', alt: '', cadrage: '50% 58%', classe: 'tete-collage tete-collage--rond', sizes: '(max-width: 900px) 40vw, 20vw' })}${c.media({ nom: 'photos/formation-grimpeurs', alt: '', cadrage: '50% 40%', classe: 'tete-collage tete-collage--carre', sizes: '(max-width: 900px) 40vw, 22vw' })}<p class="tete-pastille" aria-hidden="true" data-superpose><strong>${c.t('recrutement.tete.pastilleNombre')}</strong><b>${c.t('recrutement.tete.pastilleMot')}</b><span>${c.t('recrutement.tete.pastilleSous')}</span></p>`,
     image: 'photos/grimpeurs-chene', alt: c.s('recrutement.tete.alt'), cadrage: '70% 40%', cadrageMobile: '72% 40%',
     surtitre: c.t('recrutement.tete.surtitre'), lignes: [c.tb('recrutement.tete.ligne1'), c.tb('recrutement.tete.ligne2')],
-    intro: c.t('recrutement.tete.intro'), strate: 'Cime',
+    intro: c.t('recrutement.tete.intro'), strate: 'Sol',
     actions: html`<a class="bouton bouton--orange" href="#postes" data-action-principale>${c.t('recrutement.tete.action')}</a><a class="bouton bouton--contour" href="#candidature">${c.t('recrutement.tete.spontanee')}</a>`,
     info: html`<span class="pastille" aria-hidden="true"></span>${c.t('recrutement.tete.info')}`,
   })}

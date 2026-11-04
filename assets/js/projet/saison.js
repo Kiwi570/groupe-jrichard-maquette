@@ -3,7 +3,7 @@
    rien ne bouge tout seul plus de 5 s, la boucle s'arrête dès que tout est retombé.
    Printemps : pétales · été : aigrettes de pissenlit qui montent · automne : feuilles de chêne et de charme · hiver : flocons.
    Pour essayer une autre saison : ?saison=printemps, ete, automne ou hiver dans l'adresse. Rien en mode calme. */
-import { boucle, etat, quand } from '../socle/index.js?v=2';
+import { boucle, etat, quand } from '../socle/index.js?v=3';
 
 const SAISONS = ['printemps', 'ete', 'automne', 'hiver'];
 
@@ -89,7 +89,7 @@ function scene(hote, saison, { burst, max }) {
   let zones = [];
   const mesurerZones = () => {
     const b = hote.getBoundingClientRect();
-    zones = [...hote.querySelectorAll('.tete-contenu :is(h1, h2, p, .surtitre, a, button, .info-cle), .cime-contenu :is(h1, h2, p, .surtitre, a, button)')]
+    zones = [...hote.querySelectorAll('.tete-contenu :is(h1, h2, p, .surtitre, a, button, label, legend, .info-cle, dl), .tete-cote :is(li, p, a, h2), .cime-contenu :is(h1, h2, p, .surtitre, a, button)')]
       .map((e) => e.getBoundingClientRect()).filter((r) => r.width && r.height)
       .map((r) => ({ g: r.left - b.left - 10, d: r.right - b.left + 10, h: r.top - b.top - 10, b: r.bottom - b.top + 10 }));
   };
@@ -179,7 +179,10 @@ export function initSaison() {
   const petit = innerWidth < 760;
   const hotes = [...document.querySelectorAll('.tete, .cime')];
   if (!hotes.length) return;
-  const scenes = hotes.map((h) => ({ hote: h, s: scene(h, saison, h.classList.contains('cime') ? { burst: petit ? 5 : 11, max: petit ? 10 : 22 } : { burst: petit ? 7 : 16, max: petit ? 12 : 26 }) }));
+  /* Densité proportionnelle à la surface : un écran bas ou étroit reçoit moins de feuilles. */
+  const k = (h) => { const r = h.getBoundingClientRect(); return Math.max(0.4, Math.min(1, (r.width * Math.min(r.height, innerHeight)) / (1366 * 800))); };
+  const regle = (n, h) => Math.max(3, Math.round(n * k(h)));
+  const scenes = hotes.map((h) => ({ hote: h, s: scene(h, saison, h.classList.contains('cime') ? { burst: regle(petit ? 5 : 11, h), max: regle(petit ? 10 : 22, h) } : { burst: regle(petit ? 7 : 16, h), max: regle(petit ? 12 : 26, h) }) }));
 
   /* Arrivée : la tête de page dès que la page est prête ; la cime quand on l'atteint. */
   const tete = scenes.find((x) => x.hote.classList.contains('tete'));

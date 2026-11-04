@@ -24,11 +24,12 @@ export function pageRealisation(cle) {
       const apres = suivante[(i + 1) % suivante.length];
       return html`
 ${tete(c, {
+        variante: 'fiche',
         image: une.nom, alt: une.alt, cadrage: une.cadrage,
         surtitre: html`${c.t(`commun.profilsCourts.${r.profil}`)} · ${c.t(`commun.metiers.${r.metier}`)}`,
-        lignes: [r.titre], intro: r.resume, strate: 'Tronc',
+        lignes: [r.titre], intro: r.resume, strate: 'Sol',
         actions: c.lien('contact', { ancre: 'devis', params: `motif=devis&besoin=${r.metier === 'genie-vegetal' ? 'genie-vegetal' : r.metier}&profil=${r.profil}`, classe: 'bouton bouton--orange', texte: c.t('realisation.action'), attrs: 'data-action-principale' }),
-        info: html`<span class="pastille" aria-hidden="true"></span>${r.lieu || c.t('commun.lieuACompleter')}${r.annee ? ` · ${r.annee}` : ''}`,
+        info: html`<span class="fiche-bande-item"><small>${c.t('realisation.lieu')}</small>${r.lieu || html`<span class="a-completer">${c.t('commun.aCompleter')}</span>`}</span><span class="fiche-bande-item"><small>${c.t('realisation.annee')}</small>${r.annee || html`<span class="a-completer">${c.t('commun.aCompleter')}</span>`}</span><span class="fiche-bande-item"><small>${c.t('realisation.par')}</small>${r.societes.map((k) => soc[k]).join(' et ') || html`<span class="a-completer">${c.t('commun.aCompleter')}</span>`}</span>`,
       })}
 <section class="s-creme bloc-y" id="projet" data-strate="Tronc">
   <div class="conteneur fiche-grille">

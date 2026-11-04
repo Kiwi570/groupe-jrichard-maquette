@@ -159,7 +159,7 @@
     "cime": { "titre": "Votre extérieur, <em>dessiné pour vous</em>", "texte": "Un paysagiste vient mesurer, écouter et proposer. Le devis est gratuit." }
   },
   "entretien": {
-    "tete": { "alt": "Tondeuse autoportée sur une grande pelouse devant le château de Chamerolles", "surtitre": "Entretien et jardinage", "ligne1": "Faire grandir", "ligne2": "vos <em>espaces verts</em>", "intro": "Contrats d’entretien pour les entreprises et les collectivités, jardinage à domicile pour les particuliers : la même exigence, sans produit phytosanitaire.", "action": "Demander un devis d’entretien", "info": "50 % de crédit d’impôt pour les particuliers" },
+    "tete": { "alt": "Tondeuse autoportée sur une grande pelouse devant le château de Chamerolles", "surtitre": "Entretien et jardinage", "ligne1": "Un jardin soigné", "ligne2": "<em>à chaque saison</em>", "intro": "Contrats d’entretien pour les entreprises et les collectivités, jardinage à domicile pour les particuliers : la même exigence, sans produit phytosanitaire.", "action": "Demander un devis d’entretien", "info": "50 % de crédit d’impôt pour les particuliers" },
     "phyto": { "surtitre": "Zéro phyto", "titre": "Entretenir <em>avec le vivant</em>", "texte": "Aucun produit phytosanitaire sur nos chantiers depuis plus de dix ans : désherbage manuel, mécanique ou thermique, paillage, fauchage tardif et taille raisonnée.", "l1": "Gestion différenciée et bandes refuges", "l2": "Nichoirs, gîtes à chauves-souris, hôtels à insectes", "l3": "55 % du matériel de taille électrique", "alt": "Mésange posée sur un nichoir en bois" },
     "prestations": { "surtitre": "Nos prestations", "titre": "Entretenir, <em>saison après saison</em>", "chapeau": "Choisissez votre profil pour n’afficher que ce qui vous concerne." },
     "saisons": {
@@ -176,7 +176,7 @@
     "cime": { "titre": "Un jardin soigné, <em>toute l’année</em>", "texte": "Contrat d’entretien ou jardinage à domicile : parlons de votre espace vert.", "particulier": "Je suis un particulier", "pro": "Entreprise ou collectivité" }
   },
   "elagage": {
-    "tete": { "alt": "Élagueur encordé en tête d’un arbre, sur fond de ciel bleu", "surtitre": "Élagage et soin aux arbres · Goueffon Élagage", "ligne1": "Prendre soin", "ligne2": "de vos arbres, <em>jusqu’à la cime</em>", "intro": "Sept équipes de grimpeurs-élagueurs, à Semoy et à Amilly, pour tailler, démonter, soigner et transplanter vos arbres, en toute sécurité.", "action": "Demander un devis d’élagage", "info": "Devis gratuit, diagnostic sur place" },
+    "tete": { "fait2": "équipes de grimpeurs-élagueurs", "fait2Valeur": "7", "fait1": "Goueffon Élagage fondé à Semoy", "fait1Valeur": "1989", "altitude": "{n} m", "alt": "Élagueur encordé en tête d’un arbre, sur fond de ciel bleu", "surtitre": "Élagage et soin aux arbres · Goueffon Élagage", "ligne1": "Prendre soin", "ligne2": "de vos arbres, <em>jusqu’à la cime</em>", "intro": "Sept équipes de grimpeurs-élagueurs, à Semoy et à Amilly, pour tailler, démonter, soigner et transplanter vos arbres, en toute sécurité.", "action": "Demander un devis d’élagage", "info": "Devis gratuit, diagnostic sur place" },
     "taille": {
       "surtitre": "Taille raisonnée", "titre": "Tailler juste, <em>sans excès</em>", "illustratif": "Schéma illustratif.",
       "observer": { "titre": "Observer", "texte": "Essence, port, ramification, état sanitaire : la taille se décide au pied de l’arbre." },
@@ -219,7 +219,7 @@
     "cimeTexte": "Une idée, un terrain, une question : écrivez-nous, nous vous rappelons."
   },
   "groupe": {
-    "tete": { "alt": "Les salariés du Groupe J.Richard réunis sur la pelouse d’un parc", "surtitre": "Le Groupe J.Richard", "ligne1": "Six entreprises,", "ligne2": "<em>une même racine</em>", "intro": "Paysagistes et élagueurs à Orléans, Semoy et Amilly, réunis depuis 2018 sous une même bannière, chacun avec son nom et son autonomie.", "action": "Découvrir les entreprises", "info": "160 salariés, dont 15 apprentis" },
+    "tete": { "annees": "Les grandes dates du groupe", "alt": "Les salariés du Groupe J.Richard réunis sur la pelouse d’un parc", "surtitre": "Le Groupe J.Richard", "ligne1": "Six entreprises,", "ligne2": "<em>une même racine</em>", "intro": "Paysagistes et élagueurs à Orléans, Semoy et Amilly, réunis depuis 2018 sous une même bannière, chacun avec son nom et son autonomie.", "action": "Découvrir les entreprises", "info": "160 salariés, dont 15 apprentis" },
     "mission": { "surtitre": "Notre mission", "citation": "« Parce qu’il est agréable de planter de petits arbres et de pouvoir les contempler et profiter de leur ombre quelques dizaines d’années plus tard… »", "vocationTitre": "Notre vocation :", "vocation": "participer au développement du végétal en ville, en entreprise et dans nos lieux d’habitation.", "missionTitre": "Notre mission :", "mission": "réaliser des aménagements paysagers responsables et durables, et prendre soin de chaque végétal, de la graine jusqu’à l’arbre ancestral.", "adnTitre": "Notre ADN :", "adn": "des femmes et des hommes à la main verte, et certains qui ont le goût de la hauteur.", "alt": "Paysagiste plantant un arbre en motte", "altGrok": "Gland qui germe dans la terre" },
     "histoire": { "surtitre": "Notre histoire", "titre": "Les cernes <em>d’un groupe</em>", "chapeau": "Du cœur de l’arbre à l’écorce : faites défiler ou touchez un cerne.", "altGrok": "Coupe d’un tronc de chêne posée sur la mousse, ses cernes bien visibles." },
     "societes": { "surtitre": "Les entreprises", "titre": "À chacune <em>son métier</em>", "chapeau": "Des compétences complémentaires : selon votre projet et votre secteur, la bonne équipe vous répond." },
@@ -229,7 +229,7 @@
     "cime": { "titre": "Un projet, <em>une équipe</em>", "texte": "Dites-nous ce que vous imaginez : nous vous orientons vers la bonne entreprise du groupe.", "rejoindre": "Nous rejoindre" }
   },
   "recrutement": {
-    "tete": { "alt": "Deux grimpeurs-élagueurs souriants, encordés dans un chêne", "surtitre": "Recrutement", "ligne1": "Grandir", "ligne2": "<em>avec nous</em>", "intro": "Paysagistes, grimpeurs-élagueurs, responsables d’équipe, mécaniciens, apprentis : le groupe recrute toute l’année, à Orléans, Semoy et Amilly.", "action": "Voir les postes", "spontanee": "Candidature spontanée", "info": "Recrutement toute l’année, 3 sites" },
+    "tete": { "pastilleMot": "apprentis", "pastilleNombre": "15", "pastilleSous": "parmi nos 160 salariés", "pastille": "15 apprentis", "alt": "Deux grimpeurs-élagueurs souriants, encordés dans un chêne", "surtitre": "Recrutement", "ligne1": "Grandir", "ligne2": "<em>avec nous</em>", "intro": "Paysagistes, grimpeurs-élagueurs, responsables d’équipe, mécaniciens, apprentis : le groupe recrute toute l’année, à Orléans, Semoy et Amilly.", "action": "Voir les postes", "spontanee": "Candidature spontanée", "info": "Recrutement toute l’année, 3 sites" },
     "postes": { "note": "Lieu et type de contrat de chaque offre :",  "alt": "Deux grimpeurs-élagueurs retiennent une grume à la corde pendant un démontage.",  "surtitre": "Postes recherchés", "titre": "Nous <em>recrutons</em>", "chapeau": "Les métiers que nous recrutons, à Orléans, Semoy et Amilly.", "filtre": "Métier", "lieu": "Lieu :", "lieuACompleter": "Orléans, Semoy ou Amilly, à compléter", "contrat": "Contrat :", "postuler": "Postuler" },
     "familles": { "paysage": "Paysage", "elagage": "Élagage", "atelier": "Atelier", "alternance": "Alternance" },
     "raisons": { "alt1": "Grimpeurs-élagueurs en formation, encordés dans un arbre.", "alt2": "Apprentis en gilets jaunes taillant une vigne avec leur tuteur.", "alt3": "Les salariés du groupe réunis pour une photo d’équipe dans un parc.",  "surtitre": "Pourquoi nous rejoindre", "titre": "Trois bonnes <em>raisons</em>", "chapeau": "Ce que mettent en avant les équipes du groupe." },
@@ -239,7 +239,7 @@
     "form": { "surtitre": "Candidature", "titre": "Postuler <em>en deux minutes</em>", "poste": "Poste visé", "spontanee": "Candidature spontanée", "stage": "Stage", "site": "Site souhaité", "sites": { "orleans": "Orléans et Semoy", "amilly": "Amilly et Montargis", "indifferent": "Peu importe" }, "cv": "Votre CV (facultatif)", "cvBouton": "Joindre un fichier", "cvAucun": "Aucun fichier choisi (PDF, Word ou image)", "envoyer": "Envoyer ma candidature", "simule": "Candidature simulée : rien n’a été envoyé. Sur le site final, elle partira vers les ressources humaines du groupe." },
     "rh": { "alt": "Les locaux de Goueffon Élagage à Amilly, bardage vert et terrasse en bois.", "titre": "Une question ?", "texte": "Nos chargées des ressources humaines vous guident dans votre projet.", "orleans": "Bassin orléanais", "montargis": "Bassin montargois" }
   },
-  "actualites": {
+  "actualites": { "breves": "Brèves", "toutes": "Toutes les actualités",
     "tete": { "alt": "Une équipe du groupe plantant un arbre au bord d’un terrain", "surtitre": "Actualités", "ligne1": "La vie", "ligne2": "<em>du groupe</em>", "intro": "Chantiers, formations, sécurité, biodiversité : les nouvelles des paysagistes et des élagueurs du groupe.", "action": "Lire la dernière actualité", "info": "Dernière actualité :" },
     "une": "À la une",
     "uneAlt": "Illustration de l’actualité",
@@ -252,7 +252,7 @@
   },
   "article": { "retour": "Toutes les actualités", "par": "Par", "evenement": "Événement du", "voirRealisation": "Voir la fiche de la réalisation", "cimeTitre": "Un projet <em>en tête</em> ?", "cimeTexte": "Un paysagiste ou un élagueur se déplace pour l’étudier avec vous.", "autres": "Autres actualités" },
   "contact": {
-    "tete": { "alt": "Allée en dalles entre des massifs fleuris", "surtitre": "Contact", "ligne1": "Parlons", "ligne2": "de <em>votre projet</em>", "intro": "Devis, rendez-vous, simple question : en cinq étapes, votre demande arrive à la bonne entreprise du groupe.", "action": "Faire ma demande", "info": "Siège à Orléans" },
+    "tete": { "horairesAConfirmer": "Horaires à confirmer", "sites": "Nos trois sites", "alt": "Allée en dalles entre des massifs fleuris", "surtitre": "Contact", "ligne1": "Parlons", "ligne2": "de <em>votre projet</em>", "intro": "Devis, rendez-vous, simple question : en cinq étapes, votre demande arrive à la bonne entreprise du groupe.", "action": "Faire ma demande", "info": "Siège à Orléans" },
     "form": {
       "surtitre": "Demande en ligne", "titre": "Votre demande <em>en cinq étapes</em>", "deroule": "Cinq étapes : votre demande, votre profil, votre besoin, votre secteur, vos coordonnées. Environ deux minutes.",
       "etapes": { "motif": "Demande", "profil": "Profil", "besoin": "Besoin", "secteur": "Secteur", "coordonnees": "Coordonnées" },

@@ -1,7 +1,7 @@
 /* Détails vivants : titres découpés ligne à ligne, photos révélées de bas en haut (comme une pousse) avec un léger
    parallaxe, tiges des chiffres, tige de la méthode, cartes qui s'inclinent, boutons aimantés, questions animées.
    Tout passe par ScrollTrigger (positions mesurées au chargement), rien en mode calme. */
-import { etat } from '../socle/index.js?v=2';
+import { etat } from '../socle/index.js?v=3';
 
 const souris = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
@@ -32,9 +32,9 @@ export function initDetails() {
     }
   });
 
-  /* Ouverture : la photo s'approche lentement quand on quitte le haut de page. */
-  const fondTete = document.querySelector('.tete-fond');
-  if (fondTete) g.fromTo(fondTete, { scale: 1, yPercent: 0 }, { scale: 1.14, yPercent: 7, ease: 'none', scrollTrigger: { trigger: '.tete', start: 'top top', end: 'bottom top', scrub: true } });
+  /* Ouverture : la photo s'approche lentement quand on quitte le haut de page (à l'intérieur de son cadre). */
+  const fondTete = document.querySelector('.tete-fond picture');
+  if (fondTete) g.fromTo(fondTete, { scale: 1, yPercent: 0 }, { scale: 1.14, yPercent: 7, ease: 'none', transformOrigin: '50% 60%', scrollTrigger: { trigger: '.tete', start: 'top top', end: 'bottom top', scrub: true } });
 
   /* Défilement rapide : les photos à l'écran s'étirent légèrement dans le sens du mouvement
      (transformation posée seulement sur les photos visibles, rien à recalculer ailleurs). */

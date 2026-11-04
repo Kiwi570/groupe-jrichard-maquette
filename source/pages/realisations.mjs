@@ -1,6 +1,6 @@
 /* Réalisations : grille filtrable par profil et par métier (filtres gardés dans l'adresse), fiches détaillées. */
 import { html } from '../../outils/gabarit.mjs';
-import { tete, chapitre, cime } from '../gabarits/blocs.mjs';
+import { tete, chapitre, cime, murPhotos } from '../gabarits/blocs.mjs';
 
 export const page = { cle: 'realisations', fichier: 'realisations', imagePartage: 'photos/parc-spirale-aerien-1280.webp' };
 
@@ -11,6 +11,7 @@ export default (c) => {
   const reals = c.donnees.realisations.filter((r) => r.images.length);
   return html`
 ${tete(c, {
+    variante: 'mur', visuel: murPhotos(reals.flatMap((r) => r.images.map((im) => im.nom))),
     image: 'photos/parc-spirale-aerien', alt: c.s('realisations.tete.alt'), cadrage: '62% 55%',
     surtitre: c.t('realisations.tete.surtitre'), lignes: [c.tb('realisations.tete.ligne1'), c.tb('realisations.tete.ligne2')],
     intro: c.t('realisations.tete.intro'),

@@ -1,7 +1,7 @@
 /* Profil du visiteur (particulier, entreprise, collectivité) : un seul choix pour toute la page,
    gardé dans l'adresse (?profil=…) et mémorisé. Il filtre les prestations ([data-profils]) et
    préremplit les liens de demande de devis. Le filtrage passe en fondu, sans vider la page. */
-import { rafraichir } from '../socle/index.js?v=2';
+import { rafraichir } from '../socle/index.js?v=3';
 
 const CLE = 'jr:profil';
 const NOMS = { particulier: 'les particuliers', entreprise: 'les entreprises', collectivite: 'les collectivités' };

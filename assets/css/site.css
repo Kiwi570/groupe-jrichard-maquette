@@ -722,9 +722,36 @@ html:not(.js) .tete-profils { display: none; }
   html:not(.js) .entete-rangee { flex-wrap: wrap; row-gap: 0; }
   html:not(.js) [data-nav] { order: 3; flex: 1 1 100%; justify-content: flex-start; }
   html:not(.js) [data-nav] ul { gap: 0 16px; }
-  html:not(.js) [data-nav] a { font-size: .9rem; }
+  html:not(.js) [data-nav] li { flex: none; }
+  html:not(.js) [data-nav] a { font-size: .9rem; min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap; }
 }
 @media (max-width: 760px) { html:not(.js) { --barres-h: 66px; } }
+/* Sans JavaScript, en portrait (pas de menu, toute la navigation est affichée) : l'en-tête reste en haut de la page
+   au lieu de couvrir l'écran. Dans les ouvertures où la photo vient d'abord, la photo prend la place qui reste
+   entre l'en-tête et la barre d'appel : le titre, le bouton et l'information clé tiennent toujours dans le premier écran. */
+@media (max-width: 900px) and (min-height: 561px) {
+  html:not(.js) { --entete-h: 0px; --entete-reel: 106px; }
+  html:not(.js) [data-entete] { position: relative; }
+  html:not(.js) .tete.tete--cadre:is(.tete--plan, .tete--saisons, .tete--hauteur, .tete--berge, .tete--collage, .tete--sites) { min-height: calc(100svh - var(--entete-reel) - var(--barres-h)); }
+  html:not(.js) .tete.tete--cadre:is(.tete--plan, .tete--saisons, .tete--hauteur, .tete--berge, .tete--collage, .tete--sites) .tete-visuel { flex: 1 0 72px; height: auto; max-height: 46svh; }
+  html:not(.js) .tete.tete--cadre .tete-contenu, html:not(.js) .tete.tete--cadre .tete-cote { flex: none; }
+}
+@media (max-width: 900px) and (min-height: 561px) { html:not(.js) .tete:not(.tete--cadre) { min-height: calc(100svh - var(--entete-reel)); } }
+/* Petits écrans sans JavaScript : l'essentiel d'abord (le second bouton est déjà dans la barre d'appel). */
+@media (max-width: 760px) and (min-height: 561px) and (max-height: 700px) {
+  html:not(.js) .tete-surtitre { display: none; }
+  html:not(.js) .tete--plan .tete-contenu { padding-top: 18px; }
+  html:not(.js) .tete-bas > a:not([data-action-principale]) { display: none; }
+}
+@media (max-width: 760px) and (min-height: 561px) and (max-height: 600px) {
+  html:not(.js) .tete.tete--cadre:is(.tete--plan, .tete--saisons, .tete--hauteur, .tete--berge, .tete--collage) .tete-visuel { flex-basis: 64px; }
+  html:not(.js) .tete--saisons .tete-cote { display: none; }
+  html:not(.js) .tete--plan .tete-visuel { margin-top: 8px; }
+  html:not(.js) .tete--plan .tete-contenu { padding-top: 8px; }
+}
+/* Hauteur de l'en-tête selon le nombre de rangées de liens (une, deux ou trois). */
+@media (max-width: 767.98px) and (min-height: 561px) { html:not(.js) { --entete-reel: 150px; } }
+@media (max-width: 413.98px) and (min-height: 561px) { html:not(.js) { --entete-reel: 194px; } }
 @media (max-width: 760px) and (max-height: 600px) and (orientation: portrait) { .tete-intro { display: none; } }
 @media (max-height: 560px) and (orientation: landscape) { .tete-profils { display: none; } }
 .devis > * { min-width: 0; }
@@ -983,3 +1010,397 @@ html.calme [data-incline]::after { display: none; }
   .presta-liste > .carte-presta { scroll-snap-align: start; }
   .presta-liste > .carte-presta[data-incline] { transform: none; }
 }
+
+/* ===================================================================================================
+   v3 — Une ouverture propre à chaque page.
+   Base (tous écrans) : photo plein cadre, comme l'accueil. Les variantes s'appliquent sur ordinateur et tablette
+   en paysage (« large ») et sur téléphone et tablette en portrait (« compact ») ; sur un écran bas et large
+   (téléphone en paysage, petite fenêtre), la base plein cadre reste : titre, bouton et information clé tiennent toujours.
+   =================================================================================================== */
+.tete-visuel { position: absolute; inset: 0; z-index: -1; }
+.tete-visuel > .tete-fond { z-index: 0; }
+.tete-visuel > canvas.canopee { z-index: 1; }
+/* Décors des variantes : cachés tant que la variante ne s'applique pas. */
+.tete-plan-traits, .tete-collage, .tete-pastille, .tete-berge-eau, .tete-berge-racines, .tete-annees, .tete--saisons .tete-cote, .tete--sites .tete-cote, .tete-fond .media-legende { display: none; }
+.tete-regle { position: absolute; right: 12px; top: calc(var(--entete-h) + 18px); height: min(36svh, 300px); width: 38px; color: color-mix(in srgb, var(--creme) 70%, transparent); pointer-events: none; }
+.tete-regle svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.tete-regle ol { position: absolute; inset: -0.6em 0 -0.6em 0; right: calc(100% + 6px); left: auto; width: max-content; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; justify-content: space-between; text-align: right; font-size: .78rem; font-weight: 700; letter-spacing: .06em; }
+.tete-mousqueton { position: absolute; left: 50%; top: -4px; width: 12px; height: 22px; margin-left: -6px; border: 3px solid var(--orange); border-radius: 8px; }
+@media (max-width: 899.98px) { .tete-regle ol { display: none; } }
+
+/* 404 : texte centré. */
+.tete--centre { align-items: center; }
+.tete--centre .tete-contenu { justify-items: center; text-align: center; padding-top: calc(var(--entete-h) + 24px); }
+.tete--centre .tete-titre { align-items: center; margin-inline: auto; }
+.tete--centre .tete-intro { margin-inline: auto; }
+.tete--centre .tete-bas { justify-content: center; }
+
+/* Mur de chantiers (Réalisations), à toutes les tailles. */
+.tete--mur { align-items: center; }
+.tete--mur .tete-visuel { overflow: hidden; background: var(--terre); }
+.tete--mur canvas.canopee { display: none; }
+.mur { position: absolute; inset: -12% -8%; display: grid; align-content: center; gap: clamp(10px, 1.4vw, 18px); transform: rotate(-5deg); }
+.mur-rang { display: flex; }
+.mur-piste { display: flex; gap: clamp(10px, 1.4vw, 18px); width: max-content; animation: mur-glisse 120s linear infinite; will-change: transform; }
+.mur-rang--2 .mur-piste { animation-duration: 150s; animation-direction: reverse; }
+.mur-rang--3 .mur-piste { animation-duration: 135s; }
+.mur.arret .mur-piste { animation-play-state: paused; }
+html.calme .mur-piste { animation: none; }
+.mur-tuile { flex: none; width: clamp(150px, 19vw, 320px); aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; background: var(--humus); }
+.mur-tuile img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@keyframes mur-glisse { to { transform: translate3d(-50%, 0, 0); } }
+.tete--mur .tete-visuel::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 62% at 50% 52%, rgba(28,27,21,.9) 0%, rgba(28,27,21,.78) 48%, rgba(28,27,21,.5) 100%); }
+.tete--mur .tete-contenu { justify-items: center; text-align: center; width: min(100% - 2 * var(--gouttiere), 1100px); }
+.tete--mur .tete-titre { align-items: center; max-width: 18ch; }
+.tete--mur .tete-intro { margin-inline: auto; }
+.tete--mur .tete-bas { justify-content: center; }
+
+/* Fiche réalisation : couverture de magazine, titre en haut et fiche technique en bas, à toutes les tailles. */
+.tete--fiche { align-items: stretch; }
+.tete--fiche .tete-fond::after { background: linear-gradient(to bottom, rgba(28,27,21,.9) 0%, rgba(28,27,21,.76) 34%, rgba(28,27,21,.34) 52%, rgba(28,27,21,.08) 64%, rgba(28,27,21,.24) 78%, rgba(28,27,21,.82) 100%); }
+.tete--fiche .tete-contenu { align-content: start; grid-template-rows: auto auto auto 1fr; }
+.tete--fiche .tete-bas { align-self: end; justify-content: space-between; gap: 16px 28px; padding: 16px 18px 16px 22px; border-radius: 20px; background: rgba(28,27,21,.78); box-shadow: inset 0 0 0 1px rgba(244,241,232,.14); }
+.tete--fiche .info-cle { order: -1; flex-wrap: wrap; gap: 10px clamp(18px, 3vw, 44px); font-weight: 600; }
+.fiche-bande-item { display: grid; gap: 2px; }
+.fiche-bande-item small { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: color-mix(in srgb, var(--creme) 70%, var(--terre)); }
+.tete--fiche .tete-defiler { display: none; }
+
+/* ---------- Grands écrans : chaque variante a sa composition. ---------- */
+@media (min-width: 900px) and (min-height: 600px) {
+  .tete--cadre { --bord: max(var(--gouttiere), calc((100vw - 1440px) / 2)); align-items: center; }
+  .tete--cadre .tete-visuel { position: relative; inset: auto; z-index: 0; }
+  .tete--cadre .tete-fond { position: absolute; inset: 0; }
+  .tete--cadre .tete-fond::after { background: linear-gradient(to top, rgba(28,27,21,.16), transparent 45%); }
+  .tete--cadre .tete-fond .mention-ia { top: auto; bottom: 12px; }
+  .tete--cadre .tete-contenu { width: auto; margin: 0; padding: 0; }
+  .tete--cadre .tete-defiler { display: none; }
+
+  /* Aménagement : plan d'architecte, photo dans une arche. */
+  .tete--plan { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); column-gap: clamp(48px, 7vw, 130px); padding: calc(var(--entete-h) + clamp(28px, 6svh, 64px)) var(--bord) clamp(70px, 11svh, 120px);
+    background-image: linear-gradient(color-mix(in srgb, var(--vert) 8%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--vert) 8%, transparent) 1px, transparent 1px);
+    background-size: 56px 56px; background-position: center top; }
+  .tete--plan .tete-contenu { grid-column: 1; grid-row: 1; }
+  .tete--plan .tete-visuel { grid-column: 2; grid-row: 1; height: min(calc(100svh - var(--entete-h) - 20svh), 740px); margin: 0 48px 0 18px; }
+  .tete--plan .tete-fond, .tete--plan canvas.canopee { border-radius: 999px 999px 26px 26px; }
+  .tete--plan .tete-plan-traits { display: block; }
+
+  /* Entretien : écran coupé en deux, la photo jusqu'au bord, la frise des saisons. */
+  .tete--saisons { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; padding: 0; align-items: stretch; }
+  .tete--saisons .tete-visuel { grid-column: 1; grid-row: 1 / span 2; }
+  .tete--saisons .tete-fond { border-radius: 0 0 clamp(80px, 11vw, 200px) 0; }
+  .tete--saisons canvas.canopee { border-radius: 0 0 clamp(80px, 11vw, 200px) 0; }
+  .tete--saisons .tete-contenu { grid-column: 2; grid-row: 1; align-self: center; padding: calc(var(--entete-h) + 4svh) var(--bord) 3svh clamp(44px, 5.5vw, 104px); }
+  .tete--saisons .tete-cote { display: block; grid-column: 2; grid-row: 2; padding: 0 var(--bord) clamp(28px, 6svh, 64px) clamp(44px, 5.5vw, 104px); }
+
+  /* Élagage : la hauteur. Titre en haut (la cime), actions en bas (le sol), règle d'altitude contre la photo. */
+  .tete--hauteur { grid-template-columns: minmax(0, 1fr) minmax(0, .74fr); column-gap: clamp(96px, 10vw, 170px); padding: 0 var(--bord); align-items: stretch; background: linear-gradient(to bottom, #2F3C43 0%, #23292A 36%, var(--terre) 78%); }
+  .tete--hauteur .tete-contenu { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: clamp(14px, 2.2svh, 26px); padding: calc(var(--entete-h) + clamp(28px, 7svh, 80px)) 0 clamp(36px, 8svh, 88px); }
+  .tete--hauteur .tete-faits { display: flex; margin-top: auto; }
+  .tete--hauteur .tete-bas { margin-top: clamp(16px, 3svh, 32px); }
+  .tete--hauteur .tete-visuel { grid-column: 2; grid-row: 1; margin: calc(var(--entete-h) + 3svh) 0 clamp(28px, 5svh, 56px); }
+  .tete--hauteur .tete-fond, .tete--hauteur canvas.canopee { border-radius: 30px; }
+  .tete--hauteur .tete-regle { right: auto; left: -74px; top: 0; bottom: 0; height: auto; width: 44px; }
+  .tete--hauteur .tete-regle ol { display: flex; }
+
+  /* Génie végétal : la rivière en panorama, la ligne d'eau, le texte sous la surface. */
+  .tete--berge { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; padding: 0 var(--bord) clamp(32px, 6svh, 72px); align-items: start; background: var(--humus); }
+  .tete--berge .tete-visuel { grid-column: 1; grid-row: 1; margin: 0 calc(-1 * var(--bord)); height: clamp(280px, 55svh, 600px); }
+  .tete--berge .tete-fond { border-radius: 0; }
+  .tete--berge .tete-fond::after { background: linear-gradient(to bottom, rgba(28,27,21,.45) 0%, transparent 30%); }
+  .tete--berge .tete-berge-eau { display: block; position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(46px, 7vw, 120px); z-index: 2; }
+  .tete--berge .tete-berge-racines { display: block; position: absolute; left: 0; top: calc(100% - 4px); width: 100%; height: min(40svh, 360px); z-index: 0; pointer-events: none; }
+  .tete--berge .tete-contenu { grid-row: 2; position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); column-gap: clamp(40px, 6vw, 110px); row-gap: clamp(12px, 2svh, 22px); align-items: start; padding-top: clamp(4px, 1svh, 16px); }
+  .tete--berge .tete-surtitre { grid-column: 1; grid-row: 1; }
+  .tete--berge .tete-titre { grid-column: 1; grid-row: 2 / span 3; }
+  .tete--berge .tete-intro { grid-column: 2; grid-row: 2; }
+  .tete--berge .tete-bas { grid-column: 2; grid-row: 3; }
+
+  /* Le Groupe : titre centré, photo de l'équipe en format cinéma, frise des années. */
+  .tete--famille { grid-template-columns: minmax(0, 1fr); justify-items: center; align-content: start; row-gap: clamp(34px, 6svh, 64px); padding: calc(var(--entete-h) + clamp(28px, 6svh, 64px)) var(--gouttiere) 0; text-align: center; }
+  .tete--famille .tete-contenu { grid-row: 1; justify-items: center; max-width: 1040px; }
+  .tete--famille .tete-titre { align-items: center; max-width: 18ch; }
+  .tete--famille .tete-intro { margin-inline: auto; }
+  .tete--famille .tete-bas { justify-content: center; }
+  .tete--famille .tete-visuel { grid-row: 2; width: min(100%, 1320px); aspect-ratio: 21 / 7; align-self: end; }
+  .tete--famille .tete-fond, .tete--famille canvas.canopee { border-radius: 30px 30px 0 0; }
+  .tete--famille .tete-annees { display: flex; }
+
+  /* Recrutement : trois photos en formes arrondies et la pastille des apprentis. */
+  .tete--collage { grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr); column-gap: clamp(40px, 5vw, 100px); padding: calc(var(--entete-h) + clamp(24px, 5svh, 56px)) var(--bord) clamp(32px, 6svh, 72px);
+    background: radial-gradient(ellipse 60% 70% at 84% 40%, color-mix(in srgb, var(--orange) 14%, var(--creme)) 0%, var(--creme) 70%); }
+  .tete--collage .tete-contenu { grid-column: 1; grid-row: 1; }
+  .tete--collage .tete-visuel { grid-column: 2; grid-row: 1; height: min(calc(100svh - var(--entete-h) - 12svh), 740px); }
+  .tete--collage .tete-fond, .tete--collage canvas.canopee { inset: 0 auto 0 0; width: 48%; height: 100%; border-radius: 999px; }
+  .tete--collage .tete-collage { display: block; position: absolute; box-shadow: 0 24px 60px -30px rgba(28,27,21,.5); }
+  .tete--collage .tete-pastille { display: grid; }
+
+  /* Contact : les trois sites posés sur la photo. */
+  .tete--sites { grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr); column-gap: clamp(40px, 5vw, 100px); padding: calc(var(--entete-h) + clamp(24px, 5svh, 56px)) var(--bord) clamp(32px, 6svh, 72px); }
+  .tete--sites .tete-contenu { grid-column: 1; grid-row: 1; }
+  .tete--sites .tete-visuel { grid-column: 2; grid-row: 1; height: min(calc(100svh - var(--entete-h) - 12svh), 740px); margin-left: 26%; }
+  .tete--sites .tete-fond, .tete--sites canvas.canopee { border-radius: 30px; }
+  .tete--sites .tete-cote { display: block; grid-column: 2; grid-row: 1; align-self: center; justify-self: start; width: min(76%, 450px); position: relative; z-index: 2; }
+
+  /* Actualités : une de journal. Bandeau, titre et devise, la une en grand, trois brèves en colonne. */
+  .tete--journal { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); grid-template-rows: auto auto auto auto 1fr; column-gap: clamp(36px, 4.5vw, 84px); row-gap: clamp(12px, 2.2svh, 24px); padding: calc(var(--entete-h) + clamp(16px, 3svh, 36px)) var(--bord) clamp(32px, 6svh, 64px); align-items: start; align-content: start; min-height: 0; }
+  .tete--journal .tete-contenu, .tete--journal .tete-cote { display: contents; }
+  .tete--journal .tete-surtitre { grid-column: 1 / -1; grid-row: 1; padding: 10px 0; border-top: 3px double var(--terre); border-bottom: 1px solid var(--terre); }
+  .tete--journal .tete-surtitre::before { display: none; }
+  .tete--journal .tete-titre { grid-column: 1; grid-row: 2; max-width: none; font-size: clamp(2.6rem, min(5.4vw, 9vh), 5.6rem); flex-direction: row; flex-wrap: wrap; column-gap: .24em; }
+  .tete--journal .tete-intro { grid-column: 2; grid-row: 2; align-self: end; font-size: 1rem; color: var(--doux); padding-bottom: .5em; }
+  .tete--journal .tete-visuel { grid-column: 1; grid-row: 3; height: clamp(160px, 30svh, 400px); }
+  .tete--journal .tete-fond, .tete--journal canvas.canopee { border-radius: 6px; }
+  .tete--journal .tete-fond::after { display: none; }
+  .tete--journal .journal-une { grid-column: 1; grid-row: 4; }
+  .tete--journal .tete-bas { grid-column: 1; grid-row: 5; align-self: start; }
+  .tete--journal .journal-breves { grid-column: 2; grid-row: 3 / span 3; align-self: start; border-left: 1px solid var(--ligne-s); padding-left: clamp(20px, 2.4vw, 36px); }
+  @media (max-height: 820px) { .tete--journal .journal-chapo { display: none; } }
+
+  /* Article : texte d'abord, photo pleine largeur en dessous. */
+  .tete--article { grid-template-columns: minmax(0, 1fr); align-content: start; row-gap: clamp(28px, 5svh, 56px); padding: calc(var(--entete-h) + clamp(28px, 6svh, 64px)) var(--bord) 0; }
+  .tete--article .tete-contenu { grid-row: 1; max-width: none; grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); column-gap: clamp(36px, 6vw, 110px); }
+  .tete--article .tete-surtitre, .tete--article .tete-titre, .tete--article .tete-intro { grid-column: 1; }
+  .tete--article .tete-bas { grid-column: 2; grid-row: 1 / span 3; align-self: end; flex-direction: column; align-items: flex-start; gap: 16px; padding-left: 26px; border-left: 1px solid var(--ligne-s); }
+  .tete--article .tete-titre { max-width: 26ch; font-size: clamp(2.3rem, min(4.6vw, 8.4vh), 4.8rem); }
+  .tete--article.tete--long .tete-titre { font-size: clamp(2rem, min(4vw, 7vh), 4rem); }
+  .tete--article .tete-visuel { grid-row: 2; margin: 0 calc(-1 * var(--bord)); height: clamp(240px, 48svh, 640px); align-self: end; }
+  .tete--article .tete-fond { border-radius: 0; }
+
+  /* Pages légales : sobres, une vignette ronde. */
+  .tete--sobre { grid-template-columns: minmax(0, 1fr) auto; column-gap: clamp(40px, 6vw, 120px); min-height: auto; padding: calc(var(--entete-h) + clamp(40px, 9svh, 96px)) var(--bord) clamp(40px, 8svh, 88px); }
+  .tete--sobre .tete-contenu { grid-column: 1; grid-row: 1; }
+  .tete--sobre .tete-visuel { grid-column: 2; grid-row: 1; width: clamp(200px, 22vw, 320px); aspect-ratio: 1; }
+  .tete--sobre .tete-fond, .tete--sobre canvas.canopee { border-radius: 50%; }
+}
+
+/* ---------- Téléphones et tablettes en portrait : la variante en version compacte. ---------- */
+@media (max-width: 899.98px) and (min-height: 561px) {
+  .tete.tete--cadre { --bord: var(--gouttiere); display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; min-height: 0; padding: 0 0 clamp(28px, 5svh, 48px); }
+  :where(.tete--cadre) .tete-visuel { position: relative; inset: auto; z-index: 0; flex: none; height: calc(var(--entete-h) + clamp(130px, 26svh, 300px)); }
+  :where(.tete--cadre) .tete-fond { position: absolute; inset: 0; border-radius: 0; }
+  :where(.tete--cadre) .tete-fond::after { background: linear-gradient(to bottom, rgba(28,27,21,.5) 0%, transparent 34%, transparent 70%, rgba(28,27,21,.18) 100%); }
+  :where(.tete--cadre) .tete-fond .mention-ia { top: auto; bottom: 10px; }
+  :where(.tete--cadre) .tete-contenu { width: min(100% - 2 * var(--gouttiere), 720px); margin: 0 auto; padding: clamp(18px, 3.4svh, 30px) 0 0; }
+  :where(.tete--cadre) .tete-bas { order: 3; }
+  :where(.tete--cadre) .tete-intro { order: 4; }
+  :where(.tete--cadre) .tete-profils { order: 5; }
+  :where(.tete--cadre) .tete-cote { width: min(100% - 2 * var(--gouttiere), 720px); margin: clamp(18px, 3svh, 28px) auto 0; }
+  .tete--cadre .tete-defiler { display: none; }
+
+  /* Aménagement : l'arche sur le quadrillage. */
+  .tete--plan { background-image: linear-gradient(color-mix(in srgb, var(--vert) 8%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--vert) 8%, transparent) 1px, transparent 1px); background-size: 40px 40px; }
+  .tete--plan .tete-visuel { margin: calc(var(--entete-h) + 14px) var(--gouttiere) 0; height: clamp(140px, 27svh, 320px); }
+  .tete--plan .tete-fond, .tete--plan canvas.canopee { border-radius: 999px 999px 18px 18px; }
+  .tete--plan .tete-fond::after { background: none; }
+  /* Entretien : la photo arrondie en bas à droite, la frise des saisons. */
+  .tete--saisons .tete-fond, .tete--saisons canvas.canopee { border-radius: 0 0 72px 0; }
+  .tete--saisons .tete-cote { display: block; }
+  /* Génie végétal : la ligne d'eau. */
+  .tete--berge { background: var(--humus); }
+  .tete--berge .tete-berge-eau { display: block; position: absolute; left: 0; bottom: -1px; width: 100%; height: 44px; z-index: 2; }
+  /* Le Groupe, Actualités, Article, pages légales : le texte d'abord. */
+  .tete--famille .tete-contenu, .tete--journal .tete-contenu, .tete--article .tete-contenu, .tete--sobre .tete-contenu { order: 1; padding-top: calc(var(--entete-h) + clamp(22px, 4svh, 40px)); }
+  .tete--famille .tete-visuel, .tete--journal .tete-visuel, .tete--article .tete-visuel { order: 2; margin-top: clamp(24px, 4svh, 36px); height: clamp(200px, 32svh, 420px); }
+  .tete--famille .tete-visuel { margin-inline: var(--gouttiere); }
+  .tete--famille .tete-fond, .tete--famille canvas.canopee { border-radius: 22px; }
+  .tete--famille .tete-annees { display: flex; }
+  .tete--journal .tete-surtitre { padding: 10px 0; border-top: 3px double var(--terre); border-bottom: 1px solid var(--terre); }
+  .tete--journal .tete-surtitre::before { display: none; }
+  .tete--journal .tete-visuel { margin-inline: var(--gouttiere); }
+  .tete--journal .tete-fond { border-radius: 6px; }
+  .tete--sobre { padding-bottom: 28px; }
+  .tete--sobre .tete-visuel { order: 2; width: min(100% - 2 * var(--gouttiere), 420px); height: 150px; margin: 22px var(--gouttiere) 0; }
+  .tete--sobre .tete-fond, .tete--sobre canvas.canopee { border-radius: 22px; }
+  .tete--sobre .tete-fond .mention-ia { left: auto; right: 10px; bottom: 10px; transform: none; }
+  /* Recrutement : le collage en réduction. */
+  .tete--collage { background: radial-gradient(ellipse 80% 50% at 80% 18%, color-mix(in srgb, var(--orange) 14%, var(--creme)) 0%, var(--creme) 70%); }
+  .tete--collage .tete-visuel { margin: calc(var(--entete-h) + 14px) var(--gouttiere) 0; height: clamp(130px, 25svh, 320px); }
+  .tete--collage .tete-fond, .tete--collage canvas.canopee { inset: 0 auto 0 0; width: 46%; border-radius: 999px; }
+  .tete--collage .tete-fond::after { background: none; }
+  .tete--collage .tete-collage { display: block; position: absolute; }
+  .tete--collage .tete-pastille { display: grid; width: 96px; left: 36%; bottom: 4%; }
+  .tete--collage .tete-pastille strong { font-size: 1.05rem; }
+  .tete--collage .tete-pastille span { font-size: .75rem; }
+  /* Contact : les trois sites sous le texte. */
+  .tete--sites .tete-cote { display: block; }
+}
+
+/* ---------- Couleurs des variantes sur fond clair (seulement quand la variante s'applique). ---------- */
+@media (min-width: 900px) and (min-height: 600px), (max-width: 899.98px) and (min-height: 561px) {
+  .tete--claire { color: var(--terre); --texte-section: var(--terre); --doux: color-mix(in srgb, var(--terre) 74%, var(--creme)); --lien: var(--vert); --ligne-s: color-mix(in srgb, var(--terre) 14%, transparent); --fond-section: var(--creme); background-color: var(--creme); }
+  .tete--saisons, .tete--famille { background-color: var(--sauge); --fond-section: var(--sauge); }
+  .tete--claire .tete-intro { color: var(--doux); }
+  .tete--claire .info-cle { color: var(--terre); }
+  .tete--claire .info-cle .pastille { background: var(--feuille); box-shadow: 0 0 0 4px color-mix(in srgb, var(--feuille) 22%, transparent); }
+  .tete--claire .titre-1 em { color: var(--vert); }
+  .tete--claire .surtitre::before { background: var(--orange-texte); }
+  .tete--claire .profils span { box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--terre) 40%, transparent); }
+  .tete--claire .profils input:hover + span { box-shadow: inset 0 0 0 1.5px var(--terre); }
+  .tete--claire .profils input:checked + span { background: var(--terre); color: var(--creme); }
+  .tete--claire .profils legend { color: var(--doux); }
+  .tete--claire [data-sommaire] a { color: var(--terre); text-decoration-color: color-mix(in srgb, var(--terre) 40%, transparent); }
+  .tete--claire .bouton--contour { color: var(--terre); }
+  .tete--hauteur, .tete--berge, .tete--sites { color: var(--creme); }
+}
+
+/* ---------- Pièces des variantes. ---------- */
+.tete-collage--rond { right: 0; top: 2%; width: 46%; aspect-ratio: 1; border-radius: 50%; }
+.tete-collage--carre { right: 0; bottom: 2%; width: 46%; aspect-ratio: 4 / 3.6; border-radius: 28px; }
+@media (max-width: 899.98px) { .tete-collage--rond { width: auto; height: 56%; top: 0; right: 8%; } .tete-collage--carre { width: 44%; height: 42%; aspect-ratio: auto; border-radius: 18px; } }
+.tete--sobre .tete-fond .mention-ia { left: 50%; right: auto; bottom: 12%; transform: translateX(-50%); white-space: nowrap; }
+.tete-saisons { list-style: none; margin: 0; padding: 16px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 12px; border-top: 1px solid var(--ligne-s); }
+.tete-saisons li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-weight: 700; font-size: .95rem; color: var(--doux); }
+.tete-saison-point { width: 10px; height: 10px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 28%, transparent); flex: none; }
+.tete-saisons [data-saison="printemps"] { --c: #E79AAB; }
+.tete-saisons [data-saison="ete"] { --c: #C9B400; }
+.tete-saisons [data-saison="automne"] { --c: var(--orange); }
+.tete-saisons [data-saison="hiver"] { --c: #7FA3B5; }
+.tete-saisons li.maintenant { color: var(--terre); }
+.tete-saisons li.maintenant .tete-saison-point { box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 40%, transparent); }
+.tete-saisons small { flex-basis: 100%; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--orange-texte); }
+@media (max-width: 520px) { .tete-saisons { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.tete-annees { position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); z-index: 3; list-style: none; margin: 0; padding: 6px; gap: 4px; border-radius: 999px; background: var(--sauge); box-shadow: 0 10px 30px -18px rgba(28,27,21,.6); max-width: calc(100% - 24px); overflow-x: auto; scrollbar-width: none; }
+.tete-annees li { padding: 7px 14px; border-radius: 999px; font-family: var(--police-titres); font-size: 1.02rem; color: var(--terre); white-space: nowrap; }
+.tete-annees li:first-child { background: var(--terre); color: var(--creme); }
+@media (max-width: 520px) { .tete-annees { gap: 2px; padding: 4px; } .tete-annees li { padding: 6px 9px; font-size: .9rem; } }
+
+.tete-pastille { position: absolute; left: 37%; bottom: 13%; z-index: 3; width: clamp(118px, 10vw, 150px); aspect-ratio: 1; margin: 0; border-radius: 50%; background: var(--orange); color: var(--terre); place-content: center; justify-items: center; gap: 2px; padding: 10px; text-align: center; transform: rotate(-9deg); box-shadow: 0 18px 40px -22px rgba(28,27,21,.7); }
+.tete-pastille strong { font-family: var(--police-titres); font-weight: 500; font-size: clamp(1.2rem, 1.5vw, 1.5rem); line-height: 1.05; }
+.tete-pastille span { font-size: .78rem; font-weight: 700; line-height: 1.25; }
+
+.tete-sites { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.tete-sites li { display: grid; gap: 2px 14px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 14px 16px 14px 20px; border-radius: 18px; background: rgba(28,27,21,.9); color: var(--creme); box-shadow: inset 0 0 0 1px rgba(244,241,232,.14), 0 20px 50px -30px rgba(0,0,0,.8); }
+.tete-site-nom { margin: 0; font-family: var(--police-titres); font-size: 1.35rem; line-height: 1.1; }
+.tete-site-nom small { display: block; margin-top: 2px; font-family: var(--police-texte); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: color-mix(in srgb, var(--creme) 70%, var(--terre)); }
+.tete-site-tel { grid-column: 2; grid-row: 1 / span 2; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 999px; font-weight: 700; font-size: .92rem; color: var(--terre); background: var(--tendre); text-decoration: none; white-space: nowrap; }
+.tete-site-tel:hover { background: var(--creme); }
+.tete-site-statut { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: .9rem; font-weight: 600; color: color-mix(in srgb, var(--creme) 86%, var(--terre)); }
+.tete-site-statut .statut { display: inline-flex; align-items: center; gap: 8px; }
+@media (max-width: 420px) { .tete-sites li { grid-template-columns: minmax(0, 1fr); } .tete-site-tel { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 8px; } }
+@media (min-width: 900px) and (max-width: 1279.98px) { .tete-sites li { grid-template-columns: minmax(0, 1fr); } .tete-site-tel { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 6px; } }
+
+/* ---------- v3, après relecture : signatures plus nettes, cadrages, lisibilité. ---------- */
+/* Plan : contour d'arche décalé, cotes et nord, calés sur l'arche. */
+.tete-plan-traits { position: absolute; inset: 0; color: var(--vert); pointer-events: none; }
+.plan-contour { position: absolute; inset: -16px; border: 1px solid currentColor; border-radius: 999px 999px 38px 38px; opacity: .5; }
+.plan-cote { position: absolute; opacity: .75; }
+.plan-cote--bas { left: 0; right: 0; bottom: -40px; height: 11px; border-left: 1px solid; border-right: 1px solid; background: linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat; }
+.plan-cote--cote { right: -42px; top: 40%; bottom: 0; width: 11px; border-top: 1px solid; border-bottom: 1px solid; background: linear-gradient(currentColor, currentColor) center / 1px 100% no-repeat; }
+.plan-nord { position: absolute; right: -30px; top: -10px; width: 52px; height: 52px; }
+
+/* Saisons : quatre cases égales, la saison en cours sur fond plein. */
+.tete-saisons { align-items: stretch; gap: 8px; padding-top: 14px; }
+.tete-saisons li { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 8px; padding: 12px 12px 12px; border-radius: 14px; font-family: var(--police-titres); font-weight: 400; font-size: 1.12rem; color: var(--doux); }
+.tete-saison-point { width: 12px; height: 12px; }
+.tete-saisons li.maintenant { background: color-mix(in srgb, var(--c) 24%, var(--sauge)); color: var(--terre); }
+.tete-saisons small { flex-basis: auto; font-family: var(--police-texte); }
+.tete-saisons li.maintenant small { color: var(--terre); }
+@media (max-width: 520px) { .tete-saisons { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* Hauteur : deux faits réels (date de création, nombre d'équipes). */
+.tete-faits { display: none; gap: clamp(28px, 4vw, 64px); margin: 0; }
+.tete-faits div { display: grid; gap: 2px; }
+.tete-faits dt { font-family: var(--police-titres); font-size: clamp(2.4rem, 3.6vw, 3.6rem); line-height: 1.2; color: var(--tendre); }
+.tete-faits dd { margin: 0; max-width: 16ch; font-size: .92rem; font-weight: 600; color: color-mix(in srgb, var(--creme) 78%, var(--terre)); }
+html.corde-cachee .corde { opacity: 0; transition: opacity .4s ease; }
+
+/* Berge : des racines qui se ramifient sur les côtés, jamais derrière le texte. */
+.tete-berge-racines { -webkit-mask-image: linear-gradient(90deg, #000 0, #000 16%, transparent 32%, transparent 68%, #000 84%, #000 100%); mask-image: linear-gradient(90deg, #000 0, #000 16%, transparent 32%, transparent 68%, #000 84%, #000 100%); }
+
+/* Collage : la pastille, « 15 » en grand. */
+/* Interlignes assez ouverts pour que les trois lignes ne se recouvrent jamais. */
+.tete-pastille { gap: 0; }
+.tete-pastille strong { font-size: clamp(2.4rem, 3.4vw, 3.3rem); line-height: 1.2; margin-bottom: -.08em; }
+.tete-pastille b { font-family: var(--police-titres); font-weight: 500; font-size: 1.08rem; line-height: 1.25; }
+.tete-pastille span { font-size: .78rem; line-height: 1.3; max-width: 11ch; }
+
+/* Contact : la lumière WebGL ne se pose pas sur le ciel. */
+.tete--sites canvas.canopee { display: none; }
+
+/* Journal : la une et les brèves. */
+.journal-une, .journal-breves { display: none; }
+.journal-meta { margin: 0; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--doux); }
+.journal-titre { margin: 6px 0 0; font-size: clamp(1.4rem, 1.1rem + 1vw, 2.1rem); line-height: 1.12; text-wrap: balance; }
+.journal-titre a { color: inherit; text-decoration: none; }
+.journal-titre a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.journal-chapo { margin: 10px 0 0; max-width: 46em; color: var(--doux); }
+.journal-breves ul { list-style: none; margin: 10px 0 14px; padding: 0; }
+.journal-breves li { border-top: 1px solid var(--ligne-s); }
+.journal-breves li a { display: grid; gap: 4px; padding: 14px 0; color: inherit; text-decoration: none; }
+.journal-breves li a:hover .journal-breve-titre { text-decoration: underline; text-underline-offset: .18em; }
+.journal-breve-titre { font-family: var(--police-titres); font-size: 1.12rem; line-height: 1.2; }
+
+/* Titres : lignes équilibrées (pas de mot seul en fin de titre). */
+.tete-titre .ligne-masque { text-wrap: balance; }
+.info-cle { text-wrap: pretty; }
+
+/* Fiche réalisation : texte lisible sur les photos claires, rien « à compléter » sur la couverture. */
+.tete--fiche .tete-titre, .tete--fiche .tete-intro, .tete--fiche .tete-surtitre { text-shadow: 0 1px 22px rgba(0,0,0,.55), 0 0 2px rgba(0,0,0,.35); }
+.tete--fiche .fiche-bande-item:has(.a-completer) { display: none; }
+@media (max-width: 760px), (max-height: 600px) {
+  .tete--fiche .tete-bas { padding: 12px 14px; gap: 12px; }
+  .tete--fiche .info-cle { gap: 2px 14px; font-size: .9rem; }
+  .tete--fiche .fiche-bande-item small { display: none; }
+  .tete--fiche .tete-intro { font-size: .98rem; line-height: 1.45; }
+}
+
+/* 404 : l'information centrée elle aussi. */
+.tete--centre .info-cle { justify-content: center; text-align: center; }
+
+/* Mur de chantiers : sur grand écran les trois rangées remplissent toute la hauteur ; voile concentré derrière le texte. */
+.tete--mur .tete-visuel::after { background: radial-gradient(ellipse 50% 46% at 50% 52%, rgba(28,27,21,.92) 0%, rgba(28,27,21,.8) 55%, rgba(28,27,21,.42) 100%); }
+@media (min-width: 900px) and (min-height: 600px) {
+  .mur { inset: -14% -10%; grid-template-rows: repeat(3, minmax(0, 1fr)); align-content: stretch; }
+  .mur-rang { min-height: 0; }
+  .mur-piste { height: 100%; }
+  .mur-tuile { height: 100%; width: auto; }
+  .tete--cadre { min-height: min(100svh, 1100px); }
+  .tete--journal, .tete--sobre { min-height: 0; }
+  .tete--cadre canvas.canopee.pret { opacity: .5; }
+}
+@media (orientation: portrait) and (max-width: 899.98px) { .mur { transform: rotate(-6deg) scale(1.45); } .mur-tuile { width: clamp(150px, 48vw, 360px); } }
+
+/* Téléphones et tablettes en portrait : la signature de chaque page reste visible. */
+@media (max-width: 899.98px) and (min-height: 561px) {
+  .tete--plan .tete-plan-traits { display: block; }
+  .tete--plan .tete-visuel { width: min(64%, 420px); margin: calc(var(--entete-h) + 26px) auto 0; height: clamp(170px, 31svh, 360px); }
+  .tete--plan .tete-contenu { padding-top: 42px; }
+  .plan-contour { inset: -10px; }
+  .plan-cote--bas { bottom: -26px; }
+  .plan-cote--cote { right: -28px; }
+  .plan-nord { right: -46px; top: 6px; width: 38px; height: 38px; }
+  .tete--saisons .tete-cote { order: 1; margin-top: 14px; }
+  .tete--saisons .tete-contenu { order: 2; padding-top: 14px; }
+  .tete-saisons { padding-top: 0; border-top: 0; gap: 6px; }
+  .tete-saisons li { padding: 8px 8px; gap: 6px; font-size: .92rem; border-radius: 10px; }
+  .tete-saisons small { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .tete--hauteur .tete-visuel { height: calc(var(--entete-h) + clamp(110px, 52svh - 160px, 380px)); }
+  .tete--hauteur .tete-regle { left: 12px; right: auto; top: calc(var(--entete-h) + 14px); bottom: 14px; height: auto; width: 26px; }
+  .tete--berge .tete-berge-racines { display: block; position: absolute; left: 0; top: 100%; width: 100%; height: 240px; z-index: 0; pointer-events: none; }
+  .tete--berge .tete-contenu { position: relative; z-index: 1; }
+  .tete--famille .tete-visuel { height: auto; aspect-ratio: 16 / 9; margin-bottom: 64px; }
+  .tete--famille .tete-annees { top: calc(100% + 12px); transform: translateX(-50%); flex-wrap: wrap; justify-content: center; max-width: 100%; width: max-content; overflow: visible; }
+  .tete--journal .journal-une, .tete--journal .journal-breves { display: block; }
+  .tete--journal .tete-cote { order: 3; display: grid; gap: 24px; }
+  .tete--journal .journal-chapo { display: none; }
+  .tete--article .tete-titre { max-width: 24ch; }
+  .tete--collage .tete-pastille strong { font-size: 1.9rem; }
+  .tete--collage .tete-pastille b { font-size: .86rem; }
+  /* En réduction, la pastille garde « 15 apprentis » ; la précision reste lue par les lecteurs d'écran. */
+  .tete--collage .tete-pastille span { display: none; }
+}
+@media (max-width: 520px) and (min-height: 561px) { .tete--famille .tete-visuel { margin-bottom: 104px; } }
+@media (min-width: 600px) and (max-width: 899.98px) and (min-height: 900px) {
+  :where(.tete--cadre) .tete-visuel { height: calc(var(--entete-h) + 34svh); }
+  .tete--plan .tete-visuel { height: 38svh; width: min(52%, 440px); }
+  .tete--collage .tete-visuel { height: 36svh; }
+  .tete--hauteur .tete-visuel { height: calc(var(--entete-h) + 40svh); }
+  .tete--journal .tete-visuel, .tete--article .tete-visuel { height: 34svh; }
+}
+@media (min-width: 900px) and (min-height: 600px) { .tete--journal .journal-une, .tete--journal .journal-breves { display: block; } }
+@media (min-width: 900px) and (max-width: 1199.98px), (max-height: 840px) { .tete--hauteur .tete-faits { display: none; } .tete--hauteur .tete-bas { margin-top: auto; } }
+
+/* v3, reprise après audit : petites largeurs et cibles tactiles. */
+@media (max-width: 380px) and (min-height: 561px) { .tete-saisons li { padding: 7px 5px; font-size: .8rem; } }
+.journal-titre a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 4px; margin-block: -4px; }

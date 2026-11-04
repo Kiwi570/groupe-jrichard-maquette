@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="contact" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="contact" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -111,19 +111,22 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </nav>
 <div class="barre-altitude" data-barre-lecture aria-hidden="true"></div>
 <main id="contenu" tabindex="-1">
-<section class="tete tete--page " id="debut" data-strate="Sol" data-tete data-masque-barre>
-  <figure class="media tete-fond" style="--cadrage:50% 60%">
-  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/photos/allee-massifs-mobile-640.webp 640w, /assets/images/photos/allee-massifs-mobile-844.webp 844w" sizes="100vw">
-    <img src="/assets/images/photos/allee-massifs-1280.webp" srcset="/assets/images/photos/allee-massifs-640.webp 640w, /assets/images/photos/allee-massifs-1280.webp 1280w, /assets/images/photos/allee-massifs-1920.webp 1920w" sizes="100vw" alt="Allée en dalles entre des massifs fleuris" width="1280" height="960" fetchpriority="high" loading="eager" decoding="async">
+<section class="tete tete--page tete--sites tete--cadre " id="debut" data-strate="Sol" data-tete data-variante="sites" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" style="--cadrage:50% 60%">
+  <picture>
+    <img src="/assets/images/photos/allee-massifs-1280.webp" srcset="/assets/images/photos/allee-massifs-640.webp 640w, /assets/images/photos/allee-massifs-1280.webp 1280w, /assets/images/photos/allee-massifs-1920.webp 1920w" sizes="(max-width: 900px) 100vw, 50vw" alt="Allée en dalles entre des massifs fleuris" width="1280" height="960" fetchpriority="high" loading="eager" decoding="async">
   </picture>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Contact</p>
     <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Parlons</span></span><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">de <em>votre projet</em></span></span></h1>
     <p class="tete-intro" data-anime="gsap">Devis, rendez-vous, simple question : en cinq étapes, votre demande arrive à la bonne entreprise du groupe.</p>
-    <div class="tete-bas" data-anime="gsap"><a class="bouton bouton--orange" href="#devis" data-action-principale>Faire ma demande</a><a class="bouton bouton--contour" href="tel:+33238661384">Appeler 02 38 66 13 84</a><span class="info-cle" data-info-cle><span class="pastille" aria-hidden="true"></span><span data-statut-site="orleans" data-statut-court>Siège à Orléans</span></span></div>
+    <div class="tete-bas" data-anime="gsap"><a class="bouton bouton--orange" href="#devis" data-action-principale>Faire ma demande</a><span class="info-cle" data-info-cle><span class="pastille" aria-hidden="true"></span><span data-statut-site="orleans" data-statut-court>Siège à Orléans</span></span></div>
   </div>
+  <div class="tete-cote" data-anime="gsap"><ul class="tete-sites" aria-label="Nos trois sites"><li><p class="tete-site-nom">Orléans <small>Siège du groupe</small></p><a class="tete-site-tel" href="tel:+33238661384">Appeler 02 38 66 13 84</a><p class="tete-site-statut"><span data-statut-site="orleans" aria-live="polite"></span></p></li><li><p class="tete-site-nom">Semoy <small>Élagage</small></p><a class="tete-site-tel" href="tel:+33238610101">Appeler 02 38 61 01 01</a><p class="tete-site-statut"><span data-statut-site="semoy" aria-live="polite"></span></p></li><li><p class="tete-site-nom">Amilly <small>Bassin montargois</small></p><a class="tete-site-tel" href="tel:+33238261394">Appeler 02 38 26 13 94</a><p class="tete-site-statut"><span data-statut-site="amilly" aria-live="polite"></span><span class="a-completer">Horaires à confirmer</span></p></li></ul></div>
   <span class="tete-defiler" aria-hidden="true"><i></i>Défiler</span>
 </section>
 <section class="s-creme bloc-y section-photo section-photo--claire" id="devis" data-strate="Racines" data-masque-barre>

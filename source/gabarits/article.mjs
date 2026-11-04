@@ -13,9 +13,10 @@ export function pageArticle(cle) {
       const a = c.donnees.actualites.find((x) => x.cle === cle);
       return html`
 ${tete(c, {
+        variante: 'article',
         image: a.image || 'photos/equipe-plantation', alt: a.imageAlt || c.s('actualites.tete.alt'), cadrage: '50% 50%',
         surtitre: html`${c.t(`actualites.themes.${a.theme}`)} · <time datetime="${a.date}">${dateLongue(a.date)}</time>`,
-        lignes: [a.titre], intro: a.chapo, strate: 'Tronc', classe: a.titre.length > 60 ? 'tete--long' : '',
+        lignes: [a.titre], intro: a.chapo, strate: 'Sol', classe: a.titre.length > 60 ? 'tete--long' : '',
         actions: c.lien('actualites', { ancre: 'fil', classe: 'bouton bouton--contour', texte: c.t('article.retour'), attrs: 'data-action-principale' }),
         info: html`<span class="pastille" aria-hidden="true"></span>${c.t('article.par')} ${a.auteur}${a.evenement ? html` · <span data-statut-evenement-article="${a.evenement}">${c.t('article.evenement')} ${dateLongue(a.evenement)}</span>` : ''}`,
       })}

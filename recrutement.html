@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="recrutement" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="recrutement" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -111,13 +111,24 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </nav>
 <div class="barre-altitude" data-barre-lecture aria-hidden="true"></div>
 <main id="contenu" tabindex="-1">
-<section class="tete tete--page " id="debut" data-strate="Cime" data-tete data-masque-barre>
-  <figure class="media tete-fond" style="--cadrage:70% 40%;--cadrage-mobile:72% 40%">
-  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/photos/grimpeurs-chene-mobile-633.webp 633w" sizes="100vw">
-    <img src="/assets/images/photos/grimpeurs-chene-1280.webp" srcset="/assets/images/photos/grimpeurs-chene-640.webp 640w, /assets/images/photos/grimpeurs-chene-1280.webp 1280w, /assets/images/photos/grimpeurs-chene-1920.webp 1920w" sizes="100vw" alt="Deux grimpeurs-élagueurs souriants, encordés dans un chêne" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+<section class="tete tete--page tete--collage tete--cadre tete--claire " id="debut" data-strate="Sol" data-tete data-variante="collage" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" style="--cadrage:70% 40%;--cadrage-mobile:72% 40%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/photos/grimpeurs-chene-mobile-633.webp 633w" sizes="(max-width: 900px) 60vw, 26vw">
+    <img src="/assets/images/photos/grimpeurs-chene-1280.webp" srcset="/assets/images/photos/grimpeurs-chene-640.webp 640w, /assets/images/photos/grimpeurs-chene-1280.webp 1280w, /assets/images/photos/grimpeurs-chene-1920.webp 1920w" sizes="(max-width: 900px) 60vw, 26vw" alt="Deux grimpeurs-élagueurs souriants, encordés dans un chêne" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
   </picture>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <figure class="media tete-collage tete-collage--rond" style="--cadrage:50% 58%">
+  <picture>
+    <img src="/assets/images/photos/apprentis-groupe-1280.webp" srcset="/assets/images/photos/apprentis-groupe-640.webp 640w, /assets/images/photos/apprentis-groupe-1280.webp 1280w" sizes="(max-width: 900px) 40vw, 20vw" alt="" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure><figure class="media tete-collage tete-collage--carre" style="--cadrage:50% 40%">
+  <picture>
+    <img src="/assets/images/photos/formation-grimpeurs-1280.webp" srcset="/assets/images/photos/formation-grimpeurs-640.webp 640w, /assets/images/photos/formation-grimpeurs-1280.webp 1280w" sizes="(max-width: 900px) 40vw, 22vw" alt="" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure><p class="tete-pastille" aria-hidden="true" data-superpose><strong>15</strong><b>apprentis</b><span>parmi nos 160 salariés</span></p>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Recrutement</p>
     <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Grandir</span></span><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap"><em>avec nous</em></span></span></h1>

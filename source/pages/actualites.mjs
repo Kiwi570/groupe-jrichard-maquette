@@ -11,22 +11,16 @@ export default (c) => {
   const presents = new Set(tous.map((a) => a.theme));
   return html`
 ${tete(c, {
-    image: 'photos/equipe-plantation', alt: c.s('actualites.tete.alt'), cadrage: '50% 55%',
+    variante: 'journal',
+    image: une.image || 'photos/formation-grimpeurs', alt: une.imageAlt || c.s('actualites.uneAlt'), cadrage: '50% 50%',
     surtitre: c.t('actualites.tete.surtitre'), lignes: [c.tb('actualites.tete.ligne1'), c.tb('actualites.tete.ligne2')],
     intro: c.t('actualites.tete.intro'),
-    actions: html`<a class="bouton bouton--orange" href="#une" data-action-principale>${c.t('actualites.tete.action')}</a>`,
+    /* La une : le dernier article en grand, trois brèves à côté (la section « À la une » d'avant est reprise ici). */
+    cote: html`<div class="journal-une"><p class="journal-meta">${c.t('actualites.une')} · ${c.t(`actualites.themes.${une.theme}`)} · <time datetime="${une.date}">${dateLongue(une.date)}</time></p><h2 class="journal-titre">${c.lien('article-' + une.cle, { texte: une.titre })}</h2><p class="journal-chapo">${une.chapo}</p></div>
+      <div class="journal-breves"><p class="journal-meta">${c.t('actualites.breves')}</p><ul>${autres.slice(0, 3).map((a) => html`<li>${c.lien('article-' + a.cle, { texte: html`<span class="journal-meta">${c.t(`actualites.themes.${a.theme}`)} · <time datetime="${a.date}">${dateLongue(a.date)}</time></span><span class="journal-breve-titre">${a.titre}</span>` })}</li>`)}</ul><a class="lien-fleche" href="#fil">${c.t('actualites.toutes')}</a></div>`,
+    actions: c.lien('article-' + une.cle, { classe: 'bouton bouton--orange', texte: c.t('actualites.tete.action'), attrs: 'data-action-principale' }),
     info: html`<span class="pastille" aria-hidden="true"></span>${c.t('actualites.tete.info')} ${dateLongue(une.date)}`,
   })}
-
-<section class="s-creme bloc-y" id="une" data-strate="Tronc">
-  <div class="conteneur">
-    <p class="surtitre">${c.t('actualites.une')}</p>
-    <a class="une" href="${c.url('article-' + une.cle)}" data-libelle="${une.titre}">
-      ${mediaOu(c, { nom: une.image || 'photos/formation-grimpeurs', alt: une.imageAlt || c.s('actualites.uneAlt'), sizes: '(max-width: 860px) 100vw, 55vw' }, '')}
-      <div><time datetime="${une.date}">${dateLongue(une.date)}</time><h2 class="titre-2">${une.titre}</h2><p class="chapeau">${une.chapo}</p><span class="lien-fleche">${c.t('actualites.lire')}</span></div>
-    </a>
-  </div>
-</section>
 
 <section class="s-sauge bloc-y" id="fil" data-strate="Houppier">
   <div class="conteneur">

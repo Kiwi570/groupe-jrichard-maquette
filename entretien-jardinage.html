@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="entretien" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="entretien" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -111,16 +111,18 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </nav>
 <div class="barre-altitude" data-barre-lecture aria-hidden="true"></div>
 <main id="contenu" tabindex="-1">
-<section class="tete tete--page " id="debut" data-strate="Sol" data-tete data-masque-barre>
-  <figure class="media tete-fond" style="--cadrage:40% 60%;--cadrage-mobile:30% 60%">
-  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/photos/tonte-chamerolles-mobile-633.webp 633w" sizes="100vw">
-    <img src="/assets/images/photos/tonte-chamerolles-1280.webp" srcset="/assets/images/photos/tonte-chamerolles-640.webp 640w, /assets/images/photos/tonte-chamerolles-1280.webp 1280w, /assets/images/photos/tonte-chamerolles-1920.webp 1920w" sizes="100vw" alt="Tondeuse autoportée sur une grande pelouse devant le château de Chamerolles" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+<section class="tete tete--page tete--saisons tete--cadre tete--claire " id="debut" data-strate="Sol" data-tete data-variante="saisons" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" style="--cadrage:60% 42%;--cadrage-mobile:70% 40%">
+  <picture>
+    <img src="/assets/images/photos/tonte-chamerolles-1280.webp" srcset="/assets/images/photos/tonte-chamerolles-640.webp 640w, /assets/images/photos/tonte-chamerolles-1280.webp 1280w, /assets/images/photos/tonte-chamerolles-1920.webp 1920w" sizes="(max-width: 900px) 100vw, 50vw" alt="Tondeuse autoportée sur une grande pelouse devant le château de Chamerolles" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
   </picture>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Entretien et jardinage</p>
-    <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Faire grandir</span></span><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">vos <em>espaces verts</em></span></span></h1>
+    <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Un jardin soigné</span></span><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap"><em>à chaque saison</em></span></span></h1>
     <p class="tete-intro" data-anime="gsap">Contrats d’entretien pour les entreprises et les collectivités, jardinage à domicile pour les particuliers : la même exigence, sans produit phytosanitaire.</p>
     <div class="tete-profils" data-anime="gsap"><fieldset class="profils" data-profils-choix>
   <legend>Je suis :</legend>
@@ -128,6 +130,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </fieldset></div>
     <div class="tete-bas" data-anime="gsap"><a href="/contact?motif=devis&amp;besoin=entretien#devis" class="bouton bouton--orange" data-libelle="Contact" data-action-principale>Demander un devis d’entretien</a><span class="info-cle" data-info-cle><span class="pastille" aria-hidden="true"></span>50 % de crédit d’impôt pour les particuliers</span></div>
   </div>
+  <div class="tete-cote" data-anime="gsap"><ol class="tete-saisons" aria-label="Au fil des saisons"><li data-saison="printemps"><span class="tete-saison-point" aria-hidden="true"></span><span>Printemps</span><small hidden>En ce moment</small></li><li data-saison="ete"><span class="tete-saison-point" aria-hidden="true"></span><span>Été</span><small hidden>En ce moment</small></li><li data-saison="automne"><span class="tete-saison-point" aria-hidden="true"></span><span>Automne</span><small hidden>En ce moment</small></li><li data-saison="hiver"><span class="tete-saison-point" aria-hidden="true"></span><span>Hiver</span><small hidden>En ce moment</small></li></ol></div>
   <span class="tete-defiler" aria-hidden="true"><i></i>Défiler</span>
 </section>
 <section class="s-humus bloc-y" id="zero-phyto" data-strate="Racines">

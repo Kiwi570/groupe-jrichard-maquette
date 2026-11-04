@@ -132,9 +132,10 @@ function contexte(l, meta) {
     },
     /* Image en plusieurs tailles (assets/images/<nom>-<largeur>.webp), version téléphone (<nom>-mobile-<largeur>.webp),
        cadrage, mention « Illustration générée » pour les images Grok (dossier grok/). */
-    media({ nom, alt = '', cadrage = '50% 50%', cadrageMobile, sizes = '100vw', priorite = false, classe = '', ratio, legende } = {}) {
+    media({ nom, alt = '', cadrage = '50% 50%', cadrageMobile, sizes = '100vw', priorite = false, classe = '', ratio, legende, sansMobile = false } = {}) {
       const tailles = largeurs(nom);
-      const mobiles = largeurs(`${nom}-mobile`);
+      /* sansMobile : la photo n'est pas affichée en hauteur sur téléphone (bande, cadre large) : pas de version téléphone recadrée. */
+      const mobiles = sansMobile ? [] : largeurs(`${nom}-mobile`);
       let src = `/assets/images/${nom}.webp`, dims = null;
       if (tailles.length) {
         const milieu = tailles.find((w) => w >= 1280) || tailles[tailles.length - 1];

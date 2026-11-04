@@ -1,6 +1,6 @@
 /* Génie végétal : la coupe de berge se construit couche par couche, chaque couche reliée à une prestation. */
 import { html, brut } from '../../outils/gabarit.mjs';
-import { tete, chapitre, cime, logo, mediaOu, dessin } from '../gabarits/blocs.mjs';
+import { tete, chapitre, cime, logo, mediaOu, dessin, vagueBerge } from '../gabarits/blocs.mjs';
 
 export const page = { cle: 'genie-vegetal', fichier: 'genie-vegetal', imagePartage: 'photos/riviere-restauree-1280.webp' };
 
@@ -26,6 +26,7 @@ function coupeBerge() {
 
 export default (c) => html`
 ${tete(c, {
+    variante: 'berge', visuel: vagueBerge(),
     image: 'photos/riviere-restauree', alt: c.s('genie.tete.alt'), cadrage: '45% 60%',
     surtitre: c.t('genie.tete.surtitre'), lignes: [c.tb('genie.tete.ligne1'), c.tb('genie.tete.ligne2')],
     intro: c.t('genie.tete.intro'), strate: 'Sol',

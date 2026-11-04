@@ -7,8 +7,8 @@
      lue s'affiche en très grand derrière les cernes.
    - Recrutement : un chemin relie les quatre étapes et une feuille le parcourt.
    Rien ne bouge en mode calme (état final directement). */
-import { etat } from '../socle/index.js?v=2';
-import { saisonDuJour } from './saison.js?v=2';
+import { etat } from '../socle/index.js?v=3';
+import { saisonDuJour } from './saison.js?v=3';
 
 const ORDRE_SAISONS = ['printemps', 'ete', 'automne', 'hiver'];
 

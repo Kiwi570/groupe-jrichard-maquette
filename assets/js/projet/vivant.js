@@ -4,7 +4,7 @@
    - des racines relient les chiffres en se dessinant à la lecture ;
    - sur la carte du Loiret : les trois sites tombent avec un rebond, puis le courant de la Loire coule quelques secondes.
    Rien en mode calme ; le vent et le curseur seulement avec une souris. */
-import { etat, partir } from '../socle/index.js?v=2';
+import { etat, partir } from '../socle/index.js?v=3';
 
 const souris = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 

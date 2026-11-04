@@ -2,7 +2,7 @@
 import { existsSync, readdirSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { html, brut } from '../../outils/gabarit.mjs';
+import { html, brut, estBrut } from '../../outils/gabarit.mjs';
 
 const racine = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
@@ -26,20 +26,82 @@ export function choixProfil(c, { nom = 'profil', legende } = {}) {
 </fieldset>`;
 }
 
-/* Tête de page : photo plein cadre, lumière sous canopée (WebGL), titre ligne à ligne, action et information clé. */
-export function tete(c, { image, alt, cadrage, cadrageMobile, lignes = [], intro, actions = '', info = '', profils = false, page = true, surtitre, id = 'debut', strate = 'Sol', classe = '' }) {
-  return html`<section class="tete ${page ? 'tete--page' : ''} ${classe}" id="${id}" data-strate="${strate}" data-tete data-masque-barre>
-  ${c.media({ nom: image, alt, cadrage, cadrageMobile, priorite: true, classe: 'tete-fond', sizes: '100vw' })}
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+/* Tête de page : chaque page a sa propre organisation (variante), tirée de son métier.
+   plein (accueil, 404) : photo plein cadre et titre en bas · plan (aménagement) : plan d'architecte, photo en arche ·
+   saisons (entretien) : écran coupé en deux et frise des saisons · hauteur (élagage) : colonne de photo et règle d'altitude ·
+   berge (génie végétal) : panorama, ligne d'eau, texte sous la surface · famille (le groupe) : titre centré, photo cinéma, années ·
+   collage (recrutement) : trois photos en formes arrondies · sites (contact) : les trois sites sur la photo ·
+   mur (réalisations) : mur de chantiers qui défile · journal (actualités) : une de journal · fiche (réalisation) : couverture et fiche technique ·
+   article : texte d'abord, photo pleine largeur · sobre (pages légales).
+   Toutes gardent : un seul h1, le bouton principal (data-action-principale) et l'information clé (data-info-cle) dans le premier écran. */
+/* Variantes cadrées (la photo dans un cadre, pas en fond) et variantes sur fond clair. Sur un écran bas et large
+   (téléphone en paysage), toutes reviennent à la photo plein cadre, la plus sûre pour le premier écran. */
+const CADREES = ['plan', 'saisons', 'hauteur', 'berge', 'famille', 'collage', 'sites', 'journal', 'article', 'sobre'];
+const CLAIRES = ['plan', 'saisons', 'famille', 'collage', 'journal', 'article', 'sobre'];
+
+export function tete(c, { image, alt, cadrage, cadrageMobile, lignes = [], intro, actions = '', info = '', profils = false, page = true, surtitre, id = 'debut', strate = 'Sol', classe = '', variante = 'plein', visuel = '', cote = '', legende, faits = [] }) {
+  /* Les variantes cadrées montrent la photo en bande ou en cadre large sur téléphone : la version téléphone (en hauteur) ne sert pas. */
+  const sansMobile = CADREES.includes(variante) && variante !== 'collage';
+  const fond = variante === 'mur' || !image ? '' : c.media({ nom: image, alt, cadrage, cadrageMobile, priorite: true, classe: 'tete-fond', sizes: TAILLES_TETE[variante] || '100vw', legende, sansMobile });
+  return html`<section class="tete ${page ? 'tete--page' : ''} tete--${variante}${CADREES.includes(variante) ? ' tete--cadre' : ''}${CLAIRES.includes(variante) ? ' tete--claire' : ''} ${classe}" id="${id}" data-strate="${strate}" data-tete data-variante="${variante}" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    ${fond}
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    ${estBrut(visuel) ? visuel : brut(visuel)}
+  </div>
   <div class="tete-contenu">
     ${surtitre ? html`<p class="surtitre tete-surtitre" data-anime="gsap">${surtitre}</p>` : ''}
     <h1 class="tete-titre titre-1">${lignes.map((l) => html`<span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">${l}</span></span>`)}</h1>
     ${intro ? html`<p class="tete-intro" data-anime="gsap">${intro}</p>` : ''}
     ${profils ? html`<div class="tete-profils" data-anime="gsap">${choixProfil(c)}</div>` : ''}
+    ${faits.length ? html`<dl class="tete-faits" data-anime="gsap">${faits.map(([v, l]) => html`<div><dt>${v}</dt><dd>${l}</dd></div>`)}</dl>` : ''}
     <div class="tete-bas" data-anime="gsap">${actions}${info ? html`<span class="info-cle" data-info-cle>${info}</span>` : ''}</div>
   </div>
+  ${cote ? html`<div class="tete-cote" data-anime="gsap">${estBrut(cote) ? cote : brut(cote)}</div>` : ''}
   <span class="tete-defiler" aria-hidden="true"><i></i>${c.t('commun.defiler')}</span>
 </section>`;
+}
+
+/* Largeur affichée de la photo d'ouverture selon la variante (choix de la bonne taille de fichier). */
+const TAILLES_TETE = {
+  plan: '(max-width: 900px) 100vw, 46vw', saisons: '(max-width: 900px) 100vw, 50vw', hauteur: '(max-width: 900px) 100vw, 40vw',
+  collage: '(max-width: 900px) 60vw, 26vw', sites: '(max-width: 900px) 100vw, 50vw', journal: '(max-width: 900px) 100vw, 58vw',
+  famille: '(max-width: 1360px) 100vw, 1320px', sobre: '(max-width: 900px) 50vw, 22vw',
+};
+
+/* Mur de chantiers (Réalisations) : trois rangées de photos qui glissent lentement, en sens alternés (figées en mode calme). */
+export function murPhotos(noms) {
+  const vus = [...new Set(noms)].filter((n) => existsSync(join(racine, 'assets/images', `${n}-640.webp`)));
+  const rangs = [0, 1, 2].map((k) => vus.filter((_, i) => i % 3 === k));
+  const tuile = (n) => `<span class="mur-tuile"><img src="/assets/images/${n}-640.webp" alt="" width="640" height="480" loading="eager" decoding="async"></span>`;
+  return `<div class="mur" aria-hidden="true" data-audit-ignorer data-mur>${rangs.map((r, k) => `<div class="mur-rang mur-rang--${k + 1}"><div class="mur-piste">${r.map(tuile).join('')}${r.map(tuile).join('')}</div></div>`).join('')}</div>`;
+}
+
+/* Décors des ouvertures, dessinés en code (traits qui se tracent à l'arrivée : data-tete-trait). */
+export function decorPlan() {
+  return `<div class="tete-plan-traits" aria-hidden="true" data-audit-ignorer>
+    <span class="plan-contour"></span><span class="plan-cote plan-cote--bas"></span><span class="plan-cote plan-cote--cote"></span>
+    <svg class="plan-nord" viewBox="0 0 60 60"><circle data-tete-trait pathLength="1" cx="30" cy="30" r="25" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M30 7 L37 31 L30 26 L23 31 Z" fill="currentColor"/><path d="M30 53 V40" stroke="currentColor" stroke-width="1.2"/></svg>
+  </div>`;
+}
+
+export function regleAltitude(c) {
+  const marques = [25, 20, 15, 10, 5, 0];
+  return `<div class="tete-regle" aria-hidden="true" data-audit-ignorer>
+    <svg viewBox="0 0 40 1000" preserveAspectRatio="none"><path data-tete-trait pathLength="1" d="M20 0 V1000" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/>${Array.from({ length: 26 }, (_, i) => `<path d="M${i % 5 ? 13 : 6} ${i * 40} H${i % 5 ? 27 : 34}" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>`).join('')}</svg>
+    <ol>${marques.map((m) => `<li>${c.s('elagage.tete.altitude', { n: m })}</li>`).join('')}</ol>
+    <span class="tete-mousqueton"></span>
+  </div>`;
+}
+
+export function vagueBerge() {
+  return `<svg class="tete-berge-eau" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" data-audit-ignorer>
+    <path d="M0 64 C 180 30, 360 92, 540 60 S 900 26, 1080 58 S 1320 90, 1440 54 V120 H0Z" fill="var(--humus)"/>
+    <g fill="none" stroke="var(--tendre)" stroke-linecap="round" opacity=".55"><path data-tete-trait pathLength="1" d="M0 60 C 180 26, 360 88, 540 56 S 900 22, 1080 54 S 1320 86, 1440 50" stroke-width="1.5"/></g>
+  </svg>
+  <svg class="tete-berge-racines" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true" data-audit-ignorer>
+    <g fill="none" stroke="var(--tendre)" stroke-linecap="round" opacity=".42" vector-effect="non-scaling-stroke">${[40, 120, 200, 270, 1170, 1250, 1320, 1400].map((x, i) => { const s = i % 2 ? 1 : -1, h = 170 + (i % 3) * 45; return `<path data-tete-trait pathLength="1" d="M${x} 0 C ${x + s * 26} 60, ${x - s * 16} 120, ${x + s * 22} ${h}" stroke-width="1.6"/><path data-tete-trait pathLength="1" d="M${x + s * 4} 48 q ${s * 34} 22 ${s * 56} 70 t ${s * 26} 60" stroke-width="1.1"/><path data-tete-trait pathLength="1" d="M${x - s * 6} 96 q ${-s * 28} 26 ${-s * 40} 74" stroke-width=".9"/><path d="M${x + s * 14} 150 q ${s * 14} 10 ${s * 20} 30" stroke-width=".7"/>`; }).join('')}</g>
+  </svg>`;
 }
 
 export function chapitre(c, { surtitre, titre, chapeau, seul = false, id }) {

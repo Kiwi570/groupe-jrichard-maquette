@@ -9,6 +9,7 @@ const FICHE = ['raison', 'forme', 'capital', 'siege', 'siret', 'tva', 'directeur
 export default (c) => html`
 <div data-barre-lecture class="barre-article" aria-hidden="true"></div>
 ${tete(c, {
+    variante: 'sobre',
     image: imageExiste('grok/herbier') ? 'grok/herbier' : 'photos/prairie-fleurie', alt: c.s('legal.alt'), cadrage: '50% 50%',
     surtitre: c.t('legal.surtitre'), lignes: [c.t('mentions.titre')], intro: c.t('mentions.intro'), strate: 'Sol',
     info: html`<nav data-sommaire aria-label="${c.s('commun.sommaire')}"><ul>${['fiche', 'editeur', 'hebergeur', 'credits', 'donnees'].map((s) => html`<li><a href="#${s}" data-sans-transition>${c.t(`mentions.${s}.titre`)}</a></li>`)}</ul></nav>`,

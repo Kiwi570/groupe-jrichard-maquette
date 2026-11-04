@@ -2,7 +2,7 @@
    Sections vertes : une ligne d'herbe dont les brins se couchent selon la vitesse de défilement ;
    sections sombres : une ligne de terre ; sections claires : une colline douce qui ondule au fil du défilement.
    Dessinées une fois au chargement, redessinées seulement pendant le défilement (et figées en mode calme). */
-import { etat } from '../socle/index.js?v=2';
+import { etat } from '../socle/index.js?v=3';
 
 const VERTS = ['s-mousse', 's-sauge'];
 const SOMBRES = ['s-terre', 's-humus'];
@@ -32,8 +32,9 @@ export function initLisieres() {
   sections.forEach((el, i) => {
     /* La lisière est posée en bas de la section précédente (dans ses marges), de la couleur de celle qui arrive. */
     if (el.matches('.tete, .cime, [data-strates-scene], [data-galerie-section]')) return;
-    let avant = el.matches('.pied') ? document.querySelector('main > section:last-of-type') : el.previousElementSibling;
-    if (!avant || avant.matches('.pin-spacer, [data-strates-scene], [data-galerie-section], [data-ouverture]')) return;
+    /* Le pied de page suit le dernier bloc de main : seulement si c'est une section. */
+    let avant = el.matches('.pied') ? (document.querySelector('main') || {}).lastElementChild : el.previousElementSibling;
+    if (!avant || !avant.matches('section') || avant.matches('.pin-spacer, [data-strates-scene], [data-galerie-section], [data-ouverture]')) return;
     const fond = fondDe(el), fondAvant = fondDe(avant);
     if (!fond || fond === 'image' || /rgba\(0, 0, 0, 0\)|transparent/.test(fond) || fond === fondAvant) return;
     if (getComputedStyle(avant).position === 'static') avant.style.position = 'relative';

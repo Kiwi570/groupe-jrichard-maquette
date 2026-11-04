@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="confidentialite" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="confidentialite" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -105,13 +105,15 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </div>
 <main id="contenu" tabindex="-1" data-sans-action>
 <div data-barre-lecture class="barre-article" aria-hidden="true"></div>
-<section class="tete tete--page " id="debut" data-strate="Sol" data-tete data-masque-barre>
-  <figure class="media tete-fond" data-grok style="--cadrage:50% 50%">
-  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/herbier-mobile-640.webp 640w, /assets/images/grok/herbier-mobile-940.webp 940w" sizes="100vw">
-    <img src="/assets/images/grok/herbier-1280.webp" srcset="/assets/images/grok/herbier-640.webp 640w, /assets/images/grok/herbier-1280.webp 1280w, /assets/images/grok/herbier-1672.webp 1672w" sizes="100vw" alt="Feuilles pressées sur du papier, façon herbier" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+<section class="tete tete--page tete--sobre tete--cadre tete--claire " id="debut" data-strate="Sol" data-tete data-variante="sobre" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/herbier-1280.webp" srcset="/assets/images/grok/herbier-640.webp 640w, /assets/images/grok/herbier-1280.webp 1280w, /assets/images/grok/herbier-1672.webp 1672w" sizes="(max-width: 900px) 50vw, 22vw" alt="Feuilles pressées sur du papier, façon herbier" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
   </picture><figcaption class="mention-ia">Illustration générée</figcaption>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Informations légales</p>
     <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Politique de confidentialité</span></span></h1>

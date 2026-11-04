@@ -1,7 +1,7 @@
 /* Visionneuse des photos d'une réalisation : s'ouvre depuis la vignette, à la bonne taille dès l'ouverture,
    flèches du clavier, glissement, Échap ; focus gardé dedans puis rendu à la vignette.
    Chaque photo a son lien (#photo-2) qui l'ouvre directement. */
-import { suivre, lacher, bloquerDefilement, debloquerDefilement } from '../socle/index.js?v=2';
+import { suivre, lacher, bloquerDefilement, debloquerDefilement } from '../socle/index.js?v=3';
 
 export function initVisionneuse() {
   const fen = document.querySelector('[data-visionneuse-fenetre]');

@@ -1,8 +1,8 @@
 /* Corde d'altitude : un mousqueton monte de 0 à 25 m pendant la lecture ; les repères (Sol, Racines, Tronc,
    Houppier, Cime) servent de sommaire. Positions mesurées au chargement et au redimensionnement seulement ;
    pendant le défilement, seules window.scrollY et les valeurs gardées sont lues. */
-import { mesures } from '../socle/mesures.js?v=2';
-import { quand } from '../socle/index.js?v=2';
+import { mesures } from '../socle/mesures.js?v=3';
+import { quand } from '../socle/index.js?v=3';
 
 const ALTITUDE = 25;
 

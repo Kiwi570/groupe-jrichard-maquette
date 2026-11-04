@@ -1,6 +1,6 @@
 /* Aménagement paysager : de l'étude à la réception, prestations filtrées par profil, conception 3D, réalisations. */
 import { html } from '../../outils/gabarit.mjs';
-import { tete, chapitre, cartes, faq, cime, choixProfil, logo, imageExiste, dessin } from '../gabarits/blocs.mjs';
+import { tete, chapitre, cartes, faq, cime, choixProfil, logo, imageExiste, dessin, decorPlan } from '../gabarits/blocs.mjs';
 
 export const page = { cle: 'amenagement', fichier: 'amenagement-paysager', imagePartage: 'photos/lavoir-pas-japonais-1280.webp' };
 
@@ -10,7 +10,8 @@ export default (c) => {
   const reals = c.donnees.realisations.filter((r) => r.fiche && r.metier === 'amenagement' && r.images.length).slice(0, 3);
   return html`
 ${tete(c, {
-    image: 'photos/lavoir-pas-japonais', alt: c.s('amenagement.tete.alt'), cadrage: '45% 60%',
+    variante: 'plan', visuel: decorPlan(),
+    image: 'photos/lavoir-pas-japonais', alt: c.s('amenagement.tete.alt'), cadrage: '45% 60%', cadrageMobile: '58% 76%',
     surtitre: c.t('amenagement.tete.surtitre'), lignes: [c.tb('amenagement.tete.ligne1'), c.tb('amenagement.tete.ligne2')],
     intro: c.t('amenagement.tete.intro'), profils: true,
     actions: c.lien('contact', { ancre: 'devis', params: 'motif=devis&besoin=amenagement', classe: 'bouton bouton--orange', texte: c.t('amenagement.tete.action'), attrs: 'data-action-principale' }),

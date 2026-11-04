@@ -1,7 +1,7 @@
 /* Accueil : les quatre métiers en strates, du sol à la cime. Sur ordinateur, la scène est épinglée en plein écran :
    chaque photo pousse du sol en dôme par-dessus la précédente, un grand compteur d'altitude défile (0, 2, 8, 25 m),
    une jauge suit la progression. Sur téléphone, en mode calme et sans JavaScript : les métiers s'empilent. */
-import { etat } from '../socle/index.js?v=2';
+import { etat } from '../socle/index.js?v=3';
 
 const FONDS = ['#1C1B15', '#23241B', '#26331F', '#2E4A30'];
 

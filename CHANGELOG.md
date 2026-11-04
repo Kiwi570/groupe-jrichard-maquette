@@ -2,6 +2,42 @@
 
 Chaque version ajoute sa partie en tête de ce fichier, construite en comparant l'archive précédente et la nouvelle, jamais de mémoire.
 
+## v3 — une ouverture propre à chaque page
+
+**Les ouvertures**
+- Accueil : la photo plein cadre reste, c’est la signature du site.
+- Aménagement : un plan d’architecte, fond quadrillé, photo dans une arche, traits de plan qui se tracent à l’arrivée.
+- Entretien : écran coupé en deux, la photo jusqu’au bord gauche (recadrée sur le château de Chamerolles), et une frise des quatre saisons où la saison réelle est mise en avant ; nouveau titre « Un jardin soigné, à chaque saison ».
+- Élagage : la hauteur. Photo en colonne, règle d’altitude de 0 à 25 m, titre en haut (la cime), boutons en bas (le sol), et deux repères réels sur grand écran (1989, création de Goueffon Élagage à Semoy ; 7 équipes de grimpeurs-élagueurs). La corde du site s’efface pendant que la règle est à l’écran.
+- Génie végétal : la rivière en panorama, une ligne d’eau, le texte « sous la surface » avec des racines qui descendent.
+- Le Groupe : titre centré, photo de l’équipe en format cinéma, frise des grandes dates (1965 à 2021).
+- Recrutement : collage de trois photos en formes arrondies, avec la pastille « 15 apprentis parmi nos 160 salariés ».
+- Contact : les trois sites, avec leur téléphone et leur statut ouvert ou fermé, posés sur la photo dès l’ouverture (« Horaires à confirmer » pour Amilly) ; le bouton d’appel en double est retiré.
+- Réalisations : un mur de photos de chantiers qui défile lentement derrière le titre (arrêté hors de l’écran et en mode calme).
+- Actualités : une vraie une de journal : bandeau, titre, le dernier article en grand avec sa photo, trois brèves en colonne. La section « À la une » qui suivait est reprise dans l’ouverture.
+- Fiches réalisation : couverture de magazine, titre en haut, bandeau « fiche technique » (lieu, année, entreprise) en bas ; ce qui reste à compléter n’apparaît que dans la fiche détaillée.
+- Articles : le texte d’abord, le bouton et l’auteur dans une colonne à droite, la photo en pleine largeur dessous.
+- Pages légales : sobres, avec une vignette ; page 404 : texte centré.
+- Sur téléphone et tablette en portrait, chaque ouverture a sa version compacte (titre, bouton et information clé dans le premier écran) ; sur un écran bas et large, la photo plein cadre revient.
+
+**Technique**
+- `source/gabarits/blocs.mjs` : le gabarit `tete()` prend une `variante`, ses décors (`decorPlan`, `regleAltitude`, `vagueBerge`, `murPhotos`) et des `faits`.
+- `outils/generer.mjs` : option `sansMobile` des médias (les photos montrées en bande sur téléphone n’utilisent pas la version recadrée en hauteur).
+- Nouveau fichier `assets/js/projet/ouvertures.js` (saison en cours, arrêt du mur de photos).
+- `intro.js` anime les décors à l’arrivée ; `details.js` approche la photo à l’intérieur de son cadre.
+- Lisières : celle du pied de page ne se pose plus sur l’ouverture des pages légales.
+- Feuilles de saison : moins nombreuses sur les petits écrans, effacées aussi sur les choix « Je suis ».
+- La corde du site commence au « Sol » sur toutes les pages (plus d’étiquette « Cime » à 0 m).
+- Numéro de version des fichiers passé à 3.
+
+**Après l’audit**
+- Sans JavaScript, sur téléphone et tablette en portrait (pas de menu, tous les liens sont affichés sur deux ou trois rangées) : l’en-tête reste en haut de la page au lieu de couvrir l’écran, et la photo de l’ouverture prend la place qui reste ; le titre, le bouton et l’information clé tiennent au-dessus de la barre d’appel. Sur les plus petits écrans (moins de 700 px de haut), le surtitre, le second bouton (déjà dans la barre d’appel) et, sous 600 px, la frise des saisons sont retirés de l’ouverture.
+- Recrutement : la pastille « 15 apprentis » a des interlignes plus ouverts ; en réduction (téléphone, tablette), elle garde seulement « 15 apprentis », qui tient dans le rond.
+- Élagage : les deux repères (1989, 7 équipes) ne se recouvrent plus sur très grand écran.
+- Entretien : « En ce moment » plus contrasté ; la frise des saisons tient sur les écrans de 320 px.
+- Actualités : le titre de la une est une cible tactile de 44 px.
+- Fiches réalisation : le résumé n’est plus coupé à trois lignes sur téléphone.
+
 ## v2 — un site plus vivant
 
 **Effets sur tout le site**

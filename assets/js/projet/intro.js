@@ -10,9 +10,14 @@ export function animerTete(debut = 0, tl = null) {
   if (!g || !document.querySelector('[data-tete]')) return null;
   const t = tl || g.timeline();
   const lignes = document.querySelectorAll('.tete-ligne');
-  const autres = document.querySelectorAll('.tete-surtitre, .tete-intro, .tete-profils, .tete-bas');
+  const autres = document.querySelectorAll('.tete-surtitre, .tete-intro, .tete-profils, .tete-bas, .tete-cote');
   const fond = document.querySelector('.tete-fond img');
   if (fond) t.fromTo(fond, { scale: 1.12 }, { scale: 1, duration: tl ? 0.8 : 1.4, ease: 'power3.out' }, debut);
+  /* Décors propres à chaque ouverture : traits du plan, règle, ligne d'eau, racines qui se tracent ; photos du collage, pastille et années qui se posent. */
+  const traits = document.querySelectorAll('.tete [data-tete-trait]');
+  if (traits.length) t.fromTo(traits, { strokeDasharray: '1 1', strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.2, stagger: 0.05, ease: 'power2.inOut' }, debut + 0.2);
+  const poses = document.querySelectorAll('.tete-collage, .tete-pastille, .tete-annees, .tete-mousqueton');
+  if (poses.length) t.fromTo(poses, { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.09, ease: 'back.out(1.6)' }, debut + 0.35);
   t.fromTo(lignes, { yPercent: 108, opacity: 1 }, { yPercent: 0, opacity: 1, duration: tl ? 0.75 : 0.85, stagger: tl ? 0.08 : 0.1, ease: 'power4.out' }, debut + 0.12);
   t.fromTo(autres, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.06, ease: 'power3.out' }, debut + 0.28);
   return t;
@@ -21,7 +26,8 @@ export function animerTete(debut = 0, tl = null) {
 export function tetesFinales() {
   const g = gsap();
   if (!g) return;
-  g.set('.tete-ligne, .tete-surtitre, .tete-intro, .tete-profils, .tete-bas', { clearProps: 'transform,opacity' });
+  g.set('.tete-ligne, .tete-surtitre, .tete-intro, .tete-profils, .tete-bas, .tete-cote, .tete-collage, .tete-pastille, .tete-annees, .tete-mousqueton', { clearProps: 'transform,opacity' });
+  g.set('.tete [data-tete-trait]', { clearProps: 'strokeDasharray,strokeDashoffset' });
   g.set('.tete-fond img', { clearProps: 'transform' });
 }
 

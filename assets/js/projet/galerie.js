@@ -1,7 +1,7 @@
 /* Galerie horizontale épinglée des réalisations (ordinateur) : la piste défile au rythme de la page,
    avec une légère déformation, une barre de progression et un arrêt doux sur chaque carte.
    Sur téléphone, en mode calme et sans JavaScript, elle défile au doigt (défilement natif, accrochage). */
-import { etat } from '../socle/index.js?v=2';
+import { etat } from '../socle/index.js?v=3';
 
 export function initGalerie() {
   const g = window.gsap, ST = window.ScrollTrigger;

@@ -15,10 +15,12 @@ const ETAPES = [
 
 export default (c) => html`
 ${tete(c, {
+    variante: 'sites',
+    cote: html`<ul class="tete-sites" aria-label="${c.s('contact.tete.sites')}">${c.donnees.sites.map((s) => html`<li><p class="tete-site-nom">${s.nom} <small>${s.role}</small></p><a class="tete-site-tel" href="tel:${s.telephoneLien}">${c.t('commun.appeler')} ${s.telephone}</a><p class="tete-site-statut"><span data-statut-site="${s.cle}" aria-live="polite"></span>${s.aConfirmer ? html`<span class="a-completer">${c.t('contact.tete.horairesAConfirmer')}</span>` : ''}</p></li>`)}</ul>`,
     image: 'photos/allee-massifs', alt: c.s('contact.tete.alt'), cadrage: '50% 60%',
     surtitre: c.t('contact.tete.surtitre'), lignes: [c.tb('contact.tete.ligne1'), c.tb('contact.tete.ligne2')],
     intro: c.t('contact.tete.intro'),
-    actions: html`<a class="bouton bouton--orange" href="#devis" data-action-principale>${c.t('contact.tete.action')}</a><a class="bouton bouton--contour" href="tel:${c.site.contact.telephoneLien}">${c.t('commun.appeler')} ${c.site.contact.telephone}</a>`,
+    actions: html`<a class="bouton bouton--orange" href="#devis" data-action-principale>${c.t('contact.tete.action')}</a>`,
     info: html`<span class="pastille" aria-hidden="true"></span><span data-statut-site="orleans" data-statut-court>${c.t('contact.tete.info')}</span>`,
   })}
 

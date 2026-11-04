@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="realisation" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="realisation" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -111,18 +111,20 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </nav>
 <div class="barre-altitude" data-barre-lecture aria-hidden="true"></div>
 <main id="contenu" tabindex="-1">
-<section class="tete tete--page " id="debut" data-strate="Tronc" data-tete data-masque-barre>
-  <figure class="media tete-fond" style="--cadrage:50% 55%">
+<section class="tete tete--page tete--fiche " id="debut" data-strate="Sol" data-tete data-variante="fiche" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" style="--cadrage:50% 55%">
   <picture>
     <img src="/assets/images/photos/berthe-morisot-plantations-1280.webp" srcset="/assets/images/photos/berthe-morisot-plantations-640.webp 640w, /assets/images/photos/berthe-morisot-plantations-1280.webp 1280w" sizes="100vw" alt="Plantation d’arbres au parc Berthe Morisot" width="1280" height="779" fetchpriority="high" loading="eager" decoding="async">
   </picture>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Collectivités · Aménagement</p>
     <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Le parc Berthe Morisot</span></span></h1>
     <p class="tete-intro" data-anime="gsap">Trois parcs du quartier Madeleine réunis en un espace arboré de 2,5 hectares, conçu par le bureau d’études d’Orléans Métropole et réalisé de septembre 2022 à juillet 2023.</p>
-    <div class="tete-bas" data-anime="gsap"><a href="/contact?motif=devis&amp;besoin=amenagement&amp;profil=collectivite#devis" class="bouton bouton--orange" data-libelle="Contact" data-action-principale>Un projet similaire ?</a><span class="info-cle" data-info-cle><span class="pastille" aria-hidden="true"></span>Orléans, quartier Madeleine · 2022-2023</span></div>
+    <div class="tete-bas" data-anime="gsap"><a href="/contact?motif=devis&amp;besoin=amenagement&amp;profil=collectivite#devis" class="bouton bouton--orange" data-libelle="Contact" data-action-principale>Un projet similaire ?</a><span class="info-cle" data-info-cle><span class="fiche-bande-item"><small>Lieu</small>Orléans, quartier Madeleine</span><span class="fiche-bande-item"><small>Année</small>2022-2023</span><span class="fiche-bande-item"><small>Réalisé par</small>J.Richard Paysage</span></span></div>
   </div>
   <span class="tete-defiler" aria-hidden="true"><i></i>Défiler</span>
 </section>

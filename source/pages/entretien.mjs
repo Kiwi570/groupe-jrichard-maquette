@@ -8,7 +8,9 @@ const SAISONS = ['printemps', 'ete', 'automne', 'hiver'];
 
 export default (c) => html`
 ${tete(c, {
-    image: 'photos/tonte-chamerolles', alt: c.s('entretien.tete.alt'), cadrage: '40% 60%', cadrageMobile: '30% 60%',
+    variante: 'saisons',
+    cote: html`<ol class="tete-saisons" aria-label="${c.s('entretien.saisons.surtitre')}">${['printemps', 'ete', 'automne', 'hiver'].map((k) => html`<li data-saison="${k}"><span class="tete-saison-point" aria-hidden="true"></span><span>${c.t(`entretien.saisons.${k}.titre`)}</span><small hidden>${c.t('entretien.saisons.maintenant')}</small></li>`)}</ol>`,
+    image: 'photos/tonte-chamerolles', alt: c.s('entretien.tete.alt'), cadrage: '60% 42%', cadrageMobile: '70% 40%',
     surtitre: c.t('entretien.tete.surtitre'), lignes: [c.tb('entretien.tete.ligne1'), c.tb('entretien.tete.ligne2')],
     intro: c.t('entretien.tete.intro'), profils: true,
     actions: c.lien('contact', { ancre: 'devis', params: 'motif=devis&besoin=entretien', classe: 'bouton bouton--orange', texte: c.t('entretien.tete.action'), attrs: 'data-action-principale' }),

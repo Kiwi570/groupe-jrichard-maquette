@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="actualites" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="actualites" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -111,33 +111,24 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </nav>
 <div class="barre-altitude" data-barre-lecture aria-hidden="true"></div>
 <main id="contenu" tabindex="-1">
-<section class="tete tete--page " id="debut" data-strate="Sol" data-tete data-masque-barre>
-  <figure class="media tete-fond" style="--cadrage:50% 55%">
-  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/photos/equipe-plantation-mobile-633.webp 633w" sizes="100vw">
-    <img src="/assets/images/photos/equipe-plantation-1280.webp" srcset="/assets/images/photos/equipe-plantation-640.webp 640w, /assets/images/photos/equipe-plantation-1280.webp 1280w, /assets/images/photos/equipe-plantation-1920.webp 1920w" sizes="100vw" alt="Une équipe du groupe plantant un arbre au bord d’un terrain" width="1280" height="721" fetchpriority="high" loading="eager" decoding="async">
-  </picture>
+<section class="tete tete--page tete--journal tete--cadre tete--claire " id="debut" data-strate="Sol" data-tete data-variante="journal" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/materiel-elagueur-1122.webp" srcset="/assets/images/grok/materiel-elagueur-640.webp 640w, /assets/images/grok/materiel-elagueur-1122.webp 1122w" sizes="(max-width: 900px) 100vw, 58vw" alt="Casque, harnais, cordes et mousquetons posés au pied d’un chêne" width="1122" height="1402" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Actualités</p>
     <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">La vie</span></span><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap"><em>du groupe</em></span></span></h1>
     <p class="tete-intro" data-anime="gsap">Chantiers, formations, sécurité, biodiversité : les nouvelles des paysagistes et des élagueurs du groupe.</p>
-    <div class="tete-bas" data-anime="gsap"><a class="bouton bouton--orange" href="#une" data-action-principale>Lire la dernière actualité</a><span class="info-cle" data-info-cle><span class="pastille" aria-hidden="true"></span>Dernière actualité : 29 octobre 2026</span></div>
+    <div class="tete-bas" data-anime="gsap"><a href="/actualites/journee-securite-sauvegrain" class="bouton bouton--orange" data-libelle="Journée sécurité" data-action-principale>Lire la dernière actualité</a><span class="info-cle" data-info-cle><span class="pastille" aria-hidden="true"></span>Dernière actualité : 29 octobre 2026</span></div>
   </div>
+  <div class="tete-cote" data-anime="gsap"><div class="journal-une"><p class="journal-meta">À la une · Sécurité · <time datetime="2026-10-29">29 octobre 2026</time></p><h2 class="journal-titre"><a href="/actualites/journee-securite-sauvegrain" data-libelle="Journée sécurité">Une journée sécurité pour les paysagistes de Sauvegrain Paysage</a></h2><p class="journal-chapo">Le 23 octobre 2026, les équipes d’Amilly ont passé une journée entière à se former à la prévention des risques.</p></div>
+      <div class="journal-breves"><p class="journal-meta">Brèves</p><ul><li><a href="/actualites/challenge-msa-2026" data-libelle="Challenge MSA"><span class="journal-meta">Formation · <time datetime="2026-10-19">19 octobre 2026</time></span><span class="journal-breve-titre">Un apprenti du groupe remporte en équipe le challenge Prévention des risques de la MSA</span></a></li><li><a href="/actualites/jardins-flottants-saran" data-libelle="Jardins flottants à Saran"><span class="journal-meta">Réalisations · <time datetime="2026-07-16">16 juillet 2026</time></span><span class="journal-breve-titre">Trois jardins flottants posés à Malakoff Humanis Saran</span></a></li><li><a href="/actualites/chenilles-processionnaires-chene" data-libelle="Chenilles processionnaires"><span class="journal-meta">Soin des arbres · <time datetime="2026-06-12">12 juin 2026</time></span><span class="journal-breve-titre">Suppression des nids de chenilles processionnaires du chêne</span></a></li></ul><a class="lien-fleche" href="#fil">Toutes les actualités</a></div></div>
   <span class="tete-defiler" aria-hidden="true"><i></i>Défiler</span>
-</section>
-<section class="s-creme bloc-y" id="une" data-strate="Tronc">
-  <div class="conteneur">
-    <p class="surtitre">À la une</p>
-    <a class="une" href="/actualites/journee-securite-sauvegrain" data-libelle="Une journée sécurité pour les paysagistes de Sauvegrain Paysage">
-      <figure class="media " data-grok style="--cadrage:50% 50%">
-  <picture>
-    <img src="/assets/images/grok/materiel-elagueur-1122.webp" srcset="/assets/images/grok/materiel-elagueur-640.webp 640w, /assets/images/grok/materiel-elagueur-1122.webp 1122w" sizes="(max-width: 860px) 100vw, 55vw" alt="Casque, harnais, cordes et mousquetons posés au pied d’un chêne" width="1122" height="1402" loading="lazy" decoding="async">
-  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
-</figure>
-      <div><time datetime="2026-10-29">29 octobre 2026</time><h2 class="titre-2">Une journée sécurité pour les paysagistes de Sauvegrain Paysage</h2><p class="chapeau">Le 23 octobre 2026, les équipes d’Amilly ont passé une journée entière à se former à la prévention des risques.</p><span class="lien-fleche">Lire l’article</span></div>
-    </a>
-  </div>
 </section>
 <section class="s-sauge bloc-y" id="fil" data-strate="Houppier">
   <div class="conteneur">

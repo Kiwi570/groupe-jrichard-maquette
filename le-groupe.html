@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="2" data-gabarit="groupe" data-curseur data-curseur-voir="Voir">
+<html lang="fr" data-v="3" data-gabarit="groupe" data-curseur data-curseur-voir="Voir">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=2">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
-<link rel="modulepreload" href="/assets/js/site.js?v=2">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<link rel="stylesheet" href="/assets/css/socle.css?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
+<link rel="modulepreload" href="/assets/js/site.js?v=3">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=3">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=2"></script>
+<script type="module" src="/assets/js/site.js?v=3"></script>
 <meta name="theme-color" content="#1C1B15">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -111,13 +111,16 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </nav>
 <div class="barre-altitude" data-barre-lecture aria-hidden="true"></div>
 <main id="contenu" tabindex="-1">
-<section class="tete tete--page " id="debut" data-strate="Sol" data-tete data-masque-barre>
-  <figure class="media tete-fond" style="--cadrage:50% 55%;--cadrage-mobile:45% 55%">
-  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/photos/equipe-groupe-mobile-587.webp 587w" sizes="100vw">
-    <img src="/assets/images/photos/equipe-groupe-1280.webp" srcset="/assets/images/photos/equipe-groupe-640.webp 640w, /assets/images/photos/equipe-groupe-1280.webp 1280w, /assets/images/photos/equipe-groupe-1920.webp 1920w" sizes="100vw" alt="Les salariés du Groupe J.Richard réunis sur la pelouse d’un parc" width="1280" height="668" fetchpriority="high" loading="eager" decoding="async">
+<section class="tete tete--page tete--famille tete--cadre tete--claire " id="debut" data-strate="Sol" data-tete data-variante="famille" data-masque-barre>
+  <div class="tete-visuel" data-tete-visuel>
+    <figure class="media tete-fond" style="--cadrage:50% 30%;--cadrage-mobile:50% 34%">
+  <picture>
+    <img src="/assets/images/photos/equipe-groupe-1280.webp" srcset="/assets/images/photos/equipe-groupe-640.webp 640w, /assets/images/photos/equipe-groupe-1280.webp 1280w, /assets/images/photos/equipe-groupe-1920.webp 1920w" sizes="(max-width: 1360px) 100vw, 1320px" alt="Les salariés du Groupe J.Richard réunis sur la pelouse d’un parc" width="1280" height="668" fetchpriority="high" loading="eager" decoding="async">
   </picture>
 </figure>
-  <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <canvas class="canopee" data-canopee aria-hidden="true" data-audit-ignorer></canvas>
+    <ol class="tete-annees" aria-label="Les grandes dates du groupe"><li>1965</li><li>2005</li><li>2008</li><li>2015</li><li>2016</li><li>2018</li><li>2021</li></ol>
+  </div>
   <div class="tete-contenu">
     <p class="surtitre tete-surtitre" data-anime="gsap">Le Groupe J.Richard</p>
     <h1 class="tete-titre titre-1"><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap">Six entreprises,</span></span><span class="ligne-masque"><span class="tete-ligne" data-anime="gsap"><em>une même racine</em></span></span></h1>

@@ -1,7 +1,7 @@
 /* Prestations en liste vivante (grand écran) : la prestation au centre de l'écran, ou survolée, ou atteinte au clavier,
    devient active ; sa photo pousse en dôme dans le cadre épinglé à droite.
    Filtres animés partout : quand un filtre change, les cartes glissent vers leur nouvelle place (technique FLIP). */
-import { etat } from '../socle/index.js?v=2';
+import { etat } from '../socle/index.js?v=3';
 
 function listeVivante(g, ST) {
   document.querySelectorAll('[data-presta-liste]').forEach((liste) => {

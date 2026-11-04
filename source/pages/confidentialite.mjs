@@ -9,6 +9,7 @@ const S = ['responsable', 'donnees', 'finalites', 'conservation', 'outils', 'dro
 export default (c) => html`
 <div data-barre-lecture class="barre-article" aria-hidden="true"></div>
 ${tete(c, {
+    variante: 'sobre',
     image: imageExiste('grok/herbier') ? 'grok/herbier' : 'photos/mesange-nichoir', alt: c.s('legal.alt'), cadrage: '50% 50%',
     surtitre: c.t('legal.surtitre'), lignes: [c.t('confidentialite.titre')], intro: c.t('confidentialite.intro'), strate: 'Sol',
     info: html`<nav data-sommaire aria-label="${c.s('commun.sommaire')}"><ul>${S.map((s) => html`<li><a href="#${s}" data-sans-transition>${c.t(`confidentialite.${s}.titre`)}</a></li>`)}</ul></nav>`,

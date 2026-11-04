@@ -1,6 +1,6 @@
 /* Élagage et soin aux arbres : la cime. Taille raisonnée en direct, prestations, maladies dessinées, bois, sécurité. */
 import { html, brut } from '../../outils/gabarit.mjs';
-import { tete, chapitre, cartes, faq, cime, choixProfil, dessin, mediaOu, logo } from '../gabarits/blocs.mjs';
+import { tete, chapitre, cartes, faq, cime, choixProfil, dessin, mediaOu, logo, regleAltitude } from '../gabarits/blocs.mjs';
 
 export const page = { cle: 'elagage', fichier: 'elagage-soin-arbres', imagePartage: 'photos/elagueur-cime-1280.webp' };
 
@@ -28,9 +28,11 @@ const TAILLE = ['observer', 'morte', 'basse', 'croisee', 'gourmand'];
 
 export default (c) => html`
 ${tete(c, {
-    image: 'photos/elagueur-cime', alt: c.s('elagage.tete.alt'), cadrage: '48% 40%', cadrageMobile: '40% 40%',
+    variante: 'hauteur', visuel: regleAltitude(c),
+    image: 'photos/elagueur-cime', alt: c.s('elagage.tete.alt'), cadrage: '48% 40%', cadrageMobile: '50% 42%',
     surtitre: c.t('elagage.tete.surtitre'), lignes: [c.tb('elagage.tete.ligne1'), c.tb('elagage.tete.ligne2')],
-    intro: c.t('elagage.tete.intro'), profils: true, strate: 'Cime',
+    intro: c.t('elagage.tete.intro'), profils: true, strate: 'Sol',
+    faits: [[c.t('elagage.tete.fait1Valeur'), c.t('elagage.tete.fait1')], [c.t('elagage.tete.fait2Valeur'), c.t('elagage.tete.fait2')]],
     actions: html`${c.lien('contact', { ancre: 'devis', params: 'motif=devis&besoin=elagage', classe: 'bouton bouton--orange', texte: c.t('elagage.tete.action'), attrs: 'data-action-principale' })}<a class="bouton bouton--contour" href="tel:+33238610101">${c.t('commun.appeler')} 02 38 61 01 01</a>`,
     info: html`<span class="pastille" aria-hidden="true"></span><span data-statut-site="semoy" data-statut-court>${c.t('elagage.tete.info')}</span>`,
   })}
